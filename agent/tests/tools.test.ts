@@ -1,8 +1,8 @@
 import path from "node:path";
 import { describe, expect, it } from "vitest";
 import { loadKb } from "../src/kb/index.js";
+import { ALL_TOOLS } from "../src/tools/index.js";
 import {
-  ALL_TOOLS,
   grepCorpusTool,
   listKbTool,
   readCorpusFileTool,

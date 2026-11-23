@@ -3,7 +3,7 @@ import readline from "node:readline/promises";
 import { stdin, stdout } from "node:process";
 import { loadConfig } from "./config.js";
 import { loadKb } from "./kb/index.js";
-import { ALL_TOOLS } from "./tools/kb-tools.js";
+import { ALL_TOOLS } from "./tools/index.js";
 import { TuViAgent, streamerFromClient, type TurnResult } from "./agent/harness.js";
 
 const dim = (s: string) => `\x1b[2m${s}\x1b[0m`;

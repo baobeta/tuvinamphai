@@ -151,7 +151,7 @@ export const readCorpusFileTool = defineTool({
   },
 });
 
-export const ALL_TOOLS: ToolSpec[] = [
+export const KB_TOOLS: ToolSpec[] = [
   searchKbTool,
   readKbFileTool,
   listKbTool,

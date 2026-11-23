@@ -3,7 +3,7 @@ import Anthropic from "@anthropic-ai/sdk";
 import { describe, expect, it } from "vitest";
 import type { Config } from "../src/config.js";
 import { loadKb } from "../src/kb/index.js";
-import { ALL_TOOLS } from "../src/tools/kb-tools.js";
+import { ALL_TOOLS } from "../src/tools/index.js";
 import { TuViAgent, type Message, type MessageStreamLike, type StreamParams } from "../src/agent/harness.js";
 
 const FIX = path.join(import.meta.dirname, "fixtures");
