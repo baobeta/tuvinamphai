@@ -86,3 +86,16 @@ describe("today", () => {
     expect(out).toContain("Can chi: năm");
   });
 });
+
+describe("bài trả lời không dẫn sách", () => {
+  it("system prompt cấm ghi tên sách, trang, tên tool và nhãn kỹ thuật trong bài", () => {
+    expect(SYSTEM_PROMPT).toContain("không ghi tên sách hay mã sách");
+    expect(SYSTEM_PROMPT).toContain("Nếu người hỏi chủ động hỏi nguồn");
+    expect(SYSTEM_PROMPT).not.toMatch(/\((?:TVTH|MLTC|NP1|NP2) tr\./);
+    expect(SYSTEM_PROMPT).not.toContain("Mỗi khẳng định có nguồn");
+  });
+
+  it("yêu cầu /xem không đòi kèm nguồn", () => {
+    expect(buildReadingPrompt(parse("/xem 15/8/1990 9:10 nam"))).not.toContain("kèm nguồn");
+  });
+});

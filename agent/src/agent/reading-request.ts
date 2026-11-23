@@ -68,7 +68,7 @@ export function buildReadingPrompt(request: ReadingRequest): string {
   return [
     `Hãy xem trọn lá số Tử Vi Nam Phái cho tôi. ${person}Tôi sinh ngày ${date}, giờ ${request.time}, giới tính ${request.gender}.`,
     "Phân tích chi tiết mọi phần của lá số: chính tinh, phụ tinh, Tứ Hóa, Tuần Triệt, vòng Thái Tuế, Bác Sĩ, Tràng Sinh, cung xung chiếu và các cung phụ trợ, tam phương tứ chính, cách cục, mười hai cung và từng đại vận mười năm.",
-    "Mỗi luận giải phải có lập luận chặt chẽ: dữ kiện trên lá số, quy tắc của sách kèm nguồn, rồi mới đến kết luận, viết dễ hiểu cho người không chuyên.",
+    "Mỗi luận giải phải có lập luận chặt chẽ: dữ kiện trên lá số, quy tắc cổ thư diễn đạt bằng lời thường, rồi mới đến kết luận, viết dễ hiểu cho người không chuyên.",
     "Cuối cùng, từ lá số hãy đưa ra lời khuyên hợp lý về sự nghiệp, công việc, gia đình, tình cảm và sức khỏe: việc nên làm và việc nên tránh, mỗi lời khuyên gắn với dữ kiện cụ thể trên lá số.",
   ].join("\n");
 }
