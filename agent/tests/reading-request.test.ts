@@ -1,6 +1,8 @@
 import { describe, expect, it } from "vitest";
 import { buildReadingPrompt, parseReadingCommand } from "../src/agent/reading-request.js";
-import { SYSTEM_PROMPT } from "../src/agent/system-prompt.js";
+import { ANSWER_STYLE, READING_GUIDE, SYSTEM_PROMPT } from "../src/agent/system-prompt.js";
+import { MCP_INSTRUCTIONS } from "../src/mcp/server.js";
+import { renderXemCommand } from "../src/mcp/command.js";
 import { ALL_TOOLS } from "../src/tools/index.js";
 import { vietnamDateOf } from "../src/tools/calendar-tools.js";
 
@@ -57,7 +59,7 @@ describe("/xem: dựng yêu cầu xem trọn lá số", () => {
 describe("system prompt cho chế độ xem trọn lá số", () => {
   it("chỉ nhắc tới tool có thật", () => {
     const names = new Set(ALL_TOOLS.map((tool) => tool.name));
-    const section = SYSTEM_PROMPT.slice(SYSTEM_PROMPT.indexOf("## Xem trọn một lá số"), SYSTEM_PROMPT.indexOf("## Trả lời"));
+    const section = READING_GUIDE;
     const parameterNames = new Set(["chart_id"]);
     const mentioned = [...section.matchAll(/\b([a-z]+(?:_[a-z]+)+|today)\b/g)].map((match) => match[1]!).filter((name) => !parameterNames.has(name));
     expect(mentioned.length).toBeGreaterThan(8);
@@ -97,5 +99,26 @@ describe("bài trả lời không dẫn sách", () => {
 
   it("yêu cầu /xem không đòi kèm nguồn", () => {
     expect(buildReadingPrompt(parse("/xem 15/8/1990 9:10 nam"))).not.toContain("kèm nguồn");
+  });
+});
+
+describe("quy tắc cách viết không bị mất khi instructions bị cắt ngắn", () => {
+  const NO_CITATION_RULE = "Không ghi tên sách hay mã sách";
+
+  it("quy tắc cách viết nằm trong 2.500 ký tự đầu của system prompt và instructions MCP", () => {
+    expect(SYSTEM_PROMPT.indexOf(ANSWER_STYLE)).toBeLessThan(200);
+    expect(MCP_INSTRUCTIONS.indexOf("không ghi tên sách hay mã sách")).toBeGreaterThan(-1);
+    expect(MCP_INSTRUCTIONS.indexOf("không ghi tên sách hay mã sách")).toBeLessThan(2_500);
+  });
+
+  it("hướng dẫn xem trọn lá số và lệnh /tu-vi:xem tự mang quy tắc không dẫn sách", () => {
+    expect(READING_GUIDE).toContain(NO_CITATION_RULE);
+    expect(renderXemCommand()).toContain(NO_CITATION_RULE);
+  });
+
+  it("mỗi mục của system prompt bắt đầu ở dòng riêng", () => {
+    for (const heading of SYSTEM_PROMPT.match(/## [^\n]+/g) ?? []) {
+      expect(SYSTEM_PROMPT).toContain(`\n${heading}`);
+    }
   });
 });

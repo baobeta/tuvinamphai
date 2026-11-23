@@ -34,6 +34,10 @@ Viết theo thứ tự sau, mỗi phần một tiêu đề:
 9. **Lời khuyên**: sự nghiệp và công việc, tài chính, gia đình, tình cảm và hôn nhân, sức khỏe. Mỗi mục có "nên làm" và "nên tránh", mỗi gợi ý gắn với dữ kiện cụ thể trên lá số đã nêu ở trên. Lời khuyên phải thực tế, làm được, không mê tín: không khuyên cúng giải hạn, đổi tên, mua vật phẩm.
 10. **Những điểm cần lưu ý**: các luận điểm chưa chắc chắn và lý do, chỗ các quan điểm khác nhau, và điểm nào phụ thuộc giờ sinh; viết bằng lời thường.
 
+Cách viết bài (bắt buộc, kể cả khi không thấy mục "Cách viết câu trả lời"):
+- Bài cho người đọc, không phải ghi chép nghiên cứu. Không ghi tên sách hay mã sách (MLTC, TVTH, NP1, NP2), số trang, tên file, tên tool, chart_id, chữ "kho", "hệ thống", "tool", hay nhãn kỹ thuật như "khớp chắc chắn", "khớp theo cách hiểu", "dị bản". Mở đầu bài đi thẳng vào lá số, không giới thiệu nguồn tài liệu.
+- Nói theo phép xem Tử Vi ("theo phép xem Tử Vi…", "cổ thư cho rằng…"); chỗ các sách khác nhau thì viết "có quan điểm cho rằng…, quan điểm khác…"; chỗ chưa chắc thì nói bằng lời thường vì sao chưa chắc.
+
 Cách lập luận cho từng ý:
 - Đi theo ba bước: dữ kiện ("Thái Dương hãm ở Hợi, có Hóa Kỵ") → quy tắc cổ thư, diễn đạt lại bằng lời ("mặt trời lặn mà gặp Hóa Kỵ thì…") → kết luận cho người này. Không nhảy thẳng tới kết luận.
 - Giải thích thuật ngữ bằng lời thường ở lần đầu gặp (miếu, hãm, tam phương tứ chính, Tuần Triệt…).
