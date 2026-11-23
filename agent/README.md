@@ -18,6 +18,17 @@ pnpm typecheck
 
 Agent tự tìm kho tri thức và sách gốc ở thư mục cha (gốc repo); đặt `TUVI_WORKSPACE` nếu muốn trỏ chỗ khác. Các biến môi trường được mô tả trong `.env.example`.
 
+## Thử tool không cần API key
+Gọi thẳng các tool, không qua Claude:
+```bash
+pnpm tool --list
+pnpm tool convert_calendar '{"direction":"solar_to_lunar","year":1990,"month":8,"day":15}'
+pnpm tool build_chart '{"birth":{"calendar":"solar","year":1990,"month":8,"day":15,"hour":9,"minute":10,"gender":"nam"}}' \
+          analyze_chart '{"chart_id":"@last"}' \
+          year_forecast '{"chart_id":"@last","view_year":2026}'
+```
+Có thể gọi nhiều tool nối tiếp trong một lệnh; chúng dùng chung bộ nhớ lá số. `"@last"` là `chart_id` của lá số vừa lập. `pnpm test` chạy toàn bộ test, gồm cả vòng lặp agent với stream giả.
+
 ## Kiến trúc
 
 Code chia ba tầng theo kiểu **functional core, imperative shell**:
@@ -69,6 +80,7 @@ src/
     harness.ts             TuViAgent: vòng lặp stream → tool_use → tool_result → … → end_turn
     system-prompt.ts       prompt cố định (để prompt cache khớp tiền tố)
   cli.ts · config.ts
+  tool-cli.ts            pnpm tool: gọi tool trực tiếp, không cần API key
 tests/
   core/                    test thuần cho lịch và lá số, không cần fixture
   *.test.ts                test tool, kho tri thức, harness (stream giả, không tốn token)
