@@ -1,0 +1,28 @@
+{
+  "name": "tuvi-agent",
+  "version": "0.1.0",
+  "description": "Agent harness hỏi đáp Tử Vi Nam Phái trên kho tri thức Kien-thuc-Tu-Vi-Nam-Phai (Claude API)",
+  "scripts": {
+    "dev": "tsx src/cli.ts",
+    "ask": "tsx src/cli.ts --once",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.12.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^5.1.1"
+  },
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=22"
+  }
+}

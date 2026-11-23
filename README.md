@@ -12,3 +12,5 @@
 Hai cuốn Phần 1/Phần 2 là bản scan: chữ được nhận dạng bằng OCR nên có thể sai chính tả rải rác;
 bảng, sơ đồ, chữ viết tay nên đối chiếu với PDF theo số trang ghi ở đầu mỗi file.
 Script tái tạo: `split_book.py` (sách TV34), `build_ocr_book.py` (sách scan), `build_tvth.py` (Tử Vi Thực Hành).
+
+**Agent hỏi đáp:** [agent/](agent/README.md) là harness TypeScript (pnpm) dùng Claude API, tra kho tri thức và sách gốc ở trên. Chạy: `cd agent && pnpm install && pnpm dev`.
