@@ -171,7 +171,41 @@ flowchart TB
     H --> I["9 · Lời khuyên: sự nghiệp, tiền bạc, gia đình, tình cảm, sức khỏe"] --> J["10 · Những điểm cần lưu ý"]
 ```
 
-<!-- READING_EXCERPT -->
+Trích hai đoạn từ một bài luận thật do Claude viết qua `/tu-vi:xem 15/8/1990 9:10 nam` (giữ nguyên văn). Bài đầy đủ: [docs/demo/xem-la-so-15-8-1990.md](docs/demo/xem-la-so-15-8-1990.md).
+
+<details>
+<summary><b>Phần 3.1 · Cung Mệnh</b> (dữ kiện → quy tắc → kết luận)</summary>
+
+### 3.1. Cung Mệnh (Dần): Vũ Khúc (Đắc, Hóa Quyền) và Thiên Tướng (Miếu)
+
+**Chính tinh.**
+- Vũ Khúc là sao tài, mang tính cương quyết và thực tế. Thiên Tướng là sao "ấn", chủ sự giúp đỡ, công bằng và trách nhiệm.
+- Theo phép xem Tử Vi, Vũ Tướng ở Dần hoặc Thân là **người làm việc vất vả, phụ tá giỏi, có tay nghề, cả đời không lo đói**.
+  - Nếu hội Tả Phù, Hữu Bật, Văn Xương, Văn Khúc thì nắm được quyền.
+  - Nếu hội Lộc Tồn, Thiên Mã thì **làm giàu rồi về quê**.
+- Lá số này có Lộc Tồn và Thiên Mã ở cung Thiên Di, đối diện chiếu thẳng về Mệnh. Vì vậy câu "Lộc Mã thì phát tài hoàn hương" ứng khá sát: anh có xu hướng phải **ra ngoài, đi xa mới kiếm được tiền**.
+
+**Hóa Quyền trên Vũ Khúc.** Hóa Quyền là sao quyền lực, đi với Vũ Khúc là sao tài. Hai sao này cho tính **quyết đoán, muốn tự chủ và nắm việc**, đặc biệt là việc tiền nong và quản lý. Đây là điểm sáng nhất của cung Mệnh.
+
+</details>
+
+<details>
+<summary><b>Phần 9 · Lời khuyên về sự nghiệp</b> (mỗi lời khuyên gắn với một dữ kiện trên lá số)</summary>
+
+### Sự nghiệp và công việc
+
+**Nên làm:**
+- Anh nên **chọn vai trò quản lý vận hành, tài chính, kỹ thuật, pháp chế hoặc đào tạo**, là những việc cần kỷ luật và trách nhiệm. Lý do: Vũ Tướng, Hóa Quyền, Hổ hàm kiếm và bộ Tuế Hổ Phù đều chỉ về tính chính trực, quyết đoán, hợp nghề có quy tắc.
+- Anh nên **chủ động tìm việc cần đi lại, làm với đối tác bên ngoài, hoặc công tác xa**, vì Lộc Tồn và Thiên Mã ở Thiên Di cho thấy tiền đến từ bên ngoài.
+- Anh nên **kiên nhẫn xây nền trong giai đoạn 35–44 tuổi để đón đại hạn 45–54**, khi Tử Vi miếu Hóa Quyền về đúng cung sự nghiệp. Đó mới là lúc nên nhận trách nhiệm lớn nhất.
+- Anh nên **quý và giữ quan hệ với bề trên, thầy và người đi trước**, vì Phụ Mẫu có Nhật Lương sáng, Hóa Lộc, và Mệnh được giáp Khoa Lộc.
+
+**Nên tránh:**
+- Anh nên **tránh nhảy việc hoặc đổi ngành liên tục chỉ vì chán**. Triệt và Địa Không ở Quan Lộc cho thấy đổi hướng là khó tránh, nhưng mỗi lần đổi đều tốn công. Hãy đổi có kế hoạch.
+- Anh nên **tránh va chạm trực diện với cấp trên trong năm 2026**, vì lưu Thái Tuế, lưu Kình và Hỏa Tinh cùng tụ ở Quan Lộc.
+- Anh nên **tránh nhận việc ký thay, bảo lãnh, đứng tên giấy tờ cho người khác trong giai đoạn 35–44 tuổi**, vì Văn Xương Hóa Kỵ nằm ngay ở cung đại hạn.
+
+</details>
 
 ## Độ chính xác
 
