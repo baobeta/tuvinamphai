@@ -17,7 +17,7 @@ Kỷ Hợi, tháng 7, ngày 28, giờ Tý; Âm Nam. Bản mệnh Bình Địa M�
 
 ### Bố trí sao chính (đọc từ ảnh)
 - **Mệnh/Thân (Thân):** Tử Vi, Thiên Phủ, Thiên Việt, Phục Binh, Phúc Đức, Thiên Đức, Kiếp Sát, Thiên Trù, Triệt; cung Tuyệt.
-- **Quan Lộc (Tỵ):** Liêm Trinh, Thiên Tướng, Thiên Khôi, Ân Quang, Thiên Không, Thiếu Dương, Đào Hoa. **Tài Bạch (Thìn):** Vũ Khúc, Hữu Bật, Văn Khúc, Hóa Lộc, Hóa Kỵ, Hồng Loan, Nguyệt Đức, Tuần.
+- **Quan Lộc (Tý):** Liêm Trinh, Thiên Tướng, Thiên Khôi, Ân Quang, Thiên Không, Thiếu Dương, Đào Hoa. **Tài Bạch (Thìn):** Vũ Khúc, Hữu Bật, Văn Khúc, Hóa Lộc, Hóa Kỵ, Hồng Loan, Nguyệt Đức, Tuần.
 - Phúc (Tuất): Tham Lang, Tả Phù, Văn Xương, Hóa Quyền, Linh Tinh. Phụ Mẫu (Dậu): Thái Âm, Hỏa Tinh, Triệt. Phu Thê (Ngọ): Phá Quân, Lộc Tồn.
 
 ### Cách cục nhận ra

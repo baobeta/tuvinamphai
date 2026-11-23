@@ -4,6 +4,7 @@ import { stdin, stdout } from "node:process";
 import { loadConfig } from "./config.js";
 import { loadKb } from "./kb/index.js";
 import { ALL_TOOLS } from "./tools/index.js";
+import { createChartStore } from "./tools/chart-store.js";
 import { TuViAgent, streamerFromClient, type TurnResult } from "./agent/harness.js";
 
 const dim = (s: string) => `\x1b[2m${s}\x1b[0m`;
@@ -27,7 +28,7 @@ async function main(): Promise<void> {
     streamerFromClient(new Anthropic()),
     config,
     ALL_TOOLS,
-    { kb, corpusRoot: config.corpusRoot },
+    { kb, corpusRoot: config.corpusRoot, charts: createChartStore() },
     {
       onText: (d) => stdout.write(d),
       onToolCall: (name, input) => stdout.write(dim(`\n→ ${name} ${short(input)}\n`)),

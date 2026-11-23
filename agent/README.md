@@ -48,12 +48,21 @@ src/
       periods.ts           đại hạn, tiểu hạn, đồng hạn, lưu nguyệt, sao lưu niên
       build-chart.ts       ghép tất cả thành Chart
       render.ts            Chart → bảng markdown
+    analysis/              phân tích trên lá số đã lập
+      chart-query.ts       truy vấn: sao ở cung, tam phương tứ chính, giáp cung
+      finding.ts           Finding: "khớp chắc chắn" / "khớp theo cách hiểu", điều kiện thỏa, phá cách, giả định, dị bản
+      natal-profile.ts     bản mệnh: chủ Mệnh/Thân, Cục với bản mệnh, sinh vượng bại tuyệt, âm dương lý, vòng Thái Tuế, vô chính diệu
+      palace-analysis.ts   một cung: ngũ hành sao/cung, tam phương tứ chính, giáp cung, nhị hợp, lục hại, Tuần Triệt
+    patterns/              cách cục: 32 cách tốt, 26 cách xấu, quy tắc phá cách chung
+    periods/               vận hạn theo lớp (đại hạn, lưu đại hạn, tiểu hạn, lưu niên/nguyệt/nhật/thời), dòng thời gian cả đời, giờ xấu trẻ em, soát giờ sinh
   kb/                      kho tri thức: đọc, chuẩn hóa tiếng Việt, tìm kiếm
   tools/                   shell cho agent
     registry.ts            ToolSpec (zod là nguồn duy nhất cho schema), kiểm tra input, bắt lỗi thành is_error
     kb-tools.ts            search_kb · read_kb_file · list_kb · grep_corpus · read_corpus_file
     calendar-tools.ts      convert_calendar · convert_hour · stem_branch_info · branch_relations · element_relation · determine_bureau
-    chart-tools.ts         build_chart · year_forecast
+    chart-tools.ts         build_chart · year_forecast; resolveChart (chart_id hoặc birth)
+    chart-store.ts         kho lá số LRU theo chart_id (hash của dữ kiện sinh + tùy chọn)
+    analysis-tools.ts      analyze_chart · detect_patterns · list_patterns · natal_profile · analyze_palace · period_layers · lifetime_timeline · child_hazard_hours · birth_hour_candidates
     index.ts               ALL_TOOLS
     paths.ts               khóa đường dẫn trong thư mục gốc
   agent/
@@ -64,6 +73,10 @@ tests/
   core/                    test thuần cho lịch và lá số, không cần fixture
   *.test.ts                test tool, kho tri thức, harness (stream giả, không tốn token)
 ```
+
+**Chạy nhanh:** `build_chart` trả `chart_id`; các tool sau chỉ nhận id nên model không phải gửi lại dữ kiện và lá số không phải lập lại. `analyze_chart` gộp bản mệnh, cách cục, cung Mệnh và Thân trong một lần gọi (khoảng 25 ms).
+
+**Mức chắc chắn:** sách nhiều chỗ không định nghĩa chặt ("gặp", "hội", "nhiều sát tinh"…). Mỗi kết quả ghi "khớp chắc chắn" hoặc "khớp theo cách hiểu" kèm giả định đã dùng; các dị bản là tùy chọn. Quy tắc không thể tính chắc (Bảng B Thái Tuế, hạn theo sự việc…) nằm trong `SKIPPED_RULES` / `UNSUPPORTED_PATTERNS` kèm lý do.
 
 **Test chuẩn của phần lá số:**
 - Lá số mẫu Lã Thái Hậu (TVTH tr.159): so vị trí từng sao, hơn 100 sao.

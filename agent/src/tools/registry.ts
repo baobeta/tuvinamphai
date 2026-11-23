@@ -1,10 +1,12 @@
 import type Anthropic from "@anthropic-ai/sdk";
 import { z } from "zod";
 import type { KbIndex } from "../kb/index.js";
+import type { ChartStore } from "./chart-store.js";
 
 export interface ToolContext {
   kb: KbIndex;
   corpusRoot: string;
+  charts?: ChartStore;
 }
 
 export interface ToolSpec<S extends z.ZodType = z.ZodType> {

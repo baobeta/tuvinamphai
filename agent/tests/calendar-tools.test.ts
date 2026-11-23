@@ -4,6 +4,8 @@ import { loadKb } from "../src/kb/index.js";
 import { ALL_TOOLS } from "../src/tools/index.js";
 import { toBirthInput } from "../src/tools/chart-tools.js";
 import { runTool, type ToolContext } from "../src/tools/registry.js";
+import { createChartStore } from "../src/tools/chart-store.js";
+import { DEFAULT_CHART_OPTIONS } from "../src/core/chart/types.js";
 
 const FIX = path.join(import.meta.dirname, "fixtures");
 const toolMap = new Map(ALL_TOOLS.map((t) => [t.name, t]));
@@ -82,5 +84,40 @@ describe("tool lịch và lá số", () => {
   it("toBirthInput đổi giờ đồng hồ sang chi khi nhập âm lịch", () => {
     const input = toBirthInput({ calendar: "lunar", year: 1974, month: 3, day: 7, hour: 23, minute: 30, gender: "nam" });
     expect(input.ok && input.value.calendar === "lunar" && input.value.hourBranch).toBe(0);
+  });
+});
+
+describe("kho lá số theo chart_id", () => {
+  const birth = { calendar: "lunar", year: 1974, month: 3, day: 7, hour_branch: "Dần", gender: "nữ" };
+
+  it("build_chart trả chart_id cố định, lần sau lấy từ bộ nhớ, year_forecast dùng chart_id", async () => {
+    const ctx: ToolContext = { kb: await loadKb(path.join(FIX, "kb")), corpusRoot: path.join(FIX, "corpus"), charts: createChartStore() };
+    const first = await runTool(toolMap, "build_chart", { birth }, ctx);
+    const id = /chart_id: (ls_[0-9a-f]+)/.exec(first.content)?.[1];
+    expect(id).toBeDefined();
+    const second = await runTool(toolMap, "build_chart", { birth }, ctx);
+    expect(second.content).toContain(`chart_id: ${id} (lấy từ bộ nhớ)`);
+    const forecast = await runTool(toolMap, "year_forecast", { chart_id: id, view_year: 2000 }, ctx);
+    expect(forecast.isError).toBe(false);
+    expect(forecast.content).toContain("27 tuổi âm");
+    expect(ctx.charts!.size()).toBe(1);
+  });
+
+  it("chart_id khác khi đổi dị bản; chart_id lạ thì báo lỗi rõ", async () => {
+    const ctx: ToolContext = { kb: await loadKb(path.join(FIX, "kb")), corpusRoot: path.join(FIX, "corpus"), charts: createChartStore() };
+    const tvth = await runTool(toolMap, "build_chart", { birth }, ctx);
+    const song = await runTool(toolMap, "build_chart", { birth, options: { hoa_linh_for_ty_dau_suu: "Tống" } }, ctx);
+    expect(tvth.content.slice(0, 24)).not.toBe(song.content.slice(0, 24));
+    const missing = await runTool(toolMap, "year_forecast", { chart_id: "ls_0000000000", view_year: 2000 }, ctx);
+    expect(missing.isError).toBe(true);
+    expect(missing.content).toContain("gọi lại với birth");
+  });
+
+  it("LRU bỏ lá số cũ nhất khi đầy", () => {
+    const store = createChartStore(2);
+    const fake = (n: number) => ({ calendar: "lunar", date: { year: 1974 + n, month: 1, day: 1, isLeapMonth: false }, hourBranch: 0, gender: "nam" }) as const;
+    const ids = [0, 1, 2].map((n) => store.remember(fake(n), DEFAULT_CHART_OPTIONS, () => ({}) as never).id);
+    expect(store.get(ids[0]!)).toBeUndefined();
+    expect(store.size()).toBe(2);
   });
 });

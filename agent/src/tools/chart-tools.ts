@@ -6,9 +6,9 @@ import type { BirthInput } from "../core/chart/birth.js";
 import { buildChart } from "../core/chart/build-chart.js";
 import { yearView } from "../core/chart/periods.js";
 import { renderChart, renderYearView } from "../core/chart/render.js";
-import { DEFAULT_CHART_OPTIONS, type ChartOptions } from "../core/chart/types.js";
-import { defineTool } from "./registry.js";
-import { unwrapOrThrow } from "./result-output.js";
+import { DEFAULT_CHART_OPTIONS, type Chart, type ChartOptions } from "../core/chart/types.js";
+import { defineTool, type ToolContext } from "./registry.js";
+import { ToolInputError, unwrapOrThrow } from "./result-output.js";
 
 const birthSchema = z
   .strictObject({
@@ -76,34 +76,68 @@ export const toChartOptions = (raw: RawOptions): ChartOptions => ({
   timezone: raw?.timezone ?? DEFAULT_CHART_OPTIONS.timezone,
 });
 
-const chartFrom = (birth: RawBirth, options: RawOptions) =>
-  unwrapOrThrow(buildChart(unwrapOrThrow(toBirthInput(birth)), toChartOptions(options)));
+export const chartReferenceFields = {
+  chart_id: z.string().optional().describe("Mã lá số do build_chart trả về; dùng thay cho birth để không phải gửi lại dữ kiện"),
+  birth: birthSchema.optional(),
+  options: optionsSchema,
+};
+
+export interface ResolvedChart {
+  readonly id: string | null;
+  readonly chart: Chart;
+  readonly cached: boolean;
+}
+
+export function resolveChart(
+  reference: { chart_id?: string | undefined; birth?: RawBirth | undefined; options?: RawOptions },
+  ctx: ToolContext,
+): ResolvedChart {
+  if (reference.chart_id) {
+    if (reference.birth || reference.options) {
+      throw new ToolInputError("Chỉ truyền chart_id hoặc birth/options, không truyền cả hai; muốn đổi dị bản thì gọi lại với birth và options.");
+    }
+    const stored = ctx.charts?.get(reference.chart_id);
+    if (!stored) throw new ToolInputError(`Không còn lá số ${reference.chart_id} trong bộ nhớ; gọi lại với birth để lập lại.`);
+    return { id: reference.chart_id, chart: stored, cached: true };
+  }
+  if (!reference.birth) throw new ToolInputError("Cần chart_id hoặc birth");
+  const input = unwrapOrThrow(toBirthInput(reference.birth));
+  const options = toChartOptions(reference.options);
+  const build = () => unwrapOrThrow(buildChart(input, options));
+  if (!ctx.charts) return { id: null, chart: build(), cached: false };
+  return ctx.charts.remember(input, options, build);
+}
+
+const chartHeader = (resolved: ResolvedChart): string =>
+  resolved.id ? `chart_id: ${resolved.id}${resolved.cached ? " (lấy từ bộ nhớ)" : ""}\n\n` : "";
 
 export const buildChartTool = defineTool({
   name: "build_chart",
   description:
     "Lập lá số Tử Vi Nam Phái theo quy tắc an sao của TVTH Phần I (đối chiếu MLTC Ch.1 mục 7): Mệnh, Thân, 12 cung, can cung, Cục, " +
     "14 chính tinh kèm miếu/hãm, khoảng 60 phụ tinh, vòng Bác Sĩ, Tràng Sinh, Thái Tuế, Tứ Hóa, Tuần, Triệt, đại hạn và tiểu hạn. " +
-    "Nhận ngày dương lịch (tự đổi sang âm lịch) hoặc âm lịch. Kết quả có mục ghi chú dị bản; khi luận phải nêu các dị bản đó.",
+    "Nhận ngày dương lịch (tự đổi sang âm lịch) hoặc âm lịch. Trả về chart_id: các tool phân tích sau chỉ cần chart_id. " +
+    "Kết quả có mục ghi chú dị bản; khi luận phải nêu các dị bản đó.",
   schema: z.strictObject({ birth: birthSchema, options: optionsSchema }),
-  async run({ birth, options }) {
-    return renderChart(chartFrom(birth, options));
+  async run({ birth, options }, ctx) {
+    const resolved = resolveChart({ birth, options }, ctx);
+    return chartHeader(resolved) + renderChart(resolved.chart);
   },
 });
 
 export const yearForecastTool = defineTool({
   name: "year_forecast",
   description:
-    "Xem vận hạn một năm cho một lá số: tuổi âm, cung đại hạn, cung tiểu hạn, đồng hạn (dưới 13 tuổi), cung tháng Giêng lưu nguyệt " +
-    "và vị trí các sao lưu niên (Thái Tuế, Tang Môn, Bạch Hổ, Lộc Tồn, Kình, Đà, Mã, Khốc, Hư, Tuần, Triệt) theo TVTH tr.135–137.",
+    "Xem vận hạn một năm cho một lá số (chart_id hoặc birth): tuổi âm, cung đại hạn, cung tiểu hạn, đồng hạn (dưới 13 tuổi), " +
+    "cung tháng Giêng lưu nguyệt (MLTC tr.845), Tứ Hóa lưu niên và các sao lưu niên (Thái Tuế, Tang Môn, Bạch Hổ, Lộc Tồn, Kình, Đà, Mã, " +
+    "Khốc, Hư, Tuần, Triệt) theo TVTH tr.135–137.",
   schema: z.strictObject({
-    birth: birthSchema,
-    options: optionsSchema,
+    ...chartReferenceFields,
     view_year: z.number().int().describe("Năm âm lịch muốn xem, ví dụ 2026"),
   }),
-  async run({ birth, options, view_year }) {
-    const chart = chartFrom(birth, options);
-    return renderYearView(chart, unwrapOrThrow(yearView(chart, view_year)));
+  async run({ view_year, ...reference }, ctx) {
+    const resolved = resolveChart(reference, ctx);
+    return chartHeader(resolved) + renderYearView(resolved.chart, unwrapOrThrow(yearView(resolved.chart, view_year)));
   },
 });
 
