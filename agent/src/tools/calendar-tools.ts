@@ -223,7 +223,29 @@ export const determineBureauTool = defineTool({
   },
 });
 
+const VIETNAM_TIME_ZONE_NAME = "Asia/Ho_Chi_Minh";
+
+export function vietnamDateOf(instant: Date): SolarDate {
+  const parts = new Intl.DateTimeFormat("en-CA", { timeZone: VIETNAM_TIME_ZONE_NAME, year: "numeric", month: "numeric", day: "numeric" })
+    .formatToParts(instant)
+    .reduce<Record<string, number>>((acc, part) => (part.type === "literal" ? acc : { ...acc, [part.type]: Number(part.value) }), {});
+  return { year: parts.year!, month: parts.month!, day: parts.day! };
+}
+
+export const todayTool = defineTool({
+  name: "today",
+  description:
+    "Ngày hôm nay theo giờ Việt Nam, kèm ngày âm lịch và can chi năm/tháng/ngày. Gọi khi cần biết năm đang xem (tuổi âm, đại hạn hiện tại, lưu niên).",
+  schema: z.strictObject({}),
+  async run() {
+    const solar = vietnamDateOf(new Date());
+    const converted = unwrapOrThrow(solarToLunarVietnam(solar, "historical"));
+    return `Hôm nay (giờ Việt Nam)\n${describeLunarDay(converted.lunar, solar, converted.timezone, "historical")}`;
+  },
+});
+
 export const CALENDAR_TOOLS = [
+  todayTool,
   convertCalendarTool,
   convertHourTool,
   stemBranchInfoTool,

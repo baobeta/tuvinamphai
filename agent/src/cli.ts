@@ -5,6 +5,7 @@ import { loadConfig } from "./config.js";
 import { loadKb } from "./kb/index.js";
 import { ALL_TOOLS } from "./tools/index.js";
 import { createWorkspaceChartStore } from "./tools/chart-store.js";
+import { buildReadingPrompt, parseReadingCommand, READING_COMMAND } from "./agent/reading-request.js";
 import { TuViAgent, streamerFromClient, type TurnResult } from "./agent/harness.js";
 
 const dim = (s: string) => `\x1b[2m${s}\x1b[0m`;
@@ -19,6 +20,18 @@ function footer(r: TurnResult): string {
   return dim(
     `\n[${r.iterations} lượt model · ${r.toolCalls} lần gọi tool · token vào ${u.input} (cache đọc ${u.cacheRead}, ghi ${u.cacheWrite}) · ra ${u.output}${status}]`,
   );
+}
+
+function expandCommand(line: string): string | null {
+  if (line !== READING_COMMAND && !line.startsWith(`${READING_COMMAND} `)) return line;
+  const request = parseReadingCommand(line);
+  if (!request.ok) {
+    stdout.write(`${request.error}\n`);
+    return null;
+  }
+  const prompt = buildReadingPrompt(request.value);
+  stdout.write(dim(`${prompt}\n`));
+  return prompt;
 }
 
 async function main(): Promise<void> {
@@ -38,15 +51,15 @@ async function main(): Promise<void> {
 
   const onceIdx = process.argv.indexOf("--once");
   if (onceIdx >= 0) {
-    const question = process.argv.slice(onceIdx + 1).join(" ").trim();
-    if (!question) throw new Error('Cách dùng: pnpm ask "câu hỏi"');
+    const question = expandCommand(process.argv.slice(onceIdx + 1).join(" ").trim());
+    if (!question) throw new Error('Cách dùng: pnpm ask "câu hỏi" hoặc pnpm ask /xem 15/8/1990 9:10 nam');
     stdout.write(footer(await agent.ask(question)) + "\n");
     return;
   }
 
   stdout.write(
     `Tử Vi agent · ${config.model} (effort ${config.effort}) · kho: ${kb.docs.length} file\n` +
-      dim("Lệnh: /reset xóa hội thoại · /usage xem token · /exit thoát\n"),
+      dim("Lệnh: /xem <ngày/tháng/năm> <giờ> <nam|nữ> xem trọn lá số · /reset xóa hội thoại · /usage xem token · /exit thoát\n"),
   );
   const rl = readline.createInterface({ input: stdin, output: stdout });
   try {
@@ -63,8 +76,10 @@ async function main(): Promise<void> {
         stdout.write(dim(JSON.stringify(agent.usage) + "\n"));
         continue;
       }
+      const question = expandCommand(line);
+      if (question === null) continue;
       try {
-        stdout.write(footer(await agent.ask(line)) + "\n");
+        stdout.write(footer(await agent.ask(question)) + "\n");
       } catch (err) {
         if (err instanceof Anthropic.AuthenticationError) {
           stdout.write("Chưa có credential: đặt ANTHROPIC_API_KEY hoặc chạy `ant auth login`.\n");

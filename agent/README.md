@@ -18,6 +18,17 @@ pnpm typecheck
 
 Agent tự tìm kho tri thức và sách gốc ở thư mục cha (gốc repo); đặt `TUVI_WORKSPACE` nếu muốn trỏ chỗ khác. Các biến môi trường được mô tả trong `.env.example`.
 
+## Xem trọn một lá số
+Trong `pnpm dev`, gõ:
+```
+/xem 15/8/1990 9:10 nam
+/xem âm 25/6/1990 Tỵ nữ Lan
+/xem âm nhuận 10/2/2023 Thìn nam
+```
+Hoặc chạy một lần: `pnpm ask /xem 15/8/1990 9:10 nam`.
+
+`/xem` dựng sẵn yêu cầu xem chi tiết (chính tinh, phụ tinh, vòng sao, tam phương tứ chính, cách cục, 12 cung, từng đại vận, lời khuyên sự nghiệp, gia đình, tình cảm, sức khỏe). System prompt (mục "Xem trọn một lá số" trong `src/agent/system-prompt.ts`) quy định agent gọi tool nào để lấy dữ kiện, viết theo 10 phần nào, và lập luận theo ba bước: dữ kiện trên lá số → quy tắc của sách có nguồn → kết luận. Muốn đổi cấu trúc bài luận thì sửa mục đó.
+
 ## Thử tool không cần API key
 Gọi thẳng các tool, không qua Claude:
 ```bash
@@ -85,6 +96,7 @@ src/
     index.ts               ALL_TOOLS
     paths.ts               khóa đường dẫn trong thư mục gốc
   agent/
+    reading-request.ts     lệnh /xem: đọc ngày giờ sinh, dựng yêu cầu xem trọn lá số
     harness.ts             TuViAgent: vòng lặp stream → tool_use → tool_result → … → end_turn
     system-prompt.ts       prompt cố định (để prompt cache khớp tiền tố)
   cli.ts · config.ts
