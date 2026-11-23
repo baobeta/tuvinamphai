@@ -1,0 +1,131 @@
+{
+  "id": "03-hang-vo",
+  "title": "Hạng Võ (Đinh Mão, âm nam)",
+  "kbFile": "Kien-thuc-Tu-Vi-Nam-Phai/13_La-so-mau/03_TVTH-Hang-Vo.md",
+  "bookSource": "Tu-Vi-Thuc-Hanh/06_So-Tu-Vi-mau/03_Hang-Vo.md",
+  "bookPage": "TVTH tr.163–164",
+  "confidence": "high",
+  "birth": {
+    "calendar": "lunar",
+    "yearCanChi": "Đinh Mão",
+    "year": 1987,
+    "month": 8,
+    "day": 12,
+    "hourBranch": "Mão",
+    "gender": "nam",
+    "isLeapMonth": false
+  },
+  "yearChoice": "Năm can chi của danh nhân lịch sử; chọn 1987 (cùng can chi) vì engine chỉ dùng can chi năm cùng tháng, ngày âm.",
+  "options": {},
+  "expected": {
+    "polarity": "Âm Nam",
+    "lifeBranch": "Ngọ",
+    "bodyBranch": "Tý",
+    "bureau": "Thủy nhị cục",
+    "nayin": "Lư Trung Hỏa",
+    "palaces": {
+      "Mệnh": "Ngọ",
+      "Phụ Mẫu": "Mùi",
+      "Phúc Đức": "Thân",
+      "Điền Trạch": "Dậu",
+      "Quan Lộc": "Tuất",
+      "Nô Bộc": "Hợi",
+      "Thiên Di": "Tý",
+      "Tật Ách": "Sửu",
+      "Tài Bạch": "Dần",
+      "Tử Tức": "Mão",
+      "Phu Thê": "Thìn",
+      "Huynh Đệ": "Tỵ"
+    },
+    "stars": {
+      "Ngọ": [
+        "Thiên Cơ",
+        "Lộc Tồn",
+        "Bác Sĩ",
+        "Hỏa Tinh",
+        "Thiên Hỷ",
+        "Thiếu Âm"
+      ],
+      "Tý": [
+        "Cự Môn",
+        "Phi Liêm",
+        "Hồng Loan",
+        "Đào Hoa"
+      ],
+      "Dần": [
+        "Thiên Đồng",
+        "Thiên Lương",
+        "Địa Kiếp",
+        "Triệt"
+      ],
+      "Tuất": [
+        "Thái Âm",
+        "Tuần"
+      ],
+      "Mùi": [
+        "Tử Vi",
+        "Phá Quân",
+        "Văn Xương",
+        "Văn Khúc",
+        "Kình Dương"
+      ],
+      "Thân": [
+        "Địa Không"
+      ],
+      "Hợi": [
+        "Liêm Trinh",
+        "Tham Lang",
+        "Thiên Khôi",
+        "Tả Phụ",
+        "Bạch Hổ",
+        "Tuần"
+      ],
+      "Mão": [
+        "Vũ Khúc",
+        "Thất Sát",
+        "Hữu Bật",
+        "Triệt"
+      ]
+    },
+    "transformations": {
+      "Ngọ": [
+        "Hóa Khoa"
+      ],
+      "Tý": [
+        "Hóa Kỵ"
+      ],
+      "Dần": [
+        "Hóa Quyền"
+      ],
+      "Tuất": [
+        "Hóa Lộc"
+      ]
+    },
+    "patterns": [
+      "co-nguyet-dong-luong",
+      "tam-hoa-lien-chau"
+    ]
+  },
+  "addedStars": [],
+  "knownDiscrepancies": [
+    {
+      "kind": "pattern-usage",
+      "pattern": "tu-linh",
+      "reason": "Long Trì, Phượng Các, Hoa Cái đều ở Mùi (nhị hợp với Mệnh Ngọ, 'lưỡng hợp'), Bạch Hổ ở Hợi, nên không đủ bốn sao trong tam phương tứ chính Mệnh như TVTH số 44 đòi; sách dùng tên cách theo nghĩa rộng (nhị hợp).",
+      "source": "TVTH tr.163: 'Cách: Cơ Nguyệt Đồng Lương – Tam Hóa triều, Lưỡng hợp có Xương Khúc – Tứ Linh.'"
+    }
+  ],
+  "suspectedEngineBugs": [],
+  "spellingMap": {
+    "Thiên Hỉ": "Thiên Hỷ",
+    "Xương": "Văn Xương",
+    "Khúc": "Văn Khúc",
+    "Liêm": "Liêm Trinh",
+    "Tham": "Tham Lang",
+    "Khôi": "Thiên Khôi",
+    "Tả Phù": "Tả Phụ"
+  },
+  "notes": [
+    "KB ghi bản mệnh 'Lộ Trung Hỏa'; engine viết 'Lư Trung Hỏa' (cùng nạp âm Đinh Mão)."
+  ]
+}

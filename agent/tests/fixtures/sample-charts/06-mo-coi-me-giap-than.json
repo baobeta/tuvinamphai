@@ -1,0 +1,105 @@
+{
+  "id": "06-mo-coi-me-giap-than",
+  "title": "Mồ côi mẹ Giáp Thân",
+  "kbFile": "Kien-thuc-Tu-Vi-Nam-Phai/13_La-so-mau/06_TVTH-Mo-coi-me-Giap-Than.md",
+  "bookSource": "Tu-Vi-Thuc-Hanh/06_So-Tu-Vi-mau/06_Mo-coi-me-Giap-Than.md",
+  "bookPage": "TVTH tr.169–170",
+  "confidence": "high",
+  "birth": {
+    "calendar": "lunar",
+    "yearCanChi": "Giáp Thân",
+    "year": 2004,
+    "month": 12,
+    "day": 25,
+    "hourBranch": "Dần",
+    "gender": "nam",
+    "isLeapMonth": false
+  },
+  "yearChoice": "Sách chỉ ghi can chi; chọn 2004 là năm trong 1800–2199 cùng can chi và có ngày âm này.",
+  "options": {},
+  "expected": {
+    "polarity": "Dương Nam",
+    "lifeBranch": "Hợi",
+    "bodyBranch": "Mão",
+    "bureau": "Hỏa lục cục",
+    "nayin": "Tuyền Trung Thủy",
+    "palaces": {
+      "Mệnh": "Hợi",
+      "Phụ Mẫu": "Tý",
+      "Phúc Đức": "Sửu",
+      "Điền Trạch": "Dần",
+      "Quan Lộc": "Mão",
+      "Nô Bộc": "Thìn",
+      "Thiên Di": "Tỵ",
+      "Tật Ách": "Ngọ",
+      "Tài Bạch": "Mùi",
+      "Tử Tức": "Thân",
+      "Phu Thê": "Dậu",
+      "Huynh Đệ": "Tuất"
+    },
+    "stars": {
+      "Hợi": [
+        "Hữu Bật",
+        "Đại Hao",
+        "Bát Tọa",
+        "Đẩu Quân",
+        "Thiếu Âm",
+        "Thiên Thọ",
+        "Cô Thần",
+        "Tuyệt"
+      ],
+      "Mão": [
+        "Thiên Phủ",
+        "Tả Phụ",
+        "Lực Sĩ",
+        "Thiên Khố",
+        "Kình Dương",
+        "Tam Thai",
+        "Long Đức"
+      ],
+      "Tỵ": [
+        "Liêm Trinh",
+        "Tham Lang"
+      ],
+      "Mùi": [
+        "Thiên Tướng",
+        "Thiên Việt",
+        "Ân Quang"
+      ],
+      "Dậu": [
+        "Vũ Khúc",
+        "Thất Sát",
+        "Địa Không",
+        "Thiên Không",
+        "Triệt"
+      ],
+      "Tý": [
+        "Thiên Cơ"
+      ],
+      "Tuất": [
+        "Thái Dương",
+        "Tang Môn"
+      ]
+    },
+    "transformations": {
+      "Tỵ": [
+        "Hóa Lộc"
+      ],
+      "Dậu": [
+        "Hóa Khoa"
+      ],
+      "Tuất": [
+        "Hóa Kỵ"
+      ]
+    },
+    "patterns": []
+  },
+  "addedStars": [],
+  "knownDiscrepancies": [],
+  "suspectedEngineBugs": [],
+  "spellingMap": {
+    "Tả Phù": "Tả Phụ",
+    "Lục Sĩ": "Lực Sĩ"
+  },
+  "notes": []
+}

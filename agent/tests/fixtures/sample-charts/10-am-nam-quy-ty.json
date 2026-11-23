@@ -1,0 +1,103 @@
+{
+  "id": "10-am-nam-quy-ty",
+  "title": "Âm Nam Quý Tỵ",
+  "kbFile": "Kien-thuc-Tu-Vi-Nam-Phai/13_La-so-mau/10_TVTH-Am-Nam-Qui-Ty.md",
+  "bookSource": "Tu-Vi-Thuc-Hanh/06_So-Tu-Vi-mau/10_Am-Nam-Qui-Ty.md",
+  "bookPage": "TVTH tr.176–177",
+  "confidence": "high",
+  "birth": {
+    "calendar": "lunar",
+    "yearCanChi": "Quý Tỵ",
+    "year": 2013,
+    "month": 11,
+    "day": 4,
+    "hourBranch": "Thân",
+    "gender": "nam",
+    "isLeapMonth": false
+  },
+  "yearChoice": "Sách chỉ ghi can chi; chọn 2013 là năm trong 1800–2199 cùng can chi và có ngày âm này.",
+  "options": {},
+  "expected": {
+    "polarity": "Âm Nam",
+    "lifeBranch": "Thìn",
+    "bodyBranch": "Thân",
+    "bureau": "Thổ ngũ cục",
+    "nayin": "Trường Lưu Thủy",
+    "palaces": {
+      "Mệnh": "Thìn",
+      "Phụ Mẫu": "Tỵ",
+      "Phúc Đức": "Ngọ",
+      "Điền Trạch": "Mùi",
+      "Quan Lộc": "Thân",
+      "Nô Bộc": "Dậu",
+      "Thiên Di": "Tuất",
+      "Tật Ách": "Hợi",
+      "Tài Bạch": "Tý",
+      "Tử Tức": "Sửu",
+      "Phu Thê": "Dần",
+      "Huynh Đệ": "Mão"
+    },
+    "stars": {
+      "Thìn": [
+        "Thái Âm",
+        "Bệnh Phù",
+        "Ân Quang",
+        "Thiên Hỷ",
+        "Trực Phù",
+        "Quả Tú",
+        "Thiên La",
+        "Đế Vượng"
+      ],
+      "Thân": [
+        "Thiên Đồng",
+        "Thiên Lương",
+        "Quốc Ấn",
+        "Tướng Quân",
+        "Thiếu Âm",
+        "Cô Thần"
+      ],
+      "Tý": [
+        "Thiên Cơ",
+        "Hữu Bật",
+        "Văn Khúc",
+        "Lộc Tồn",
+        "Bác Sĩ",
+        "Long Đức",
+        "Triệt"
+      ],
+      "Tỵ": [
+        "Liêm Trinh",
+        "Tham Lang",
+        "Thiên Việt"
+      ],
+      "Dần": [
+        "Tả Phụ",
+        "Văn Xương"
+      ],
+      "Mão": [
+        "Thiên Phủ",
+        "Thiên Khôi",
+        "Địa Không"
+      ]
+    },
+    "transformations": {
+      "Thìn": [
+        "Hóa Khoa"
+      ],
+      "Tỵ": [
+        "Hóa Kỵ"
+      ]
+    },
+    "patterns": [
+      "co-nguyet-dong-luong"
+    ]
+  },
+  "addedStars": [],
+  "knownDiscrepancies": [],
+  "suspectedEngineBugs": [],
+  "spellingMap": {
+    "Thiên Hỉ": "Thiên Hỷ",
+    "Tả Phù": "Tả Phụ"
+  },
+  "notes": []
+}

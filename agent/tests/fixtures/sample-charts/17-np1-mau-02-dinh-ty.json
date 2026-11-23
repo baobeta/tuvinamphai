@@ -1,0 +1,116 @@
+{
+  "id": "17-np1-mau-02-dinh-ty",
+  "title": "NP1 mẫu 2: Thiên Cơ, âm nữ Đinh Tỵ",
+  "kbFile": "Kien-thuc-Tu-Vi-Nam-Phai/13_La-so-mau/17_NP1-Mau-02-Thien-Co-Am-Nu-Dinh-Ty.md",
+  "bookSource": "Tu-Vi-Nam-Phai_Phan-1/05_La-so-mau/02_La-so-mau-2.md",
+  "bookPage": "NP1 tr.249",
+  "confidence": "low",
+  "birth": {
+    "calendar": "lunar",
+    "yearCanChi": "Đinh Tỵ",
+    "year": 1977,
+    "month": 6,
+    "day": 2,
+    "hourBranch": "Mùi",
+    "gender": "nữ",
+    "isLeapMonth": false
+  },
+  "yearChoice": "Ảnh lá số NP1 tr.249 ghi năm 1977, tháng 7 (6), ngày 17 (02), 14 giờ: dương lịch 17/7/1977 = âm lịch 2/6 Đinh Tỵ. KB bỏ sót ngày; lấy ngày âm 2 từ ảnh.",
+  "options": {},
+  "expected": {
+    "polarity": "Âm Nữ",
+    "lifeBranch": "Tý",
+    "bodyBranch": "Dần",
+    "bureau": "Mộc tam cục",
+    "nayin": "Sa Trung Thổ",
+    "palaces": {
+      "Mệnh": "Tý",
+      "Phụ Mẫu": "Sửu",
+      "Phúc Đức": "Dần",
+      "Điền Trạch": "Mão",
+      "Quan Lộc": "Thìn",
+      "Nô Bộc": "Tỵ",
+      "Thiên Di": "Ngọ",
+      "Tật Ách": "Mùi",
+      "Tài Bạch": "Thân",
+      "Tử Tức": "Dậu",
+      "Phu Thê": "Tuất",
+      "Huynh Đệ": "Hợi"
+    },
+    "stars": {
+      "Tý": [
+        "Thiên Cơ",
+        "Phi Liêm",
+        "Long Đức",
+        "Mộc Dục"
+      ],
+      "Dần": [
+        "Quốc Ấn",
+        "Thiên Hình",
+        "Thiên Quan",
+        "Thiên Đức",
+        "Kiếp Sát"
+      ],
+      "Sửu": [
+        "Tử Vi",
+        "Phá Quân",
+        "Bạch Hổ",
+        "Hoa Cái"
+      ],
+      "Dậu": [
+        "Vũ Khúc",
+        "Thất Sát"
+      ],
+      "Tuất": [
+        "Thái Dương",
+        "Hồng Loan"
+      ],
+      "Mão": [
+        "Thiên Phủ"
+      ],
+      "Thân": [
+        "Thiên Đồng",
+        "Thiên Lương"
+      ],
+      "Thìn": [
+        "Thái Âm",
+        "Địa Không"
+      ],
+      "Tỵ": [
+        "Liêm Trinh",
+        "Tham Lang"
+      ],
+      "Ngọ": [
+        "Cự Môn",
+        "Địa Kiếp",
+        "Đào Hoa",
+        "Thiên Không"
+      ],
+      "Mùi": [
+        "Thiên Tướng"
+      ]
+    },
+    "transformations": {
+      "Tý": [
+        "Hóa Khoa"
+      ],
+      "Thân": [
+        "Hóa Quyền"
+      ],
+      "Thìn": [
+        "Hóa Lộc"
+      ],
+      "Ngọ": [
+        "Hóa Kỵ"
+      ]
+    },
+    "patterns": [
+      "tam-hoa-lien-chau"
+    ]
+  },
+  "addedStars": [],
+  "knownDiscrepancies": [],
+  "suspectedEngineBugs": [],
+  "spellingMap": {},
+  "notes": []
+}

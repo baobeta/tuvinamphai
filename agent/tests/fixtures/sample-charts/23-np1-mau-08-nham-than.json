@@ -1,0 +1,125 @@
+{
+  "id": "23-np1-mau-08-nham-than",
+  "title": "NP1 mẫu 8: Liêm Phủ tại Thìn (Nhâm Thân, dương nữ)",
+  "kbFile": "Kien-thuc-Tu-Vi-Nam-Phai/13_La-so-mau/23_NP1-Mau-08-Liem-Phu-tai-Thin-Nham-Than.md",
+  "bookSource": "Tu-Vi-Nam-Phai_Phan-1/05_La-so-mau/08_La-so-mau-8.md",
+  "bookPage": "NP1 tr.269",
+  "confidence": "low",
+  "birth": {
+    "calendar": "lunar",
+    "yearCanChi": "Nhâm Thân",
+    "year": 1992,
+    "month": 7,
+    "day": 19,
+    "hourBranch": "Thìn",
+    "gender": "nữ",
+    "isLeapMonth": false
+  },
+  "yearChoice": "Ảnh ghi năm 1992 (Nhâm Thân), tháng 7 Mậu Thân, ngày 19 Ất Sửu (âm lịch), giờ Thìn.",
+  "options": {},
+  "expected": {
+    "polarity": "Dương Nữ",
+    "lifeBranch": "Thìn",
+    "bodyBranch": "Tý",
+    "bureau": "Hỏa lục cục",
+    "nayin": "Kiếm Phong Kim",
+    "palaces": {
+      "Mệnh": "Thìn",
+      "Phụ Mẫu": "Tỵ",
+      "Phúc Đức": "Ngọ",
+      "Điền Trạch": "Mùi",
+      "Quan Lộc": "Thân",
+      "Nô Bộc": "Dậu",
+      "Thiên Di": "Tuất",
+      "Tật Ách": "Hợi",
+      "Tài Bạch": "Tý",
+      "Tử Tức": "Sửu",
+      "Phu Thê": "Dần",
+      "Huynh Đệ": "Mão"
+    },
+    "stars": {
+      "Thìn": [
+        "Liêm Trinh",
+        "Thiên Phủ",
+        "Hữu Bật",
+        "Tam Thai",
+        "Hỷ Thần",
+        "Đường Phù",
+        "Bạch Hổ",
+        "Thiên La",
+        "Thai"
+      ],
+      "Tý": [
+        "Quan Phù",
+        "Long Trì"
+      ],
+      "Thân": [
+        "Vũ Khúc",
+        "Thiên Tướng",
+        "Văn Khúc",
+        "Thái Tuế"
+      ],
+      "Dậu": [
+        "Thái Dương",
+        "Thiên Lương",
+        "Đào Hoa"
+      ],
+      "Mùi": [
+        "Thiên Đồng",
+        "Cự Môn",
+        "Địa Không",
+        "Thiên Diêu"
+      ],
+      "Dần": [
+        "Phá Quân",
+        "Linh Tinh",
+        "Đại Hao",
+        "Thiên Mã",
+        "Tuế Phá",
+        "Triệt"
+      ],
+      "Ngọ": [
+        "Tham Lang"
+      ],
+      "Tỵ": [
+        "Thái Âm",
+        "Kiếp Sát"
+      ],
+      "Hợi": [
+        "Thiên Cơ"
+      ],
+      "Tuất": [
+        "Thất Sát",
+        "Hỏa Tinh",
+        "Đà La"
+      ],
+      "Sửu": [
+        "Thiên Hỷ",
+        "Phục Binh"
+      ]
+    },
+    "transformations": {
+      "Tý": [
+        "Hóa Quyền"
+      ],
+      "Thân": [
+        "Hóa Kỵ"
+      ],
+      "Dậu": [
+        "Hóa Lộc"
+      ],
+      "Tuất": [
+        "Hóa Khoa"
+      ]
+    },
+    "patterns": []
+  },
+  "addedStars": [],
+  "knownDiscrepancies": [],
+  "suspectedEngineBugs": [],
+  "spellingMap": {
+    "Hỉ Thần": "Hỷ Thần",
+    "Thiên Hỉ": "Thiên Hỷ"
+  },
+  "notes": []
+}

@@ -1,0 +1,119 @@
+{
+  "id": "05-nu-vcd-canh-ngo",
+  "title": "Nữ mệnh vô chính diệu Canh Ngọ",
+  "kbFile": "Kien-thuc-Tu-Vi-Nam-Phai/13_La-so-mau/05_TVTH-Nu-VCD-Canh-Ngo.md",
+  "bookSource": "Tu-Vi-Thuc-Hanh/06_So-Tu-Vi-mau/05_Nu-menh-vo-chinh-dieu-Canh-Ngo.md",
+  "bookPage": "TVTH tr.167–168",
+  "confidence": "high",
+  "birth": {
+    "calendar": "lunar",
+    "yearCanChi": "Canh Ngọ",
+    "year": 1990,
+    "month": 9,
+    "day": 11,
+    "hourBranch": "Sửu",
+    "gender": "nữ",
+    "isLeapMonth": false
+  },
+  "yearChoice": "Sách chỉ ghi can chi; chọn 1990 là năm trong 1800–2199 cùng can chi và có ngày âm này.",
+  "options": {},
+  "expected": {
+    "polarity": "Dương Nữ",
+    "lifeBranch": "Dậu",
+    "bodyBranch": "Hợi",
+    "bureau": "Thủy nhị cục",
+    "nayin": "Lộ Bàng Thổ",
+    "palaces": {
+      "Mệnh": "Dậu",
+      "Phụ Mẫu": "Tuất",
+      "Phúc Đức": "Hợi",
+      "Điền Trạch": "Tý",
+      "Quan Lộc": "Sửu",
+      "Nô Bộc": "Dần",
+      "Thiên Di": "Mão",
+      "Tật Ách": "Thìn",
+      "Tài Bạch": "Tỵ",
+      "Tử Tức": "Ngọ",
+      "Phu Thê": "Mùi",
+      "Huynh Đệ": "Thân"
+    },
+    "stars": {
+      "Dậu": [
+        "Văn Xương",
+        "Kình Dương",
+        "Hồng Loan",
+        "Thiếu Âm",
+        "Thiên Diêu",
+        "Thiên Y",
+        "Dưỡng",
+        "Quan Phủ"
+      ],
+      "Mão": [
+        "Thái Dương",
+        "Thiên Lương",
+        "Tấu Thư",
+        "Phong Cáo",
+        "Thiên Hỷ",
+        "Phúc Đức",
+        "Thiên Đức",
+        "Đào Hoa"
+      ],
+      "Tỵ": [
+        "Thiên Cơ",
+        "Văn Khúc"
+      ],
+      "Sửu": [
+        "Thiên Đồng",
+        "Cự Môn"
+      ],
+      "Hợi": [
+        "Thái Âm",
+        "Nguyệt Đức",
+        "Kiếp Sát",
+        "Tuần"
+      ],
+      "Mùi": [
+        "Thiên Không",
+        "Đà La",
+        "Triệt"
+      ],
+      "Ngọ": [
+        "Tử Vi",
+        "Thiên Khôi",
+        "Thanh Long",
+        "Ân Quang"
+      ],
+      "Tuất": [
+        "Quan Phù"
+      ]
+    },
+    "transformations": {
+      "Mão": [
+        "Hóa Lộc"
+      ],
+      "Sửu": [
+        "Hóa Khoa"
+      ],
+      "Hợi": [
+        "Hóa Kỵ"
+      ]
+    },
+    "patterns": [
+      "tien-cai-hau-ma"
+    ]
+  },
+  "addedStars": [
+    {
+      "star": "Quan Phủ",
+      "branch": "Dậu",
+      "reason": "Ảnh TVTH tr.167 ô Mệnh (Dậu) in 'Quan-Phủ' (vòng Bác Sĩ); KB chép thành 'Quan Phù'."
+    }
+  ],
+  "knownDiscrepancies": [],
+  "suspectedEngineBugs": [],
+  "spellingMap": {
+    "Thiên Riêu": "Thiên Diêu",
+    "Thiên Hỉ": "Thiên Hỷ"
+  },
+  "notes": []
+}

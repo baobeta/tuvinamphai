@@ -4,7 +4,9 @@ import { loadKb } from "../src/kb/index.js";
 import { ALL_TOOLS } from "../src/tools/index.js";
 import { toBirthInput } from "../src/tools/chart-tools.js";
 import { runTool, type ToolContext } from "../src/tools/registry.js";
-import { createChartStore } from "../src/tools/chart-store.js";
+import fs from "node:fs";
+import os from "node:os";
+import { chartIdOf, createChartStore, createWorkspaceChartStore } from "../src/tools/chart-store.js";
 import { DEFAULT_CHART_OPTIONS } from "../src/core/chart/types.js";
 
 const FIX = path.join(import.meta.dirname, "fixtures");
@@ -119,5 +121,65 @@ describe("kho lá số theo chart_id", () => {
     const ids = [0, 1, 2].map((n) => store.remember(fake(n), DEFAULT_CHART_OPTIONS, () => ({}) as never).id);
     expect(store.get(ids[0]!)).toBeUndefined();
     expect(store.size()).toBe(2);
+  });
+});
+
+describe("lưu lá số ra file", () => {
+  const birth = { calendar: "lunar", year: 1974, month: 3, day: 7, hour_branch: "Dần", gender: "nữ" };
+
+  it("phiên sau dùng lại được chart_id; file hỏng hoặc bị sửa thì bỏ qua", async () => {
+    const directory = fs.mkdtempSync(path.join(os.tmpdir(), "tuvi-charts-"));
+    const kb = await loadKb(path.join(FIX, "kb"));
+    const first: ToolContext = { kb, corpusRoot: FIX, charts: createWorkspaceChartStore(directory) };
+    const built = await runTool(toolMap, "build_chart", { birth }, first);
+    const id = /chart_id: (ls_[0-9a-f]+)/.exec(built.content)![1]!;
+    expect(fs.existsSync(path.join(directory, `${id}.json`))).toBe(true);
+
+    const second: ToolContext = { kb, corpusRoot: FIX, charts: createWorkspaceChartStore(directory) };
+    const forecast = await runTool(toolMap, "year_forecast", { chart_id: id, view_year: 2000 }, second);
+    expect(forecast.isError).toBe(false);
+    expect(forecast.content).toContain("27 tuổi âm");
+
+    const file = path.join(directory, `${id}.json`);
+    const saved = JSON.parse(fs.readFileSync(file, "utf8"));
+    fs.writeFileSync(file, JSON.stringify({ ...saved, input: { ...saved.input, gender: "nam" } }));
+    const third: ToolContext = { kb, corpusRoot: FIX, charts: createWorkspaceChartStore(directory) };
+    expect((await runTool(toolMap, "year_forecast", { chart_id: id, view_year: 2000 }, third)).isError).toBe(true);
+    expect((await runTool(toolMap, "year_forecast", { chart_id: "../../etc/passwd", view_year: 2000 }, third)).isError).toBe(true);
+    fs.rmSync(directory, { recursive: true, force: true });
+  });
+
+  it("ghi file với quyền 0600, báo khi không ghi được, file cũ thiếu tùy chọn mới vẫn mở được", async () => {
+    const directory = fs.mkdtempSync(path.join(os.tmpdir(), "tuvi-charts-"));
+    const kb = await loadKb(path.join(FIX, "kb"));
+    const ctx: ToolContext = { kb, corpusRoot: FIX, charts: createWorkspaceChartStore(directory) };
+    const built = await runTool(toolMap, "build_chart", { birth }, ctx);
+    const id = /chart_id: (ls_[0-9a-f]+)/.exec(built.content)![1]!;
+    const file = path.join(directory, `${id}.json`);
+    expect(fs.statSync(file).mode & 0o777).toBe(0o600);
+    expect(fs.readdirSync(directory).filter((name) => name.endsWith(".tmp"))).toEqual([]);
+
+    const saved = JSON.parse(fs.readFileSync(file, "utf8"));
+    const { khoiVietForTan: _dropped, ...olderOptions } = saved.options;
+    const olderId = chartIdOf(saved.input, olderOptions);
+    fs.writeFileSync(path.join(directory, `${olderId}.json`), JSON.stringify({ ...saved, id: olderId, options: olderOptions }));
+    const fresh: ToolContext = { kb, corpusRoot: FIX, charts: createWorkspaceChartStore(directory) };
+    expect((await runTool(toolMap, "year_forecast", { chart_id: olderId, view_year: 2000 }, fresh)).isError).toBe(false);
+
+    const blocked = path.join(directory, "khong-ghi-duoc");
+    fs.writeFileSync(blocked, "");
+    const failing: ToolContext = { kb, corpusRoot: FIX, charts: createWorkspaceChartStore(path.join(blocked, "con")) };
+    expect((await runTool(toolMap, "build_chart", { birth }, failing)).content).toContain("không ghi được ra file");
+    fs.rmSync(directory, { recursive: true, force: true });
+  });
+
+  it("chart_id sai định dạng và chart_id không tồn tại báo khác nhau", async () => {
+    const ctx: ToolContext = { kb: await loadKb(path.join(FIX, "kb")), corpusRoot: FIX, charts: createWorkspaceChartStore(null) };
+    expect((await runTool(toolMap, "year_forecast", { chart_id: "abc", view_year: 2000 }, ctx)).content).toContain("sai định dạng");
+    expect((await runTool(toolMap, "year_forecast", { chart_id: "ls_0123456789", view_year: 2000 }, ctx)).content).toContain("Không tìm thấy");
+  });
+
+  it("tắt lưu file thì chỉ nhớ trong phiên", () => {
+    expect(createWorkspaceChartStore(null).size()).toBe(0);
   });
 });

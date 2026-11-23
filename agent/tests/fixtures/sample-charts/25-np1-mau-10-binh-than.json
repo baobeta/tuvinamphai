@@ -1,0 +1,127 @@
+{
+  "id": "25-np1-mau-10-binh-than",
+  "title": "NP1 mẫu 10: Thất Sát, trẻ nhỏ Bính Thân (dương nam)",
+  "kbFile": "Kien-thuc-Tu-Vi-Nam-Phai/13_La-so-mau/25_NP1-Mau-10-That-Sat-Binh-Than-tre-nho.md",
+  "bookSource": "Tu-Vi-Nam-Phai_Phan-1/05_La-so-mau/10_La-so-mau-10.md",
+  "bookPage": "NP1 tr.275",
+  "confidence": "low",
+  "birth": {
+    "calendar": "lunar",
+    "yearCanChi": "Bính Thân",
+    "year": 2016,
+    "month": 9,
+    "day": 2,
+    "hourBranch": "Thìn",
+    "gender": "nam",
+    "isLeapMonth": false
+  },
+  "yearChoice": "Ảnh ghi năm 2016 (Bính Thân), tháng 9 Mậu Tuất, ngày 2 Đinh Tỵ (âm lịch), giờ Thìn.",
+  "options": {},
+  "expected": {
+    "polarity": "Dương Nam",
+    "lifeBranch": "Ngọ",
+    "bodyBranch": "Dần",
+    "bureau": "Kim tứ cục",
+    "nayin": "Sơn Hạ Hỏa",
+    "palaces": {
+      "Mệnh": "Ngọ",
+      "Phụ Mẫu": "Mùi",
+      "Phúc Đức": "Thân",
+      "Điền Trạch": "Dậu",
+      "Quan Lộc": "Tuất",
+      "Nô Bộc": "Hợi",
+      "Thiên Di": "Tý",
+      "Tật Ách": "Sửu",
+      "Tài Bạch": "Dần",
+      "Tử Tức": "Mão",
+      "Phu Thê": "Thìn",
+      "Huynh Đệ": "Tỵ"
+    },
+    "stars": {
+      "Ngọ": [
+        "Thất Sát",
+        "Hỏa Tinh",
+        "Linh Tinh",
+        "Ân Quang",
+        "Điếu Khách",
+        "Lực Sĩ",
+        "Mộc Dục"
+      ],
+      "Dần": [
+        "Tham Lang",
+        "Hữu Bật",
+        "Đại Hao",
+        "Thiên Mã",
+        "Tuế Phá",
+        "Thiên Hư",
+        "Giải Thần",
+        "Phượng Các"
+      ],
+      "Thìn": [
+        "Thiên Tướng"
+      ],
+      "Tỵ": [
+        "Thiên Lương",
+        "Thiên Hình",
+        "Kiếp Sát",
+        "Thiên Quan"
+      ],
+      "Mùi": [
+        "Hồng Loan",
+        "Địa Không",
+        "Thanh Long"
+      ],
+      "Thân": [
+        "Liêm Trinh",
+        "Văn Khúc"
+      ],
+      "Dậu": [
+        "Thiên Không",
+        "Đào Hoa",
+        "Thiên Diêu"
+      ],
+      "Tuất": [
+        "Phá Quân"
+      ],
+      "Hợi": [
+        "Thiên Đồng",
+        "Thiên Khôi"
+      ],
+      "Tý": [
+        "Vũ Khúc",
+        "Thiên Phủ"
+      ],
+      "Sửu": [
+        "Thái Dương",
+        "Thái Âm"
+      ],
+      "Mão": [
+        "Thiên Cơ",
+        "Cự Môn",
+        "Địa Kiếp"
+      ]
+    },
+    "transformations": {
+      "Ngọ": [
+        "Hóa Khoa"
+      ],
+      "Thân": [
+        "Hóa Kỵ"
+      ],
+      "Hợi": [
+        "Hóa Lộc"
+      ],
+      "Mão": [
+        "Hóa Quyền"
+      ]
+    },
+    "patterns": []
+  },
+  "addedStars": [],
+  "knownDiscrepancies": [],
+  "suspectedEngineBugs": [],
+  "spellingMap": {
+    "Lục Sĩ": "Lực Sĩ"
+  },
+  "notes": []
+}

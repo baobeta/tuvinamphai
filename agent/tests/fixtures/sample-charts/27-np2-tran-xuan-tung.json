@@ -1,0 +1,88 @@
+{
+  "id": "27-np2-tran-xuan-tung",
+  "title": "NP2: Trần Xuân Tùng (Đinh Mão, nam)",
+  "kbFile": "Kien-thuc-Tu-Vi-Nam-Phai/13_La-so-mau/27_NP2-Giai-la-so-Tran-Xuan-Tung.md",
+  "bookSource": "Tu-Vi-Nam-Phai_Phan-2/05_Xem-ngay-va-giai-la-so-mau/02_Giai-La-So.md",
+  "bookPage": "NP2 tr.247–248",
+  "confidence": "low",
+  "birth": {
+    "calendar": "solar",
+    "yearCanChi": "Đinh Mão",
+    "year": 1987,
+    "month": 12,
+    "day": 10,
+    "hour": 14,
+    "minute": 30,
+    "gender": "nam"
+  },
+  "yearChoice": "Sách ghi 10/12/1987 dương lịch (âm lịch 20/10/1987, Đinh Mão), 14h30; giới tính nam theo lời giảng ('chưa vợ').",
+  "options": {},
+  "expected": {
+    "polarity": "Âm Nam",
+    "lifeBranch": "Thìn",
+    "bodyBranch": "Ngọ",
+    "palaces": {
+      "Mệnh": "Thìn",
+      "Phụ Mẫu": "Tỵ",
+      "Phúc Đức": "Ngọ",
+      "Điền Trạch": "Mùi",
+      "Quan Lộc": "Thân",
+      "Nô Bộc": "Dậu",
+      "Thiên Di": "Tuất",
+      "Tật Ách": "Hợi",
+      "Tài Bạch": "Tý",
+      "Tử Tức": "Sửu",
+      "Phu Thê": "Dần",
+      "Huynh Đệ": "Mão"
+    },
+    "stars": {
+      "Thìn": [
+        "Thiên Đồng",
+        "Thiên Không",
+        "Địa Không",
+        "Thanh Long"
+      ],
+      "Ngọ": [
+        "Địa Kiếp",
+        "Thiên Hình"
+      ],
+      "Dần": [
+        "Triệt"
+      ],
+      "Hợi": [
+        "Bạch Hổ",
+        "Thiên Tướng"
+      ],
+      "Tỵ": [
+        "Thiên Mã",
+        "Vũ Khúc"
+      ],
+      "Mùi": [
+        "Thiên Phủ",
+        "Long Trì",
+        "Phượng Các"
+      ]
+    },
+    "transformations": {
+      "Thân": [
+        "Hóa Khoa",
+        "Hóa Lộc"
+      ]
+    },
+    "patterns": []
+  },
+  "addedStars": [],
+  "knownDiscrepancies": [
+    {
+      "kind": "lecture-note",
+      "star": "Thiên Mã",
+      "bookBranch": "Hợi",
+      "engineBranch": "Tỵ",
+      "reason": "Ghi chú giảng liệt kê Thiên Mã ở cả Tật Ách lẫn Phụ Mẫu; Thiên Mã chỉ có một. Năm Mão Thiên Mã ở Tỵ (Phụ Mẫu), xung chiếu Tật Ách; câu 'Quan: Khoa Lộc nhị hợp Thiên Mã' (Thân nhị hợp Tỵ) cũng xác nhận Tỵ.",
+      "source": "NP2 tr.247: 'Tật: Bạch Hổ / Thiên Mã: ngày chết có xe đưa ma đi xa'; 'Phụ mẫu: Kiếm tiền tốt (Thiên mã - Vũ)'"
+    }
+  ],
+  "suspectedEngineBugs": [],
+  "spellingMap": {},
+  "notes": []
+}

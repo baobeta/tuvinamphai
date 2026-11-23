@@ -12,7 +12,8 @@ export type SourceVariant = "TVTH" | "MLTC";
 export interface ChartOptions {
   readonly leapMonthRule: LeapMonthRule;
   readonly lateRatHourNextDay: boolean;
-  readonly khoiVietForCanh: SourceVariant;
+  readonly khoiVietForCanh: SourceVariant | "NP1";
+  readonly khoiVietForTan: "TVTH" | "NP1";
   readonly transformationsForCanh: SourceVariant;
   readonly khoaStarForNham: "Tả Phụ" | "Thiên Phủ";
   readonly hoaLinhForTyDauSuu: "TVTH" | "Tống";
@@ -23,6 +24,7 @@ export const DEFAULT_CHART_OPTIONS: ChartOptions = {
   leapMonthRule: "next-month",
   lateRatHourNextDay: false,
   khoiVietForCanh: "TVTH",
+  khoiVietForTan: "TVTH",
   transformationsForCanh: "TVTH",
   khoaStarForNham: "Tả Phụ",
   hoaLinhForTyDauSuu: "TVTH",

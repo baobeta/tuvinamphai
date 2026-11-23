@@ -1,6 +1,6 @@
 import { loadConfig } from "./config.js";
 import { loadKb } from "./kb/index.js";
-import { createChartStore } from "./tools/chart-store.js";
+import { createWorkspaceChartStore } from "./tools/chart-store.js";
 import { ALL_TOOLS } from "./tools/index.js";
 import { runTool } from "./tools/registry.js";
 
@@ -26,7 +26,7 @@ async function main(): Promise<void> {
     return;
   }
   const config = loadConfig();
-  const ctx = { kb: await loadKb(config.kbRoot), corpusRoot: config.corpusRoot, charts: createChartStore() };
+  const ctx = { kb: await loadKb(config.kbRoot), corpusRoot: config.corpusRoot, charts: createWorkspaceChartStore(config.chartDir) };
   const toolMap = new Map(ALL_TOOLS.map((tool) => [tool.name, tool]));
   let lastChartId: string | undefined;
   for (let i = 0; i < args.length; i += 2) {

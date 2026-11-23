@@ -488,4 +488,11 @@ describe("hồi quy theo phản biện độc lập", () => {
     expect(matched).toBe(true);
     expect(finding.breakers.some((text) => text.startsWith("Kình Dương"))).toBe(false);
   });
+
+  it("Tuyệt xứ phùng sinh lá số Nam Kỷ Hợi (TVTH tr.182–183): Mệnh Mộc ở Thân tuyệt địa, được Tử Phủ, Khôi Việt cứu", () => {
+    const { matched, finding } = evaluationOf([2019, 7, 28, "Tý", "nam"], "tuyet-xu-phung-sinh");
+    expect(matched).toBe(true);
+    expect(finding.certainty).toBe("interpretive");
+    expect(finding.satisfied.some((text) => text.includes("Tử Vi/Thiên Phủ") || text.includes("Tam") || text.includes("sao ["))).toBe(true);
+  });
 });

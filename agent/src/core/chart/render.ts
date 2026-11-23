@@ -20,7 +20,11 @@ const starsOfGroup = (palace: Palace, groups: readonly string[]): string =>
 const palaceLabel = (palace: Palace): string =>
   `${palace.role}${palace.isBodyPalace ? " (Thân)" : ""} · ${stemName(palace.stem)} ${branchName(palace.branch)}`;
 
-export function renderChart(chart: Chart): string {
+export type ChartRenderDetail = "brief" | "full";
+
+export const SHA_STARS: readonly string[] = ["Kình Dương", "Đà La", "Hỏa Tinh", "Linh Tinh", "Địa Không", "Địa Kiếp"];
+
+export function renderChart(chart: Chart, detail: ChartRenderDetail = "full"): string {
   const { parameters: p, birth } = chart;
   const lunar = birth.lunar;
   const solarText = birth.solar ? `${birth.solar.day}/${birth.solar.month}/${birth.solar.year}` : "—";
@@ -33,6 +37,20 @@ export function renderChart(chart: Chart): string {
     `- Mệnh ở ${branchName(p.lifePalace)}, Thân cư ${chart.bodyPalaceRole} (${branchName(p.bodyPalace)})`,
   ];
   const ordered = Array.from({ length: 12 }, (_, i) => chart.palaces[(p.lifePalace + i) % 12]!);
+  const notes = chart.notes.length ? ["", "## Ghi chú và dị bản", ...chart.notes.map((note) => `- ${note}`)] : [];
+  if (detail === "brief") {
+    const briefTable = [
+      "| Cung | Chính tinh | Tứ Hóa / Tuần Triệt | Sát tinh |",
+      "|---|---|---|---|",
+      ...ordered.map((palace) => {
+        const transformed = palace.stars.filter((star) => star.transformation && star.group !== "chính tinh").map(formatStar);
+        const voids = palace.stars.filter((star) => star.group === "Tuần Triệt").map((star) => star.name);
+        const sha = palace.stars.filter((star) => SHA_STARS.includes(star.name)).map((star) => star.name);
+        return `| ${[palaceLabel(palace), starsOfGroup(palace, ["chính tinh"]), [...transformed, ...voids].join(", ") || "—", sha.join(", ") || "—"].join(" | ")} |`;
+      }),
+    ];
+    return [...header, "", ...briefTable, ...notes].join("\n");
+  }
   const table = [
     "| Cung | Đại hạn | Tiểu hạn | Chính tinh | Tứ Hóa / Tuần Triệt | Phụ tinh | Vòng sao |",
     "|---|---|---|---|---|---|---|",
@@ -50,16 +68,22 @@ export function renderChart(chart: Chart): string {
       ].join(" | ");
     }).map((row) => `| ${row} |`),
   ];
-  const notes = chart.notes.length ? ["", "## Ghi chú và dị bản", ...chart.notes.map((note) => `- ${note}`)] : [];
   return [...header, "", ...table, ...notes].join("\n");
 }
 
-export function renderYearView(chart: Chart, view: YearView): string {
+export function renderYearView(chart: Chart, view: YearView, detail: ChartRenderDetail = "full"): string {
   const flowingByPalace = new Map<number, string[]>();
   for (const star of view.flowingStars) {
     flowingByPalace.set(star.palace, [...(flowingByPalace.get(star.palace) ?? []), star.name]);
   }
   const describe = (palace: Palace): string => `${palace.role} (${branchName(palace.branch)})`;
+  const sortedFlowing = [...flowingByPalace.entries()].sort(([a], [b]) => a - b);
+  const flowingTable = [
+    "",
+    "| Cung | Sao lưu niên |",
+    "|---|---|",
+    ...sortedFlowing.map(([branch, names]) => `| ${describe(chart.palaces[branch]!)} | ${names.join(", ")} |`),
+  ];
   return [
     `# Vận hạn năm ${stemBranchName(view.viewYearStemBranch)} (${view.viewYear}) · ${view.age} tuổi âm`,
     view.majorPeriod
@@ -71,11 +95,8 @@ export function renderYearView(chart: Chart, view: YearView): string {
     `- Tứ Hóa lưu niên (can ${stemName(view.viewYearStemBranch.stem)}): ${view.flowingTransformations
       .map((item) => `${item.star} ${item.transformation}${item.palace === null ? "" : ` tại ${describe(chart.palaces[item.palace]!)}`}`)
       .join(" · ")}`,
-    "",
-    "| Cung | Sao lưu niên |",
-    "|---|---|",
-    ...[...flowingByPalace.entries()]
-      .sort(([a], [b]) => a - b)
-      .map(([branch, names]) => `| ${describe(chart.palaces[branch]!)} | ${names.join(", ")} |`),
+    ...(detail === "brief"
+      ? [`- Sao lưu niên: ${sortedFlowing.map(([branch, names]) => `${branchName(branch)}: ${names.join(", ")}`).join(" · ")}`]
+      : flowingTable),
   ].join("\n");
 }

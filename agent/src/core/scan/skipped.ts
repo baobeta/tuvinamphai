@@ -1,0 +1,208 @@
+export interface SkippedTrigger {
+  readonly id: string;
+  readonly topic: string;
+  readonly rule: string;
+  readonly source: string;
+  readonly reason: string;
+}
+
+const GAP_SCOPE = "\"gặp\" liệt kê nhiều sao nhưng sách không nói cần đủ hết hay chỉ vài sao, cũng không nói tầng hạn nào (A-GAP-SCOPE)";
+
+export const SKIPPED_TRIGGERS: readonly SkippedTrigger[] = [
+  {
+    id: "HN-LUU-DAO-HONG-HY",
+    topic: "hôn nhân",
+    rule: "Lưu Đào Hoa / Lưu Hồng Loan / Lưu Thiên Hỷ",
+    source: "MLTC tr.903-944",
+    reason: "Kho không có cách an Lưu Hồng Loan, Lưu Thiên Hỷ, Lưu Đào Hoa (A-UNDEFINED-LUU); chỉ xét Hồng Loan, Đào Hoa gốc.",
+  },
+  {
+    id: "HN-NP1-HAN-CO-HY",
+    topic: "hôn nhân",
+    rule: "Hạn có hỷ: Liêm Trinh, Hoa Cái, Long Phượng, Thiên Hỷ, Hỷ Thần, Đào Hoa, Thai",
+    source: "NP1 tr.111-142",
+    reason: "Chỉ là danh sách sao, không nêu cần bao nhiêu sao hay tầng hạn nào.",
+  },
+  {
+    id: "HN-MLTC-DAI-HAN-5-NAM",
+    topic: "hôn nhân",
+    rule: "Đại hạn ứng năm năm đầu hoặc năm năm cuối",
+    source: "MLTC tr.903-944",
+    reason: "Sách nói rõ không xác định chính xác năm; \"trạng thái ứng\" không được định nghĩa.",
+  },
+  {
+    id: "HN-MLTC-LUU-NIEN-TU-DIEN-TAT-PHU",
+    topic: "hôn nhân",
+    rule: "Lưu niên rơi vào Tử, Điền, Tật (lên xe trước) / Phụ Mẫu (cha mẹ sắp xếp)",
+    source: "MLTC tr.903-944",
+    reason: "Mô tả cách thức kết hôn khi đã có dấu hiệu, không tự là dấu hiệu năm kết hôn.",
+  },
+  {
+    id: "HN-MLTC-CAN-HAI-BEN",
+    topic: "hôn nhân",
+    rule: "Can Lưu niên hai bên không hóa Kỵ chính tinh Mệnh đối phương",
+    source: "MLTC tr.903-944",
+    reason: "Cần lá số người kia.",
+  },
+  {
+    id: "HN-MLTC-THOI-HAN-THEO-NAM",
+    topic: "hôn nhân",
+    rule: "Thời hạn tối đa theo năm: nam xem can cung Bộc Dịch, nữ xem can cung Tật Ách",
+    source: "MLTC tr.903-944",
+    reason: "Kho chỉ tóm tắt tên cung, không nêu sao hóa nào phải vào cung nào.",
+  },
+  {
+    id: "HN-MLTC-HONG-HY-DAI-HAN-HAI",
+    topic: "hôn nhân",
+    rule: "Hồng Loan, Thiên Hỉ nhập Mệnh hoặc đại hạn thứ hai: kết hôn sớm",
+    source: "MLTC tr.903-944",
+    reason: "Quy tắc định sớm/muộn theo mệnh cách, không chỉ ra năm.",
+  },
+  {
+    id: "HN-TVTH-GIAN-DIU",
+    topic: "hôn nhân",
+    rule: "Cung Thê có Tả Hữu Hồng Đào chiếu, Tiểu hạn gặp dâm tinh",
+    source: "TVTH tr.138-139",
+    reason: "\"Dâm tinh\" không được liệt kê.",
+  },
+  {
+    id: "HN-TVTH-DUYEN-DANG-DO",
+    topic: "hôn nhân",
+    rule: "Cung duyên dang dở (Cô Quả ngộ Không Kiếp; Kình Đà Không Kiếp ngộ Tuần Triệt; ...) đến hạn gặp",
+    source: "TVTH tr.138-139",
+    reason: `Không rõ bộ sao ở cung gốc nào và ${GAP_SCOPE}; nội dung sinh ly tử biệt giữ nhãn cổ thư.`,
+  },
+  {
+    id: "HN-NP1-MA-TUAN-TRIET-HINH-PHI-KY",
+    topic: "hôn nhân",
+    rule: "Mã Tuần Triệt, Mã Hình (bế con bỏ đi); Phi Hóa Kỵ cư Phúc",
+    source: "NP1 tr.111-142",
+    reason: "Không nói cung nào, tầng hạn nào, can nào phi Hóa Kỵ.",
+  },
+  {
+    id: "TL-TVTH-DANG-KHOA-THANG-CHUC",
+    topic: "công danh, thi cử",
+    rule: "Hạn cần có Đào Hồng, Xương Khúc, Khôi Việt, Khoa Quyền, hoặc thêm Thai Cáo, Quốc Ấn",
+    source: "TVTH tr.138",
+    reason: "Không rõ cần đủ cả bốn cặp hay chỉ một vài cặp.",
+  },
+  {
+    id: "TL-NP-DAI-VAN-CHINH-TINH",
+    topic: "tài lộc, con cái",
+    rule: "Đại vận Thái Dương / Thái Âm / Thiên Đồng / Phá Quân phát; vận Thái Âm sinh con",
+    source: "NP1 tr.111-142; NP2 tr.148-154, tr.262-266",
+    reason: "\"Nhập hạn\" chưa định nghĩa (tọa hay chiếu) và còn phụ thuộc miếu hãm (PH-CHINH-TINH-NHAP-HAN-LOOKUP).",
+  },
+  {
+    id: "TL-NP1-TAI-TINH",
+    topic: "tài lộc",
+    rule: "Mệnh, Tài, Quan nhiều tài tinh: thiên hướng kinh doanh",
+    source: "NP1",
+    reason: "Quy tắc bản mệnh, không phải dấu hiệu năm.",
+  },
+  {
+    id: "CD-MLTC-QUAN-LOC-HOA-XUAT",
+    topic: "công danh",
+    rule: "Quan Lộc hóa xuất Hóa Lộc / Quyền / Khoa / Kỵ",
+    source: "MLTC tr.865-882",
+    reason: "Không nói Quan Lộc tầng nào và hóa xuất vào cung nào.",
+  },
+  {
+    id: "TC-MLTC-1-2-3",
+    topic: "thi cử",
+    rule: "Quy tắc 1-3: cấp học, Văn Xương nhập Mệnh, Tử Vi Văn Xương cùng Mệnh gặp năm tốt",
+    source: "MLTC tr.865-882",
+    reason: "\"Năm Lưu niên hoặc Tiểu hạn tốt\" không định nghĩa; quy tắc 1 đo cấp học.",
+  },
+  {
+    id: "TC-MLTC-5-6-9",
+    topic: "thi cử",
+    rule: "Quy tắc 5, 6, 9: Dương Lương Xương Lộc; hai trong Cơ Đồng Lương; Phù Tướng Xương Khúc Khoa Lộc Quyền",
+    source: "MLTC tr.865-882",
+    reason: "Danh sách sao không có ngưỡng, kèm \"không sát\" và miếu vượng chưa định nghĩa thao tác.",
+  },
+  {
+    id: "TC-MLTC-12",
+    topic: "thi cử",
+    rule: "Lưu Xương, Lưu Khúc thêm 2-3 cát tinh",
+    source: "MLTC tr.865-882",
+    reason: "Kho không có cách an Lưu Xương, Lưu Khúc (A-UNDEFINED-LUU).",
+  },
+  {
+    id: "TC-MLTC-13-14",
+    topic: "thi cử",
+    rule: "Cung Phụ Mẫu hung xấu, sao khoa văn Hóa Kỵ hoặc lạc hãm gặp sát kỵ: thi trượt",
+    source: "MLTC tr.865-882",
+    reason: "\"Hung xấu\", \"sao khoa văn\" và tầng hạn không định nghĩa.",
+  },
+  {
+    id: "SK-TVTH-THAT-LOI",
+    topic: "sức khỏe",
+    rule: "Đại Tiểu hạn thất lợi: Cơ Nguyệt Đồng Lương / Cự Nhật / Nhật Nguyệt / Phá Liêm Tham / Thiên Đồng / Sát Phá Tham gặp sát tinh",
+    source: "TVTH tr.139-140",
+    reason: `${GAP_SCOPE}; nội dung tai nạn giữ nhãn cổ thư.`,
+  },
+  {
+    id: "SK-TVTH-NGA-CAO",
+    topic: "sức khỏe",
+    rule: "Cơ Lương ở Thìn Tuất mà Tiểu hạn gặp Tang Điếu Tuế Khốc Hư",
+    source: "TVTH tr.140",
+    reason: "Không rõ Cơ Lương ở Thìn Tuất là cung Mệnh, cung hạn hay bất kỳ cung nào.",
+  },
+  {
+    id: "SK-MLTC-BENH-THEO-SAO",
+    topic: "sức khỏe",
+    rule: "Can cung Tật Ách lưu niên hóa Kỵ sao B: bệnh ứng sao B",
+    source: "MLTC tr.883-899",
+    reason: "Năm nào cũng có một sao Hóa Kỵ; quy tắc nói loại bệnh, không chỉ ra năm.",
+  },
+  {
+    id: "SK-MLTC-THIEN-DI-TU-KY",
+    topic: "sức khỏe",
+    rule: "Thiên Di tự Hóa Kỵ xung Mệnh (tai họa bất ngờ)",
+    source: "MLTC tr.883-899 (mục 8)",
+    reason: "Không nói Thiên Di tầng nào (bản mệnh, đại hạn hay lưu niên).",
+  },
+  {
+    id: "SK-MLTC-KINH-MA-LUU-NIEN",
+    topic: "sức khỏe",
+    rule: "Kình Dương nhập Lưu niên, có Thiên Mã trong cung: dễ tai nạn xe cộ",
+    source: "MLTC tr.846-847 (quy tắc 4)",
+    reason: "Theo cách an của kho, Thiên Mã chỉ ở Dần, Thân, Tỵ, Hợi còn Kình Dương (gốc hay lưu) không bao giờ ở bốn cung đó, nên đọc nguyên văn \"trong cung\" thì không bao giờ xảy ra; sách không nói đọc theo hội chiếu.",
+  },
+  {
+    id: "SK-LUU-NGUYET-NHAT",
+    topic: "sức khỏe",
+    rule: "Quy tắc lưu nguyệt, lưu nhật (Kình Mã, Hỏa Linh, Chiến Mã...)",
+    source: "MLTC tr.848-861",
+    reason: "Thuộc tầng tháng/ngày, ngoài phạm vi quét theo năm (MLTC-848-LUU-NGUYET-NHAT).",
+  },
+  {
+    id: "SC-BO-CAN-TRO",
+    topic: "con cái",
+    rule: "Bộ cản trở sinh con (Cự, Sát, Âm Dương hãm, Vũ Khúc, Đà, Hình, Hao, Diêu, Kỵ, Không Kiếp...)",
+    source: "NP1 tr.111-142; TVTH tr.152",
+    reason: "Danh sách không ngưỡng, phần lớn là quy tắc bản mệnh hoặc cần miếu hãm.",
+  },
+  {
+    id: "TANG-CHE",
+    topic: "tang chế",
+    rule: "Chín bộ phòng tang sự và các câu Tang Hổ Khốc Hư",
+    source: "TVTH tr.140; NP1; NP2",
+    reason: "Điều kiện \"cách hạn khác cách gốc Phụ Mẫu\", cửu phi tinh và tỷ lệ 2/3 không thao tác được; nội dung tang sự không dùng để báo cho người thật.",
+  },
+  {
+    id: "KIEN-TUNG",
+    topic: "kiện tụng",
+    rule: "Bộ sao kiện tụng, tù tội (Thất Sát gia Hình Hổ Quan Phủ ở cung hãm...)",
+    source: "TVTH tr.137, tr.139-140, tr.151-157; MLTC tr.899-903",
+    reason: "\"Cung hãm\", \"hung tinh\", \"Lưu Sát\" không định nghĩa; Lưu Sát không có cách an.",
+  },
+  {
+    id: "TUOI-THO",
+    topic: "tuổi thọ",
+    rule: "Thủ tục xét hạn nguy và quy tắc thọ nguyên",
+    source: "TVTH tr.158; MLTC tr.883-899",
+    reason: "Kho chỉ trình bày như cổ thư, không dùng để đưa mốc năm cho người thật; \"xung khắc tuổi nhất\", \"mờ ám nhất\" không định nghĩa.",
+  },
+];

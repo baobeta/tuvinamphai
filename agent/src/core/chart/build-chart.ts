@@ -49,13 +49,18 @@ function variantNotes(params: ChartParameters, options: ChartOptions): readonly 
   return [
     ...(stem === 6
       ? [
-          `Tuổi Canh: Khôi Việt theo ${options.khoiVietForCanh} (TVTH: Ngọ–Dần; MLTC: Sửu–Mùi).`,
+          `Tuổi Canh: Khôi Việt theo ${options.khoiVietForCanh} (TVTH: Khôi Ngọ, Việt Dần; MLTC: Sửu–Mùi; NP1: Khôi Dần, Việt Ngọ).`,
           `Tuổi Canh: Tứ Hóa theo ${options.transformationsForCanh} (TVTH: Đồng Khoa, Âm Kỵ; MLTC Ch.3: Âm Khoa, Đồng Kỵ).`,
         ]
       : []),
     ...(stem === 8 ? [`Tuổi Nhâm: Hóa Khoa là ${options.khoaStarForNham} (bài thơ TVTH in Thiên Phủ; phần lớn sách ghi Tả Phụ).`] : []),
     ...(stem === 4 ? ["Tuổi Mậu: Hóa Khoa an ở Hữu Bật theo TVTH; MLTC có chỗ ghi Tả Phù."] : []),
-    ...(stem === 7 ? ["Tuổi Tân: Hóa Lộc ở Cự Môn; bài thơ TVTH tr.14 in \"Vũ\" là lỗi in."] : []),
+    ...(stem === 7
+      ? [
+          "Tuổi Tân: Hóa Lộc ở Cự Môn; bài thơ TVTH tr.14 in \"Vũ\" là lỗi in.",
+          `Tuổi Tân: Khôi Việt theo ${options.khoiVietForTan} (TVTH: Khôi Ngọ, Việt Dần; NP1: Khôi Dần, Việt Ngọ).`,
+        ]
+      : []),
     ...(trineGroup(params.year.branch) === 1
       ? [`Tuổi Tỵ Dậu Sửu: Hỏa Linh theo ${options.hoaLinhForTyDauSuu} (TVTH: Hỏa khởi Mão, Linh khởi Tuất; bản đời Tống trong MLTC: Hỏa Tuất, Linh Mão).`]
       : []),

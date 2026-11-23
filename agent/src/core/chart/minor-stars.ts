@@ -11,6 +11,7 @@ const KHOI_VIET_BY_STEM: ReadonlyArray<readonly [number, number]> = [
   [1, 7], [0, 8], [11, 9], [11, 9], [1, 7], [0, 8], [6, 2], [6, 2], [3, 5], [3, 5],
 ];
 const KHOI_VIET_CANH_MLTC: readonly [number, number] = [1, 7];
+const KHOI_VIET_CANH_TAN_NP1: readonly [number, number] = [2, 6];
 
 const LOC_TON_BY_STEM: readonly number[] = [2, 3, 5, 6, 5, 6, 8, 9, 11, 0];
 
@@ -44,8 +45,11 @@ export const trietPalaces = (yearStem: number): readonly [number, number] => {
 export const hongLoanPalace = (yearBranch: number): number => mod(3 - yearBranch, 12);
 
 export function khoiVietPalaces(yearStem: number, options: ChartOptions): readonly [number, number] {
-  const isCanh = mod(yearStem, 10) === 6;
-  return isCanh && options.khoiVietForCanh === "MLTC" ? KHOI_VIET_CANH_MLTC : KHOI_VIET_BY_STEM[mod(yearStem, 10)]!;
+  const stem = mod(yearStem, 10);
+  if (stem === 6 && options.khoiVietForCanh === "MLTC") return KHOI_VIET_CANH_MLTC;
+  if (stem === 6 && options.khoiVietForCanh === "NP1") return KHOI_VIET_CANH_TAN_NP1;
+  if (stem === 7 && options.khoiVietForTan === "NP1") return KHOI_VIET_CANH_TAN_NP1;
+  return KHOI_VIET_BY_STEM[stem]!;
 }
 
 export function hoaLinhPalaces(params: ChartParameters, options: ChartOptions): { hoa: number; linh: number } {

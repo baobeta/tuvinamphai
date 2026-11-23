@@ -1,0 +1,120 @@
+{
+  "id": "19-np1-mau-04-tan-dau",
+  "title": "NP1 mẫu 4: Cự Cơ tại Mão (Tân Dậu, âm nam)",
+  "kbFile": "Kien-thuc-Tu-Vi-Nam-Phai/13_La-so-mau/19_NP1-Mau-04-Cu-Co-tai-Mao-Tan-Dau.md",
+  "bookSource": "Tu-Vi-Nam-Phai_Phan-1/05_La-so-mau/04_La-so-mau-4.md",
+  "bookPage": "NP1 tr.256",
+  "confidence": "low",
+  "birth": {
+    "calendar": "lunar",
+    "yearCanChi": "Tân Dậu",
+    "year": 1981,
+    "month": 2,
+    "day": 11,
+    "hourBranch": "Tý",
+    "gender": "nam",
+    "isLeapMonth": false
+  },
+  "yearChoice": "Ảnh ghi năm 1981 (Tân Dậu), tháng 2 Tân Mão, ngày 11 Quý Tỵ (âm lịch), giờ Tý.",
+  "options": {
+    "khoiVietForTan": "NP1"
+  },
+  "expected": {
+    "polarity": "Âm Nam",
+    "lifeBranch": "Mão",
+    "bodyBranch": "Mão",
+    "bureau": "Mộc tam cục",
+    "nayin": "Thạch Lựu Mộc",
+    "palaces": {
+      "Mệnh": "Mão",
+      "Phụ Mẫu": "Thìn",
+      "Phúc Đức": "Tỵ",
+      "Điền Trạch": "Ngọ",
+      "Quan Lộc": "Mùi",
+      "Nô Bộc": "Thân",
+      "Thiên Di": "Dậu",
+      "Tật Ách": "Tuất",
+      "Tài Bạch": "Hợi",
+      "Tử Tức": "Tý",
+      "Phu Thê": "Sửu",
+      "Huynh Đệ": "Dần"
+    },
+    "stars": {
+      "Mão": [
+        "Thiên Cơ",
+        "Cự Môn",
+        "Hỏa Tinh",
+        "Tam Thai",
+        "Phi Liêm",
+        "Lưu Hà",
+        "Tuế Phá",
+        "Thiên Hư"
+      ],
+      "Tuất": [
+        "Phá Quân",
+        "Văn Xương",
+        "Linh Tinh",
+        "Kình Dương",
+        "Thiên Không",
+        "Thiên Hình",
+        "Quan Phủ",
+        "Địa Võng",
+        "Thiên Sứ"
+      ],
+      "Hợi": [
+        "Thiên Đồng",
+        "Địa Không",
+        "Địa Kiếp",
+        "Tang Môn"
+      ],
+      "Thìn": [
+        "Thiên Tướng",
+        "Văn Khúc"
+      ],
+      "Tỵ": [
+        "Thiên Lương"
+      ],
+      "Ngọ": [
+        "Thất Sát"
+      ],
+      "Thân": [
+        "Liêm Trinh"
+      ],
+      "Dậu": [
+        "Hữu Bật",
+        "Lộc Tồn",
+        "Thái Tuế"
+      ],
+      "Sửu": [
+        "Thái Dương",
+        "Thái Âm"
+      ],
+      "Tý": [
+        "Vũ Khúc"
+      ],
+      "Dần": [
+        "Tham Lang",
+        "Thiên Khôi"
+      ]
+    },
+    "transformations": {
+      "Mão": [
+        "Hóa Lộc"
+      ],
+      "Tuất": [
+        "Hóa Kỵ"
+      ],
+      "Thìn": [
+        "Hóa Khoa"
+      ]
+    },
+    "patterns": [
+      "cu-co-mao-dau"
+    ]
+  },
+  "addedStars": [],
+  "knownDiscrepancies": [],
+  "suspectedEngineBugs": [],
+  "spellingMap": {},
+  "notes": []
+}

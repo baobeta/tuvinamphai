@@ -9,6 +9,11 @@ describe("loadConfig", () => {
     expect(path.basename(path.join(import.meta.dirname, "..", ".."))).toBe(path.basename(REPO_ROOT));
     expect(cfg.kbRoot).toBe(path.join(REPO_ROOT, "Kien-thuc-Tu-Vi-Nam-Phai"));
   });
+  it("thư mục lưu lá số mặc định nằm trong .omc của workspace, tắt được bằng off", () => {
+    expect(loadConfig({}, "/x").chartDir).toBe(path.join(REPO_ROOT, ".omc", "charts"));
+    expect(loadConfig({ TUVI_CHART_DIR: "off" }).chartDir).toBeNull();
+    expect(loadConfig({ TUVI_CHART_DIR: "c" }, "/tmp").chartDir).toBe("/tmp/c");
+  });
   it("TUVI_WORKSPACE ghi đè, tính theo thư mục đang chạy", () => {
     expect(loadConfig({ TUVI_WORKSPACE: "x" }, "/tmp").corpusRoot).toBe("/tmp/x");
   });

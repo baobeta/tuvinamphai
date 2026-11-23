@@ -1,0 +1,114 @@
+{
+  "id": "14-nam-ky-hoi",
+  "title": "Nam Kỷ Hợi (âm nam)",
+  "kbFile": "Kien-thuc-Tu-Vi-Nam-Phai/13_La-so-mau/14_TVTH-Nam-Ky-Hoi.md",
+  "bookSource": "Tu-Vi-Thuc-Hanh/06_So-Tu-Vi-mau/14_Nam-Ky-Hoi.md",
+  "bookPage": "TVTH tr.182–183",
+  "confidence": "high",
+  "birth": {
+    "calendar": "lunar",
+    "yearCanChi": "Kỷ Hợi",
+    "year": 2019,
+    "month": 7,
+    "day": 28,
+    "hourBranch": "Tý",
+    "gender": "nam",
+    "isLeapMonth": false
+  },
+  "yearChoice": "Sách chỉ ghi can chi; chọn 2019 là năm trong 1800–2199 cùng can chi và có ngày âm này.",
+  "options": {},
+  "expected": {
+    "polarity": "Âm Nam",
+    "lifeBranch": "Thân",
+    "bodyBranch": "Thân",
+    "bureau": "Kim tứ cục",
+    "nayin": "Bình Địa Mộc",
+    "palaces": {
+      "Mệnh": "Thân",
+      "Phụ Mẫu": "Dậu",
+      "Phúc Đức": "Tuất",
+      "Điền Trạch": "Hợi",
+      "Quan Lộc": "Tý",
+      "Nô Bộc": "Sửu",
+      "Thiên Di": "Dần",
+      "Tật Ách": "Mão",
+      "Tài Bạch": "Thìn",
+      "Tử Tức": "Tỵ",
+      "Phu Thê": "Ngọ",
+      "Huynh Đệ": "Mùi"
+    },
+    "stars": {
+      "Thân": [
+        "Tử Vi",
+        "Thiên Phủ",
+        "Thiên Việt",
+        "Phục Binh",
+        "Phúc Đức",
+        "Thiên Đức",
+        "Kiếp Sát",
+        "Thiên Trù",
+        "Triệt",
+        "Tuyệt",
+        "Thiên Khố"
+      ],
+      "Tý": [
+        "Liêm Trinh",
+        "Thiên Tướng",
+        "Thiên Khôi",
+        "Ân Quang",
+        "Thiên Không",
+        "Thiếu Dương",
+        "Đào Hoa"
+      ],
+      "Thìn": [
+        "Vũ Khúc",
+        "Hữu Bật",
+        "Văn Khúc",
+        "Hồng Loan",
+        "Nguyệt Đức",
+        "Tuần"
+      ],
+      "Tuất": [
+        "Tham Lang",
+        "Tả Phụ",
+        "Văn Xương",
+        "Linh Tinh"
+      ],
+      "Dậu": [
+        "Thái Âm",
+        "Hỏa Tinh",
+        "Triệt"
+      ],
+      "Ngọ": [
+        "Phá Quân",
+        "Lộc Tồn"
+      ]
+    },
+    "transformations": {
+      "Thìn": [
+        "Hóa Lộc",
+        "Hóa Kỵ"
+      ],
+      "Tuất": [
+        "Hóa Quyền"
+      ]
+    },
+    "patterns": [
+      "tu-phu-dong-cung",
+      "tuyet-xu-phung-sinh"
+    ]
+  },
+  "addedStars": [
+    {
+      "star": "Thiên Khố",
+      "branch": "Thân",
+      "reason": "Lời sách TVTH tr.182: 'Thiên Khố thủ mệnh' (Mệnh Thân)."
+    }
+  ],
+  "knownDiscrepancies": [],
+  "suspectedEngineBugs": [],
+  "spellingMap": {
+    "Tả Phù": "Tả Phụ"
+  },
+  "notes": []
+}

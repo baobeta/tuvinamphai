@@ -1,0 +1,168 @@
+{
+  "id": "28-np2-phuong-anh",
+  "title": "NP2: Phương Anh (Mậu Dần, nữ)",
+  "kbFile": "Kien-thuc-Tu-Vi-Nam-Phai/13_La-so-mau/28_NP2-Giai-la-so-Phuong-Anh.md",
+  "bookSource": "Tu-Vi-Nam-Phai_Phan-2/05_Xem-ngay-va-giai-la-so-mau/02_Giai-La-So.md",
+  "bookPage": "NP2 tr.248–251",
+  "confidence": "low",
+  "birth": {
+    "calendar": "solar",
+    "yearCanChi": "Mậu Dần",
+    "year": 1998,
+    "month": 10,
+    "day": 20,
+    "hour": 0,
+    "minute": 0,
+    "gender": "nữ"
+  },
+  "yearChoice": "Sách ghi 20/10/1998 giờ Tý, không nói âm hay dương. Đọc là dương lịch (= âm 1/9 Mậu Dần) vì cho Mệnh Tuất có Hoa Cái, Bạch Hổ, Văn Xương, Thai như lời giảng; đọc âm lịch cho Mệnh Hợi không khớp.",
+  "options": {},
+  "expected": {
+    "polarity": "Dương Nữ",
+    "lifeBranch": "Tuất",
+    "palaces": {
+      "Mệnh": "Tuất",
+      "Phụ Mẫu": "Hợi",
+      "Phúc Đức": "Tý",
+      "Điền Trạch": "Sửu",
+      "Quan Lộc": "Dần",
+      "Nô Bộc": "Mão",
+      "Thiên Di": "Thìn",
+      "Tật Ách": "Tỵ",
+      "Tài Bạch": "Ngọ",
+      "Tử Tức": "Mùi",
+      "Phu Thê": "Thân",
+      "Huynh Đệ": "Dậu"
+    },
+    "stars": {
+      "Tuất": [
+        "Hoa Cái",
+        "Bạch Hổ",
+        "Hỷ Thần",
+        "Văn Xương",
+        "Thai"
+      ],
+      "Thân": [
+        "Thiên Mã"
+      ],
+      "Hợi": [
+        "Địa Không",
+        "Địa Kiếp"
+      ],
+      "Ngọ": [
+        "Kình Dương"
+      ],
+      "Mão": [
+        "Thiên Phúc",
+        "Thiên Quan"
+      ],
+      "Tỵ": [
+        "Thiên Hình"
+      ],
+      "Thìn": [
+        "Tang Môn"
+      ],
+      "Sửu": [
+        "Hồng Loan"
+      ]
+    },
+    "transformations": {},
+    "patterns": []
+  },
+  "addedStars": [],
+  "knownDiscrepancies": [
+    {
+      "kind": "birth-data",
+      "star": "Phá Quân",
+      "bookBranch": "Tuất",
+      "engineBranch": "Sửu",
+      "reason": "Sao phụ thuộc ngày sinh. Ngày 20/10/1998 dương = 1/9 Mậu Dần cho Tử Vi ở Sửu; mọi sao theo ngày trong lời giảng (Phá Quân Mệnh, Liêm Mã Phu, Sát Kình Tài, Đồng Không Kiếp Phụ Mẫu, Ân Quang và Cơ Hóa Kỵ ở Nô) khớp ngày âm 7/9 Mậu Dần (dương 26/10/1998). Dữ kiện ngày trong sách nhiều khả năng sai.",
+      "source": "NP2 tr.248: 'Phương Anh 20/10/1998 giờ Tý'"
+    },
+    {
+      "kind": "birth-data",
+      "star": "Liêm Trinh",
+      "bookBranch": "Thân",
+      "engineBranch": "Tỵ",
+      "reason": "Sao phụ thuộc ngày sinh. Ngày 20/10/1998 dương = 1/9 Mậu Dần cho Tử Vi ở Sửu; mọi sao theo ngày trong lời giảng (Phá Quân Mệnh, Liêm Mã Phu, Sát Kình Tài, Đồng Không Kiếp Phụ Mẫu, Ân Quang và Cơ Hóa Kỵ ở Nô) khớp ngày âm 7/9 Mậu Dần (dương 26/10/1998). Dữ kiện ngày trong sách nhiều khả năng sai.",
+      "source": "NP2 tr.248: 'Phương Anh 20/10/1998 giờ Tý'"
+    },
+    {
+      "kind": "birth-data",
+      "star": "Thiên Đồng",
+      "bookBranch": "Hợi",
+      "engineBranch": "Thân",
+      "reason": "Sao phụ thuộc ngày sinh. Ngày 20/10/1998 dương = 1/9 Mậu Dần cho Tử Vi ở Sửu; mọi sao theo ngày trong lời giảng (Phá Quân Mệnh, Liêm Mã Phu, Sát Kình Tài, Đồng Không Kiếp Phụ Mẫu, Ân Quang và Cơ Hóa Kỵ ở Nô) khớp ngày âm 7/9 Mậu Dần (dương 26/10/1998). Dữ kiện ngày trong sách nhiều khả năng sai.",
+      "source": "NP2 tr.248: 'Phương Anh 20/10/1998 giờ Tý'"
+    },
+    {
+      "kind": "birth-data",
+      "star": "Thất Sát",
+      "bookBranch": "Ngọ",
+      "engineBranch": "Dậu",
+      "reason": "Sao phụ thuộc ngày sinh. Ngày 20/10/1998 dương = 1/9 Mậu Dần cho Tử Vi ở Sửu; mọi sao theo ngày trong lời giảng (Phá Quân Mệnh, Liêm Mã Phu, Sát Kình Tài, Đồng Không Kiếp Phụ Mẫu, Ân Quang và Cơ Hóa Kỵ ở Nô) khớp ngày âm 7/9 Mậu Dần (dương 26/10/1998). Dữ kiện ngày trong sách nhiều khả năng sai.",
+      "source": "NP2 tr.248: 'Phương Anh 20/10/1998 giờ Tý'"
+    },
+    {
+      "kind": "birth-data",
+      "star": "Ân Quang",
+      "bookBranch": "Mão",
+      "engineBranch": "Dậu",
+      "reason": "Sao phụ thuộc ngày sinh. Ngày 20/10/1998 dương = 1/9 Mậu Dần cho Tử Vi ở Sửu; mọi sao theo ngày trong lời giảng (Phá Quân Mệnh, Liêm Mã Phu, Sát Kình Tài, Đồng Không Kiếp Phụ Mẫu, Ân Quang và Cơ Hóa Kỵ ở Nô) khớp ngày âm 7/9 Mậu Dần (dương 26/10/1998). Dữ kiện ngày trong sách nhiều khả năng sai.",
+      "source": "NP2 tr.248: 'Phương Anh 20/10/1998 giờ Tý'"
+    },
+    {
+      "kind": "birth-data",
+      "transformation": "Hóa Kỵ",
+      "bookBranch": "Mão",
+      "engineBranch": "Tý",
+      "reason": "Hóa Kỵ tuổi Mậu ở Thiên Cơ; với ngày 1/9 Thiên Cơ ở Tý, với ngày 7/9 ở Mão (Nô) như lời giảng.",
+      "source": "NP2 tr.249: '(Nô) Hóa Ky : bon chen, bạn không tốt'"
+    },
+    {
+      "kind": "lecture-note",
+      "star": "Triệt",
+      "bookBranch": "Thân",
+      "engineBranch": "Tý",
+      "reason": "Tuổi Mậu Triệt ở Tý Sửu; cung Phu (Thân) có Tuần (Mậu Dần thuộc tuần Giáp Tuất, Tuần ở Thân Dậu). Ghi chú giảng gọi nhầm Tuần thành Triệt.",
+      "source": "NP2 tr.249: '(Mệnh) Phá Quân, Hoa Cái ( Bạch Hổ) gặp (Phu) Thiên Mã, Triệt: dễ bỏ chồng'"
+    },
+    {
+      "kind": "lecture-note",
+      "star": "Đại Hao",
+      "bookBranch": "Tý",
+      "engineBranch": "Thân",
+      "reason": "Ghi chú giảng xếp Song Hao, Phượng Các vào cung Phúc (Tý); Phượng Các năm Dần ở Thân, Đại Hao ở Thân, Tiểu Hao ở Dần (Dương Nữ Lộc Tồn Tỵ đi nghịch). Nhóm sao này nằm ở cung Phu Thê (Thân), không phải Phúc.",
+      "source": "NP2 tr.250: 'Phúc: Song Hao : rất khôn / Văn tinh / Phượng Các: gia đình giàu có'"
+    },
+    {
+      "kind": "lecture-note",
+      "star": "Tiểu Hao",
+      "bookBranch": "Tý",
+      "engineBranch": "Dần",
+      "reason": "Ghi chú giảng xếp Song Hao, Phượng Các vào cung Phúc (Tý); Phượng Các năm Dần ở Thân, Đại Hao ở Thân, Tiểu Hao ở Dần (Dương Nữ Lộc Tồn Tỵ đi nghịch). Nhóm sao này nằm ở cung Phu Thê (Thân), không phải Phúc.",
+      "source": "NP2 tr.250: 'Phúc: Song Hao : rất khôn / Văn tinh / Phượng Các: gia đình giàu có'"
+    },
+    {
+      "kind": "lecture-note",
+      "star": "Phượng Các",
+      "bookBranch": "Tý",
+      "engineBranch": "Thân",
+      "reason": "Ghi chú giảng xếp Song Hao, Phượng Các vào cung Phúc (Tý); Phượng Các năm Dần ở Thân, Đại Hao ở Thân, Tiểu Hao ở Dần (Dương Nữ Lộc Tồn Tỵ đi nghịch). Nhóm sao này nằm ở cung Phu Thê (Thân), không phải Phúc.",
+      "source": "NP2 tr.250: 'Phúc: Song Hao : rất khôn / Văn tinh / Phượng Các: gia đình giàu có'"
+    },
+    {
+      "kind": "lecture-note",
+      "star": "Cô Thần",
+      "bookBranch": "Sửu",
+      "engineBranch": "Tỵ",
+      "reason": "Năm Dần Cô Thần ở Tỵ, Quả Tú ở Sửu (Điền Trạch). Câu giảng chỉ nhắc Cô Thần như một ý phụ ('đặc biệt Cô Thần càng rõ'), KB chép thành sao ở Điền.",
+      "source": "NP2 tr.250: 'Hồng Loan ở Điền: … Hàng xóm : nhiều bà cô ế chồng. Đặc biệt Cô Thần càng rõ'"
+    }
+  ],
+  "suspectedEngineBugs": [],
+  "spellingMap": {},
+  "notes": [
+    "Ngày âm 7/9 Mậu Dần (dương 26/10/1998) khớp toàn bộ lời giảng; fixture vẫn dùng dữ kiện sách (20/10/1998) và ghi các sao lệch là birth-data."
+  ]
+}

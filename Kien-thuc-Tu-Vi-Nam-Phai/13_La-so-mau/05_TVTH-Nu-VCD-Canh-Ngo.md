@@ -16,7 +16,7 @@ Nữ Dương, Mệnh vô chính diệu tại Dậu, Thân cư Phúc Đức (Hợ
 Canh Ngọ, tháng 9, ngày 11, giờ Sửu; Dương Nữ. Bản mệnh Lộ Bàng Thổ, Thủy nhị cục. Thân cư Phúc Đức (Hợi) (TVTH tr.167).
 
 ### Bố trí sao chính (đọc từ ảnh)
-- **Mệnh (Dậu):** không chính tinh; Văn Xương, Quan Phù, Kình Dương, Hồng Loan, Thiếu Âm, Thiên Riêu, Thiên Y; cung Dưỡng.
+- **Mệnh (Dậu):** không chính tinh; Văn Xương, Quan Phủ, Kình Dương, Hồng Loan, Thiếu Âm, Thiên Riêu, Thiên Y; cung Dưỡng.
 - **Thiên Di (Mão, chiếu Mệnh):** Thái Dương, Thiên Lương, Hóa Lộc, Tấu Thư, Phong Cáo, Thiên Hỉ, Phúc Đức, Thiên Đức, Đào Hoa.
 - Tam hợp: Tài Bạch (Tỵ) Thiên Cơ, Văn Khúc; Quan Lộc (Sửu) Thiên Đồng, Cự Môn, Hóa Khoa. Thân/Phúc Đức (Hợi): Thái Âm, Hóa Kỵ, Nguyệt Đức, Kiếp Sát, Tuần.
 - Phu Thê (Mùi): không chính tinh; Thiên Không, Đà La, Triệt. Tử Tức (Ngọ): Tử Vi, Thiên Khôi, Thanh Long, Ân Quang.
@@ -40,6 +40,7 @@ Dữ kiện: Mệnh VCD có Văn Xương + Hồng Loan + Thiên Riêu → quy t�
 
 ## Dị bản & lưu ý
 Sách nói cung Phối có Nguyệt Đức; ảnh lá số cho thấy Nguyệt Đức ở Phúc Đức (Hợi), chưa thấy ở Phu Thê (Mùi). Ghi nguyên lời sách.
+- Đối chiếu ảnh trang 167: ô Mệnh (Dậu) in "Quan-Phủ" (vòng Bác Sĩ); Quan Phù (vòng Thái Tuế, năm Ngọ) ở Phụ Mẫu (Tuất).
 
 ## Liên quan
 - [Nguyên tắc xem Mệnh vô chính diệu](../04_Chinh-tinh/15_Menh-vo-chinh-dieu/01_Nguyen-tac-xem-VCD.md)

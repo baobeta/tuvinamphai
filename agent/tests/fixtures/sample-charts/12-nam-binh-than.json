@@ -1,0 +1,102 @@
+{
+  "id": "12-nam-binh-than",
+  "title": "Nam Bính Thân",
+  "kbFile": "Kien-thuc-Tu-Vi-Nam-Phai/13_La-so-mau/12_TVTH-Nam-Binh-Than.md",
+  "bookSource": "Tu-Vi-Thuc-Hanh/06_So-Tu-Vi-mau/12_Nam-Binh-Than.md",
+  "bookPage": "TVTH tr.179–180",
+  "confidence": "high",
+  "birth": {
+    "calendar": "lunar",
+    "yearCanChi": "Bính Thân",
+    "year": 2016,
+    "month": 11,
+    "day": 17,
+    "hourBranch": "Dần",
+    "gender": "nam",
+    "isLeapMonth": false
+  },
+  "yearChoice": "Sách chỉ ghi can chi; chọn 2016 là năm trong 1800–2199 cùng can chi và có ngày âm này.",
+  "options": {},
+  "expected": {
+    "polarity": "Dương Nam",
+    "lifeBranch": "Tuất",
+    "bodyBranch": "Dần",
+    "bureau": "Mộc tam cục",
+    "nayin": "Sơn Hạ Hỏa",
+    "palaces": {
+      "Mệnh": "Tuất",
+      "Phụ Mẫu": "Hợi",
+      "Phúc Đức": "Tý",
+      "Điền Trạch": "Sửu",
+      "Quan Lộc": "Dần",
+      "Nô Bộc": "Mão",
+      "Thiên Di": "Thìn",
+      "Tật Ách": "Tỵ",
+      "Tài Bạch": "Ngọ",
+      "Tử Tức": "Mùi",
+      "Phu Thê": "Thân",
+      "Huynh Đệ": "Dậu"
+    },
+    "stars": {
+      "Tuất": [
+        "Liêm Trinh",
+        "Thiên Phủ",
+        "Đường Phù",
+        "Tấu Thư",
+        "Thiên Khốc",
+        "Tang Môn",
+        "Thiên Thọ",
+        "Địa Võng",
+        "Dưỡng"
+      ],
+      "Dần": [
+        "Vũ Khúc",
+        "Thiên Tướng",
+        "Tả Phụ",
+        "Đại Hao",
+        "Thiên Hư",
+        "Phượng Các",
+        "Giải Thần",
+        "Tuế Phá",
+        "Thiên Mã"
+      ],
+      "Thìn": [
+        "Thất Sát",
+        "Đà La",
+        "Hỏa Tinh",
+        "Phong Cáo",
+        "Bạch Hổ",
+        "Hoa Cái",
+        "Thiên La",
+        "Triệt",
+        "Tuần"
+      ],
+      "Ngọ": [
+        "Tử Vi",
+        "Văn Khúc",
+        "Kình Dương"
+      ],
+      "Thân": [
+        "Phá Quân",
+        "Văn Xương",
+        "Linh Tinh"
+      ]
+    },
+    "transformations": {
+      "Tuất": [
+        "Hóa Kỵ"
+      ],
+      "Thân": [
+        "Hóa Khoa"
+      ]
+    },
+    "patterns": []
+  },
+  "addedStars": [],
+  "knownDiscrepancies": [],
+  "suspectedEngineBugs": [],
+  "spellingMap": {
+    "Tả Phù": "Tả Phụ"
+  },
+  "notes": []
+}

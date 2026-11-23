@@ -40,6 +40,7 @@ Dữ kiện: Mệnh Không + Thân Kiếp → giảng viên kết luận giảm 
 
 ## Dị bản & lưu ý
 Bản OCR chỉ ghi các sao chính; không thể dựng lại đủ lá số. Nội dung về cái chết là ví dụ do giảng viên kể lại, cần thận trọng khi trích dẫn.
+- Ghi chú giảng liệt kê Thiên Mã ở cả Tật Ách lẫn Phụ Mẫu; năm Mão Thiên Mã chỉ ở Tỵ (Phụ Mẫu), khớp câu "Quan: Khoa Lộc nhị hợp Thiên Mã" (NP2 tr.247).
 
 ## Liên quan
 - [Địa Không – Địa Kiếp](../05_Phu-tinh-sat-tinh-tu-hoa/02_Luc-sat-tinh/04_Dia-Khong-Dia-Kiep.md)

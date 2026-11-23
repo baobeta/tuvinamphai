@@ -1,0 +1,50 @@
+{
+  "id": "29-np2-anh-khoi",
+  "title": "NP2: anh Khôi, Mệnh thủ Thái Tuế (Kỷ Mùi, âm nam)",
+  "kbFile": "Kien-thuc-Tu-Vi-Nam-Phai/13_La-so-mau/29_NP2-Giai-la-so-anh-Khoi-vong-Thai-Tue.md",
+  "bookSource": "Tu-Vi-Nam-Phai_Phan-2/05_Xem-ngay-va-giai-la-so-mau/02_Giai-La-So.md",
+  "bookPage": "NP2 tr.251–258",
+  "confidence": "low",
+  "birth": {
+    "calendar": "solar",
+    "yearCanChi": "Kỷ Mùi",
+    "year": 1979,
+    "month": 11,
+    "day": 23,
+    "hour": 8,
+    "minute": 0,
+    "gender": "nam"
+  },
+  "yearChoice": "Sách ghi 23/11/1979 giờ Thìn, âm nam. Đọc là dương lịch (= âm 4/10 Kỷ Mùi) vì cho Mệnh Mùi thủ Thái Tuế như lời giảng; đọc âm lịch (tháng 11) cho Mệnh Thân, không thủ Thái Tuế. Giờ Thìn lấy 8:00.",
+  "options": {},
+  "expected": {
+    "polarity": "Âm Nam",
+    "lifeBranch": "Mùi",
+    "palaces": {
+      "Mệnh": "Mùi",
+      "Phụ Mẫu": "Thân",
+      "Phúc Đức": "Dậu",
+      "Điền Trạch": "Tuất",
+      "Quan Lộc": "Hợi",
+      "Nô Bộc": "Tý",
+      "Thiên Di": "Sửu",
+      "Tật Ách": "Dần",
+      "Tài Bạch": "Mão",
+      "Tử Tức": "Thìn",
+      "Phu Thê": "Tỵ",
+      "Huynh Đệ": "Ngọ"
+    },
+    "stars": {
+      "Mùi": [
+        "Thái Tuế"
+      ]
+    },
+    "transformations": {},
+    "patterns": []
+  },
+  "addedStars": [],
+  "knownDiscrepancies": [],
+  "suspectedEngineBugs": [],
+  "spellingMap": {},
+  "notes": []
+}

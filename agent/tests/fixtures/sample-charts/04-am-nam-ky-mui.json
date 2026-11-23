@@ -1,0 +1,123 @@
+{
+  "id": "04-am-nam-ky-mui",
+  "title": "Âm Nam Kỷ Mùi",
+  "kbFile": "Kien-thuc-Tu-Vi-Nam-Phai/13_La-so-mau/04_TVTH-Am-Nam-Ky-Mui.md",
+  "bookSource": "Tu-Vi-Thuc-Hanh/06_So-Tu-Vi-mau/04_Am-Nam-Ky-Mui.md",
+  "bookPage": "TVTH tr.165–166",
+  "confidence": "high",
+  "birth": {
+    "calendar": "lunar",
+    "yearCanChi": "Kỷ Mùi",
+    "year": 1979,
+    "month": 8,
+    "day": 23,
+    "hourBranch": "Dần",
+    "gender": "nam",
+    "isLeapMonth": false
+  },
+  "yearChoice": "Sách chỉ ghi can chi; chọn 1979 là năm trong 1800–2199 cùng can chi và có ngày âm này.",
+  "options": {},
+  "expected": {
+    "polarity": "Âm Nam",
+    "lifeBranch": "Mùi",
+    "bodyBranch": "Hợi",
+    "bureau": "Thổ ngũ cục",
+    "nayin": "Thiên Thượng Hỏa",
+    "palaces": {
+      "Mệnh": "Mùi",
+      "Phụ Mẫu": "Thân",
+      "Phúc Đức": "Dậu",
+      "Điền Trạch": "Tuất",
+      "Quan Lộc": "Hợi",
+      "Nô Bộc": "Tý",
+      "Thiên Di": "Sửu",
+      "Tật Ách": "Dần",
+      "Tài Bạch": "Mão",
+      "Tử Tức": "Thìn",
+      "Phu Thê": "Tỵ",
+      "Huynh Đệ": "Ngọ"
+    },
+    "stars": {
+      "Mùi": [
+        "Thiên Cơ",
+        "Quan Phủ",
+        "Kình Dương",
+        "Hỏa Tinh",
+        "Thiên Khố",
+        "Thái Tuế",
+        "Hoa Cái"
+      ],
+      "Hợi": [
+        "Cự Môn",
+        "Tả Phụ",
+        "Đường Phù",
+        "Thiên Khốc",
+        "Long Trì",
+        "Hỷ Thần"
+      ],
+      "Thân": [
+        "Tử Vi",
+        "Thiên Phủ",
+        "Thiên Việt",
+        "Văn Xương",
+        "Hồng Loan",
+        "Thiên Không",
+        "Triệt"
+      ],
+      "Ngọ": [
+        "Phá Quân",
+        "Văn Khúc",
+        "Lộc Tồn"
+      ],
+      "Tuất": [
+        "Tham Lang"
+      ],
+      "Thìn": [
+        "Vũ Khúc"
+      ],
+      "Mão": [
+        "Thiên Đồng",
+        "Hữu Bật",
+        "Bạch Hổ"
+      ],
+      "Dần": [
+        "Thiên Hỷ"
+      ]
+    },
+    "transformations": {
+      "Ngọ": [
+        "Hóa Kỵ"
+      ],
+      "Tuất": [
+        "Hóa Quyền"
+      ],
+      "Thìn": [
+        "Hóa Lộc"
+      ]
+    },
+    "patterns": []
+  },
+  "addedStars": [
+    {
+      "star": "Hỷ Thần",
+      "branch": "Hợi",
+      "reason": "Ảnh TVTH tr.165 ô Quan Lộc (Hợi) in 'Hi-Thần' (vòng Bác Sĩ); KB chép thành 'Thiên Hỉ'."
+    }
+  ],
+  "knownDiscrepancies": [
+    {
+      "kind": "book-internal",
+      "pattern": "tu-linh",
+      "reason": "Đủ Long Phượng Cái Hổ trong tam phương Mệnh Mùi, nhưng TVTH số 44 đòi Mệnh có chính tinh miếu vượng, mà lời luận của chính sách nói Thiên Cơ ở Mùi hãm địa (ảnh ghi đđ, vẫn không phải miếu vượng).",
+      "source": "TVTH tr.165: 'Tứ Linh triều thân mệnh'; TVTH số 44: 'Mệnh có chính tinh miếu vượng địa, gặp Cái Hổ Phượng Long'"
+    }
+  ],
+  "suspectedEngineBugs": [],
+  "spellingMap": {
+    "Tả Phù": "Tả Phụ",
+    "Thiên Hỉ": "Thiên Hỷ"
+  },
+  "notes": [
+    "Sách gọi 'Cơ Cự Đồng Lương' (không có Thái Âm trong tam phương), khác cách Cơ Nguyệt Đồng Lương trong danh mục, nên không đặt kỳ vọng co-nguyet-dong-luong."
+  ]
+}

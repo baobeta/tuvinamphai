@@ -1,0 +1,117 @@
+{
+  "id": "07-am-nam-ky-suu",
+  "title": "Âm Nam Kỷ Sửu",
+  "kbFile": "Kien-thuc-Tu-Vi-Nam-Phai/13_La-so-mau/07_TVTH-Am-Nam-Ky-Suu.md",
+  "bookSource": "Tu-Vi-Thuc-Hanh/06_So-Tu-Vi-mau/07_Am-Nam-Ky-Suu.md",
+  "bookPage": "TVTH tr.171–172",
+  "confidence": "high",
+  "birth": {
+    "calendar": "lunar",
+    "yearCanChi": "Kỷ Sửu",
+    "year": 2009,
+    "month": 1,
+    "day": 26,
+    "hourBranch": "Ngọ",
+    "gender": "nam",
+    "isLeapMonth": false
+  },
+  "yearChoice": "Sách chỉ ghi can chi; chọn 2009 là năm trong 1800–2199 cùng can chi và có ngày âm này.",
+  "options": {},
+  "expected": {
+    "polarity": "Âm Nam",
+    "lifeBranch": "Thân",
+    "bodyBranch": "Thân",
+    "bureau": "Kim tứ cục",
+    "nayin": "Tích Lịch Hỏa",
+    "palaces": {
+      "Mệnh": "Thân",
+      "Phụ Mẫu": "Dậu",
+      "Phúc Đức": "Tuất",
+      "Điền Trạch": "Hợi",
+      "Quan Lộc": "Tý",
+      "Nô Bộc": "Sửu",
+      "Thiên Di": "Dần",
+      "Tật Ách": "Mão",
+      "Tài Bạch": "Thìn",
+      "Tử Tức": "Tỵ",
+      "Phu Thê": "Ngọ",
+      "Huynh Đệ": "Mùi"
+    },
+    "stars": {
+      "Thân": [
+        "Tham Lang",
+        "Thiên Việt",
+        "Phục Binh",
+        "Phong Cáo",
+        "Thiên Hỷ",
+        "Long Đức",
+        "Thiên Trù",
+        "Triệt",
+        "Tuyệt",
+        "Thiên Giải"
+      ],
+      "Dần": [
+        "Liêm Trinh",
+        "Thiên Phúc",
+        "Quốc Ấn",
+        "Tướng Quân",
+        "Hồng Loan",
+        "Thiên Không",
+        "Kiếp Sát"
+      ],
+      "Tý": [
+        "Thất Sát",
+        "Thiên Khôi",
+        "Thai Phụ"
+      ],
+      "Mùi": [
+        "Thái Dương",
+        "Thái Âm",
+        "Kình Dương",
+        "Tuần"
+      ],
+      "Ngọ": [
+        "Vũ Khúc",
+        "Thiên Phủ",
+        "Lộc Tồn"
+      ],
+      "Tuất": [
+        "Tử Vi",
+        "Thiên Tướng",
+        "Văn Khúc",
+        "Hữu Bật"
+      ],
+      "Dậu": [
+        "Giải Thần"
+      ]
+    },
+    "transformations": {
+      "Thân": [
+        "Hóa Quyền"
+      ],
+      "Ngọ": [
+        "Hóa Lộc"
+      ],
+      "Tuất": [
+        "Hóa Kỵ"
+      ]
+    },
+    "patterns": [
+      "sat-pha-liem-tham"
+    ]
+  },
+  "addedStars": [
+    {
+      "star": "Thiên Giải",
+      "branch": "Thân",
+      "reason": "Ảnh TVTH tr.171 ô Mệnh (Thân) in 'Thiên-Giải'; KB chép thành 'Giải Thần'."
+    }
+  ],
+  "knownDiscrepancies": [],
+  "suspectedEngineBugs": [],
+  "spellingMap": {
+    "Thiên Hỉ": "Thiên Hỷ",
+    "Thái Phụ": "Thai Phụ"
+  },
+  "notes": []
+}

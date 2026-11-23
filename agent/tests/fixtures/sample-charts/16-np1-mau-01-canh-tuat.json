@@ -1,0 +1,119 @@
+{
+  "id": "16-np1-mau-01-canh-tuat",
+  "title": "NP1 mẫu 1: Thiên Tướng tại Hợi (Canh Tuất, dương nữ)",
+  "kbFile": "Kien-thuc-Tu-Vi-Nam-Phai/13_La-so-mau/16_NP1-Mau-01-Thien-Tuong-tai-Hoi.md",
+  "bookSource": "Tu-Vi-Nam-Phai_Phan-1/05_La-so-mau/01_La-so-mau-1.md",
+  "bookPage": "NP1 tr.246",
+  "confidence": "low",
+  "birth": {
+    "calendar": "lunar",
+    "yearCanChi": "Canh Tuất",
+    "year": 1970,
+    "month": 12,
+    "day": 28,
+    "hourBranch": "Dần",
+    "gender": "nữ",
+    "isLeapMonth": false
+  },
+  "yearChoice": "Ảnh lá số ghi năm 1970 (Canh Tuất), âm lịch tháng 12 ngày 28 (dương lịch đã sang 1971).",
+  "options": {
+    "transformationsForCanh": "MLTC",
+    "khoiVietForCanh": "NP1"
+  },
+  "expected": {
+    "polarity": "Dương Nữ",
+    "lifeBranch": "Hợi",
+    "bodyBranch": "Mão",
+    "bureau": "Thổ ngũ cục",
+    "nayin": "Thoa Xuyến Kim",
+    "palaces": {
+      "Mệnh": "Hợi",
+      "Phụ Mẫu": "Tý",
+      "Phúc Đức": "Sửu",
+      "Điền Trạch": "Dần",
+      "Quan Lộc": "Mão",
+      "Nô Bộc": "Thìn",
+      "Thiên Di": "Tỵ",
+      "Tật Ách": "Ngọ",
+      "Tài Bạch": "Mùi",
+      "Tử Tức": "Thân",
+      "Phu Thê": "Dậu",
+      "Huynh Đệ": "Tuất"
+    },
+    "stars": {
+      "Hợi": [
+        "Thiên Tướng",
+        "Hữu Bật",
+        "Hỏa Tinh",
+        "Thiên Hỷ",
+        "Thiên Không",
+        "Thiên Quan",
+        "Đại Hao",
+        "Kiếp Sát",
+        "Thiếu Dương",
+        "Tuyệt"
+      ],
+      "Mão": [
+        "Đào Hoa",
+        "Nguyệt Đức",
+        "Tử Phù"
+      ],
+      "Mùi": [
+        "Thiên Phủ"
+      ],
+      "Ngọ": [
+        "Thái Dương",
+        "Văn Khúc",
+        "Thiên Việt"
+      ],
+      "Tỵ": [
+        "Vũ Khúc",
+        "Phá Quân",
+        "Hồng Loan",
+        "Linh Tinh"
+      ],
+      "Thìn": [
+        "Thiên Đồng",
+        "Tướng Quân"
+      ],
+      "Dậu": [
+        "Tử Vi",
+        "Tham Lang",
+        "Địa Không"
+      ],
+      "Thân": [
+        "Thiên Cơ",
+        "Thái Âm"
+      ],
+      "Sửu": [
+        "Liêm Trinh",
+        "Thất Sát",
+        "Địa Kiếp"
+      ],
+      "Tý": [
+        "Thiên Lương"
+      ]
+    },
+    "transformations": {
+      "Ngọ": [
+        "Hóa Lộc"
+      ],
+      "Tỵ": [
+        "Hóa Quyền"
+      ],
+      "Thìn": [
+        "Hóa Kỵ"
+      ]
+    },
+    "patterns": []
+  },
+  "addedStars": [],
+  "knownDiscrepancies": [],
+  "suspectedEngineBugs": [],
+  "spellingMap": {
+    "Thiên Hỉ": "Thiên Hỷ"
+  },
+  "notes": [
+    "Khôi Dần, Việt Ngọ theo cách an NP1 (khoiVietForCanh: NP1). Tứ Hóa Canh theo MLTC (Âm Khoa, Đồng Kỵ): ảnh ghi Hóa Kỵ ở Thiên Đồng (Nô) và Hóa Khoa ở Tử Tức cùng Thái Âm."
+  ]
+}

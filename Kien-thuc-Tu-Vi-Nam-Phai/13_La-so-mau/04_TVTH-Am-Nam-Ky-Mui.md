@@ -17,7 +17,7 @@ Năm Kỷ Mùi, tháng 8, ngày 23, giờ Dần; Âm Nam. Bản mệnh Thiên Th
 
 ### Bố trí sao chính (đọc từ ảnh)
 - **Mệnh (Mùi):** Thiên Cơ, Quan Phủ, Kình Dương, Hỏa Tinh, Thiên Khố, Thái Tuế, Hoa Cái.
-- **Thân/Quan Lộc (Hợi):** Cự Môn, Tả Phù, Đường Phù, Thiên Hỉ, Thiên Khốc, Long Trì.
+- **Thân/Quan Lộc (Hợi):** Cự Môn, Tả Phù, Đường Phù, Hỷ Thần, Thiên Khốc, Long Trì.
 - Phụ Mẫu (Thân): Tử Vi, Thiên Phủ, Thiên Việt, Văn Xương, Hồng Loan, Thiên Không, Triệt. Huynh Đệ (Ngọ): Phá Quân, Văn Khúc, Hóa Kỵ, Lộc Tồn. Điền (Tuất): Tham Lang, Hóa Quyền. Tử Tức (Thìn): Vũ Khúc, Hóa Lộc. Tài Bạch (Mão): Thiên Đồng, Hữu Bật, Bạch Hổ.
 
 ### Cách cục nhận ra
@@ -39,6 +39,7 @@ Dữ kiện: Lộc Tồn đồng cung Hóa Kỵ ở Huynh Đệ (đại hạn 15
 
 ## Dị bản & lưu ý
 Lời luận ghi Cơ "hãm địa", trong khi ảnh lá số ghi Thiên Cơ ở Mùi là "đắc" (đđ); ghi cả hai, không phân xử.
+- Đối chiếu ảnh trang 165: ô Quan Lộc (Hợi) in "Hi-Thần" tức Hỷ Thần (vòng Bác Sĩ), bản chép cũ đọc nhầm thành Thiên Hỷ; Thiên Hỷ năm Mùi ở Tật Ách (Dần).
 
 ## Liên quan
 - [Lộc Tồn](../05_Phu-tinh-sat-tinh-tu-hoa/04_Loc-Ton-Thien-Ma/01_Loc-Ton.md)

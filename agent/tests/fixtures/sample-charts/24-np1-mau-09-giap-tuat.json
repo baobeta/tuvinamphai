@@ -1,0 +1,137 @@
+{
+  "id": "24-np1-mau-09-giap-tuat",
+  "title": "NP1 mẫu 9: Vô chính diệu, Cự Đồng chiếu (Giáp Tuất, dương nam)",
+  "kbFile": "Kien-thuc-Tu-Vi-Nam-Phai/13_La-so-mau/24_NP1-Mau-09-VCD-Cu-Dong-Giap-Tuat.md",
+  "bookSource": "Tu-Vi-Nam-Phai_Phan-1/05_La-so-mau/09_La-so-mau-9.md",
+  "bookPage": "NP1 tr.272",
+  "confidence": "low",
+  "birth": {
+    "calendar": "lunar",
+    "yearCanChi": "Giáp Tuất",
+    "year": 1994,
+    "month": 3,
+    "day": 25,
+    "hourBranch": "Dậu",
+    "gender": "nam",
+    "isLeapMonth": false
+  },
+  "yearChoice": "Ảnh ghi năm 1994 (Giáp Tuất), tháng 3 Mậu Thìn, ngày 25 Tân Mão (âm lịch), giờ Dậu.",
+  "options": {},
+  "expected": {
+    "polarity": "Dương Nam",
+    "lifeBranch": "Mùi",
+    "bodyBranch": "Sửu",
+    "bureau": "Thổ ngũ cục",
+    "nayin": "Sơn Đầu Hỏa",
+    "palaces": {
+      "Mệnh": "Mùi",
+      "Phụ Mẫu": "Thân",
+      "Phúc Đức": "Dậu",
+      "Điền Trạch": "Tuất",
+      "Quan Lộc": "Hợi",
+      "Nô Bộc": "Tý",
+      "Thiên Di": "Sửu",
+      "Tật Ách": "Dần",
+      "Tài Bạch": "Mão",
+      "Tử Tức": "Thìn",
+      "Phu Thê": "Tỵ",
+      "Huynh Đệ": "Ngọ"
+    },
+    "stars": {
+      "Mùi": [
+        "Thiên Việt",
+        "Tấu Thư",
+        "Đường Phù",
+        "Thiên Quan",
+        "Thiên Đức",
+        "Dưỡng"
+      ],
+      "Sửu": [
+        "Thiên Đồng",
+        "Cự Môn",
+        "Văn Khúc",
+        "Đà La",
+        "Thiên Khôi",
+        "Quan Phủ",
+        "Phá Toái",
+        "Thiếu Âm"
+      ],
+      "Thân": [
+        "Phá Quân",
+        "Địa Kiếp",
+        "Hữu Bật",
+        "Bát Tọa",
+        "Điếu Khách",
+        "Thiên Mã",
+        "Thiên Khốc"
+      ],
+      "Tuất": [
+        "Liêm Trinh",
+        "Thiên Phủ",
+        "Hỏa Tinh",
+        "Thái Tuế",
+        "Hoa Cái"
+      ],
+      "Hợi": [
+        "Thái Âm",
+        "Thiên Hình",
+        "Thiên Không",
+        "Thiên Hỷ",
+        "Đại Hao",
+        "Kiếp Sát"
+      ],
+      "Tý": [
+        "Tham Lang"
+      ],
+      "Dần": [
+        "Vũ Khúc",
+        "Thiên Tướng",
+        "Địa Không",
+        "Lộc Tồn"
+      ],
+      "Mão": [
+        "Thái Dương",
+        "Thiên Lương",
+        "Đào Hoa",
+        "Kình Dương",
+        "Thiên Diêu"
+      ],
+      "Tỵ": [
+        "Thiên Cơ",
+        "Hồng Loan"
+      ],
+      "Ngọ": [
+        "Tử Vi",
+        "Tả Phụ",
+        "Linh Tinh",
+        "Bạch Hổ"
+      ],
+      "Thìn": [
+        "Thất Sát"
+      ]
+    },
+    "transformations": {
+      "Thân": [
+        "Hóa Quyền"
+      ],
+      "Tuất": [
+        "Hóa Lộc"
+      ],
+      "Dần": [
+        "Hóa Khoa"
+      ],
+      "Mão": [
+        "Hóa Kỵ"
+      ]
+    },
+    "patterns": []
+  },
+  "addedStars": [],
+  "knownDiscrepancies": [],
+  "suspectedEngineBugs": [],
+  "spellingMap": {
+    "Thiên Hỉ": "Thiên Hỷ",
+    "Tả Phù": "Tả Phụ"
+  },
+  "notes": []
+}

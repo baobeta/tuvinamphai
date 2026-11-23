@@ -59,12 +59,16 @@ src/
       periods.ts           đại hạn, tiểu hạn, đồng hạn, lưu nguyệt, sao lưu niên
       build-chart.ts       ghép tất cả thành Chart
       render.ts            Chart → bảng markdown
+      render-grid.ts       Chart → địa bàn 4×4 (khung chữ hoặc bảng markdown)
     analysis/              phân tích trên lá số đã lập
       chart-query.ts       truy vấn: sao ở cung, tam phương tứ chính, giáp cung
       finding.ts           Finding: "khớp chắc chắn" / "khớp theo cách hiểu", điều kiện thỏa, phá cách, giả định, dị bản
       natal-profile.ts     bản mệnh: chủ Mệnh/Thân, Cục với bản mệnh, sinh vượng bại tuyệt, âm dương lý, vòng Thái Tuế, vô chính diệu
       palace-analysis.ts   một cung: ngũ hành sao/cung, tam phương tứ chính, giáp cung, nhị hợp, lục hại, Tuần Triệt
     patterns/              cách cục: 32 cách tốt, 26 cách xấu, quy tắc phá cách chung
+    reading/               ánh xạ sao → file kho (theo cấu trúc thư mục, không dò toàn văn); luận theo 10 chủ đề của 11_Chu-de-luan
+    scan/                  quét nhiều năm theo tiêu chí hoặc mục tiêu (hôn nhân, tài lộc…), gồm các hạn theo sự việc có nguồn
+    compare/               so hai lá số: can chi, nạp âm, quy tắc vợ chồng (NP2, MLTC), Thái Tuế nhập quẻ
     periods/               vận hạn theo lớp (đại hạn, lưu đại hạn, tiểu hạn, lưu niên/nguyệt/nhật/thời), dòng thời gian cả đời, giờ xấu trẻ em, soát giờ sinh
   kb/                      kho tri thức: đọc, chuẩn hóa tiếng Việt, tìm kiếm
   tools/                   shell cho agent
@@ -72,7 +76,11 @@ src/
     kb-tools.ts            search_kb · read_kb_file · list_kb · grep_corpus · read_corpus_file
     calendar-tools.ts      convert_calendar · convert_hour · stem_branch_info · branch_relations · element_relation · determine_bureau
     chart-tools.ts         build_chart · year_forecast; resolveChart (chart_id hoặc birth)
-    chart-store.ts         kho lá số LRU theo chart_id (hash của dữ kiện sinh + tùy chọn)
+    chart-store.ts         kho lá số LRU theo chart_id (hash của dữ kiện sinh + tùy chọn); lưu dữ kiện ra .omc/charts/ để phiên sau dùng lại (TUVI_CHART_DIR=off để tắt)
+    reading-tools.ts       lookup_star_meaning · chart_star_references · topic_reading
+    scan-tools.ts          scan_years
+    compare-tools.ts       compare_charts
+    grid-tools.ts          render_chart_grid
     analysis-tools.ts      analyze_chart · detect_patterns · list_patterns · natal_profile · analyze_palace · period_layers · lifetime_timeline · child_hazard_hours · birth_hour_candidates
     index.ts               ALL_TOOLS
     paths.ts               khóa đường dẫn trong thư mục gốc
@@ -88,7 +96,11 @@ tests/
 
 **Chạy nhanh:** `build_chart` trả `chart_id`; các tool sau chỉ nhận id nên model không phải gửi lại dữ kiện và lá số không phải lập lại. `analyze_chart` gộp bản mệnh, cách cục, cung Mệnh và Thân trong một lần gọi (khoảng 25 ms).
 
+**Ít token:** các tool phân tích có `detail: "brief" | "full"`. `analyze_chart` mặc định brief (khoảng 4.000 ký tự so với 16.600 bản full); `topic_reading` brief khoảng 2.300 ký tự.
+
 **Mức chắc chắn:** sách nhiều chỗ không định nghĩa chặt ("gặp", "hội", "nhiều sát tinh"…). Mỗi kết quả ghi "khớp chắc chắn" hoặc "khớp theo cách hiểu" kèm giả định đã dùng; các dị bản là tùy chọn. Quy tắc không thể tính chắc (Bảng B Thái Tuế, hạn theo sự việc…) nằm trong `SKIPPED_RULES` / `UNSUPPORTED_PATTERNS` kèm lý do.
+
+**Đối chiếu lá số mẫu:** `tests/core/sample-charts.test.ts` so 29 lá số mẫu của kho (TVTH, NP1, NP2) với engine: 888 vị trí sao, 90 Tứ Hóa, cách cục sách gọi tên, Mệnh, Thân, Cục, 12 cung. Chỗ sách tự lệch hoặc OCR được ghi trong `knownDiscrepancies` của từng fixture, kèm trích trang.
 
 **Test chuẩn của phần lá số:**
 - Lá số mẫu Lã Thái Hậu (TVTH tr.159): so vị trí từng sao, hơn 100 sao.

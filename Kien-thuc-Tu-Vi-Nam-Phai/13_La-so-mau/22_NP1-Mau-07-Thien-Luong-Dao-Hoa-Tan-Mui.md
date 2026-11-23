@@ -18,7 +18,7 @@ Tân Mùi (1991), tháng 7 Bính Thân, ngày 16 Đinh Mão, giờ Mậu Thân (
 ### Bố trí sao chính (đọc từ ảnh)
 - **Mệnh:** Thiên Lương (Vượng), Văn Khúc (Hãm), Hóa Khoa, Đào Hoa, Tiểu Hao, Tử Phù, Nguyệt Đức; cung Đế Vượng.
 - **Thân/Quan Lộc:** Thiên Đồng (Hãm), Hữu Bật, Ân Quang, Hỉ Thần, Thiên Đức, Triệt.
-- Huynh Đệ: Thiên Tướng, Thanh Long, Long Trì. Phụ Mẫu: Liêm Trinh, Thất Sát, Tướng Quân. Phúc: vô chính diệu (Linh Tinh, Hóa Kỵ, Thiên Khôi, Thiên Hỉ). Điền: vô chính diệu (Địa Không, Thiên Hình, Thiên Diêu). Phu Thê: Cự Môn, Hóa Lộc, Lục Sĩ. Tử Tức: Tham Lang, Tang Môn. Tài Bạch: Thiên Cơ, Thái Âm, Hồng Loan, Thiên Không. Thiên Di: Thái Dương, Hóa Quyền. Nô: Vũ Khúc, Phá Quân.
+- Huynh Đệ: Thiên Tướng, Thanh Long, Long Trì. Phụ Mẫu: Liêm Trinh, Thất Sát, Tướng Quân. Phúc: vô chính diệu (Linh Tinh, Hóa Kỵ, Thiên Khôi, Thiên Hỉ). Điền: vô chính diệu (Địa Không, Thiên Hình); Thiên Diêu ở Tật Ách (Mùi). Phu Thê: Cự Môn, Hóa Lộc, Lục Sĩ. Tử Tức: Tham Lang, Tang Môn. Tài Bạch: Thiên Cơ, Thái Âm, Hồng Loan, Thiên Không. Thiên Di: Thái Dương, Hóa Quyền. Nô: Vũ Khúc, Phá Quân.
 
 ### Luận theo giảng viên
 - Mệnh Thổ tam hợp Thủy: "cuộc đời phải gặp nhiều sóng gió mới vững vàng". Mệnh trong tam hợp Đào Hồng: nữ sắc nước hương trời, trẻ lâu. Mệnh Đào Hoa: thanh tú, da trắng, tóc dày, thích thời trang, có sức hút.
@@ -40,6 +40,7 @@ Dữ kiện: Mệnh Thiên Lương + Đào Hồng chiếu, Phúc có Hóa Kỵ �
 
 ## Dị bản & lưu ý
 Văn bản nói "Mệnh giáp Long Phượng" (không kiểm được trên ảnh). Bản OCR lỗi ("đích tóp").
+- Đối chiếu ảnh trang 265: ô Điền Trạch (Mão) chỉ có Giải Thần, Phượng Các, Địa Không, Thiên Hình, Phi Liêm, Lưu Hà; Thiên Diêu nằm ở ô Tật Ách (Mùi).
 
 ## Liên quan
 - [Thiên Lương](../04_Chinh-tinh/12_Thien-Luong/04_Nam-menh-nu-menh.md)

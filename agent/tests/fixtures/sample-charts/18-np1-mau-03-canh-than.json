@@ -1,0 +1,142 @@
+{
+  "id": "18-np1-mau-03-canh-than",
+  "title": "NP1 mẫu 3: Thiên Cơ tại Sửu (Canh Thân, dương nam)",
+  "kbFile": "Kien-thuc-Tu-Vi-Nam-Phai/13_La-so-mau/18_NP1-Mau-03-Thien-Co-tai-Suu-Canh-Than.md",
+  "bookSource": "Tu-Vi-Nam-Phai_Phan-1/05_La-so-mau/03_La-so-mau-3.md",
+  "bookPage": "NP1 tr.253",
+  "confidence": "low",
+  "birth": {
+    "calendar": "lunar",
+    "yearCanChi": "Canh Thân",
+    "year": 1980,
+    "month": 4,
+    "day": 11,
+    "hourBranch": "Thìn",
+    "gender": "nam",
+    "isLeapMonth": false
+  },
+  "yearChoice": "Ảnh ghi năm 1980 (Canh Thân), tháng 4 Tân Tỵ, ngày 11 Đinh Dậu (âm lịch), giờ Thìn.",
+  "options": {
+    "transformationsForCanh": "MLTC",
+    "khoiVietForCanh": "NP1"
+  },
+  "expected": {
+    "polarity": "Dương Nam",
+    "lifeBranch": "Sửu",
+    "bodyBranch": "Dậu",
+    "bureau": "Hỏa lục cục",
+    "nayin": "Thạch Lựu Mộc",
+    "palaces": {
+      "Mệnh": "Sửu",
+      "Phụ Mẫu": "Dần",
+      "Phúc Đức": "Mão",
+      "Điền Trạch": "Thìn",
+      "Quan Lộc": "Tỵ",
+      "Nô Bộc": "Ngọ",
+      "Thiên Di": "Mùi",
+      "Tật Ách": "Thân",
+      "Tài Bạch": "Dậu",
+      "Tử Tức": "Tuất",
+      "Phu Thê": "Hợi",
+      "Huynh Đệ": "Tý"
+    },
+    "stars": {
+      "Sửu": [
+        "Thiên Cơ",
+        "Thiên Hỷ",
+        "Tử Phù",
+        "Tấu Thư",
+        "Đường Phù",
+        "Nguyệt Đức"
+      ],
+      "Dậu": [
+        "Thiên Đồng",
+        "Đào Hoa",
+        "Kình Dương",
+        "Thiên Không",
+        "Bát Tọa"
+      ],
+      "Hợi": [
+        "Thái Dương",
+        "Thiên Quan"
+      ],
+      "Dần": [
+        "Tử Vi",
+        "Thiên Phủ",
+        "Thiên Khôi"
+      ],
+      "Tý": [
+        "Phá Quân",
+        "Thiên Hình"
+      ],
+      "Tuất": [
+        "Vũ Khúc",
+        "Tang Môn"
+      ],
+      "Thân": [
+        "Thất Sát",
+        "Văn Khúc",
+        "Thái Tuế"
+      ],
+      "Mùi": [
+        "Thiên Lương",
+        "Địa Không",
+        "Đà La",
+        "Hồng Loan"
+      ],
+      "Ngọ": [
+        "Liêm Trinh",
+        "Thiên Tướng",
+        "Hỏa Tinh",
+        "Linh Tinh",
+        "Thiên Việt"
+      ],
+      "Tỵ": [
+        "Cự Môn"
+      ],
+      "Thìn": [
+        "Tham Lang",
+        "Thiên Diêu"
+      ],
+      "Mão": [
+        "Thái Âm",
+        "Địa Kiếp"
+      ]
+    },
+    "transformations": {
+      "Dậu": [
+        "Hóa Kỵ"
+      ],
+      "Hợi": [
+        "Hóa Lộc"
+      ],
+      "Tuất": [
+        "Hóa Quyền"
+      ],
+      "Mão": [
+        "Hóa Khoa"
+      ]
+    },
+    "patterns": []
+  },
+  "addedStars": [
+    {
+      "star": "Thiên Khôi",
+      "branch": "Dần",
+      "reason": "Ảnh NP1 tr.253 ô Phụ Mẫu (M.Dần) in 'Thiên Khôi' (cách an NP1 cho tuổi Canh)."
+    },
+    {
+      "star": "Thiên Việt",
+      "branch": "Ngọ",
+      "reason": "Ảnh NP1 tr.253 ô Nô Bộc (N.Ngọ) in 'Thiên Việt' (cách an NP1 cho tuổi Canh)."
+    }
+  ],
+  "knownDiscrepancies": [],
+  "suspectedEngineBugs": [],
+  "spellingMap": {
+    "Thiên Hỉ": "Thiên Hỷ"
+  },
+  "notes": [
+    "Tứ Hóa Canh theo MLTC: KB và ảnh tr.253 ghi Thiên Đồng Hóa Kỵ, Thái Âm Hóa Khoa. Khôi Dần, Việt Ngọ theo cách an NP1 (khoiVietForCanh: NP1), đọc từ ảnh."
+  ]
+}

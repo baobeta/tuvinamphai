@@ -1,0 +1,118 @@
+{
+  "id": "20-np1-mau-05-nham-tuat",
+  "title": "NP1 mẫu 5: Thái Dương tại Hợi (Nhâm Tuất, dương nam)",
+  "kbFile": "Kien-thuc-Tu-Vi-Nam-Phai/13_La-so-mau/20_NP1-Mau-05-Thai-Duong-tai-Hoi-Nham-Tuat.md",
+  "bookSource": "Tu-Vi-Nam-Phai_Phan-1/05_La-so-mau/05_La-so-mau-5.md",
+  "bookPage": "NP1 tr.258",
+  "confidence": "low",
+  "birth": {
+    "calendar": "lunar",
+    "yearCanChi": "Nhâm Tuất",
+    "year": 1982,
+    "month": 8,
+    "day": 4,
+    "hourBranch": "Tuất",
+    "gender": "nam",
+    "isLeapMonth": false
+  },
+  "yearChoice": "Ảnh ghi năm 1982 (Nhâm Tuất), tháng 8 Kỷ Dậu, ngày 4 Bính Ngọ (âm lịch), giờ Tuất.",
+  "options": {},
+  "expected": {
+    "polarity": "Dương Nam",
+    "lifeBranch": "Hợi",
+    "bodyBranch": "Mùi",
+    "bureau": "Kim tứ cục",
+    "nayin": "Đại Hải Thủy",
+    "palaces": {
+      "Mệnh": "Hợi",
+      "Phụ Mẫu": "Tý",
+      "Phúc Đức": "Sửu",
+      "Điền Trạch": "Dần",
+      "Quan Lộc": "Mão",
+      "Nô Bộc": "Thìn",
+      "Thiên Di": "Tỵ",
+      "Tật Ách": "Ngọ",
+      "Tài Bạch": "Mùi",
+      "Tử Tức": "Thân",
+      "Phu Thê": "Dậu",
+      "Huynh Đệ": "Tuất"
+    },
+    "stars": {
+      "Hợi": [
+        "Thái Dương",
+        "Lộc Tồn",
+        "Hỏa Tinh",
+        "Thiên Không",
+        "Thiên Hỷ",
+        "Bác Sĩ",
+        "Kiếp Sát",
+        "Lưu Hà",
+        "Thiếu Dương"
+      ],
+      "Mùi": [
+        "Thiên Lương",
+        "Quốc Ấn"
+      ],
+      "Tỵ": [
+        "Cự Môn"
+      ],
+      "Mão": [
+        "Thái Âm",
+        "Hữu Bật",
+        "Thiên Khôi",
+        "Đào Hoa",
+        "Tướng Quân"
+      ],
+      "Thìn": [
+        "Tham Lang",
+        "Thiên Hình",
+        "Tuế Phá"
+      ],
+      "Dậu": [
+        "Thiên Đồng",
+        "Địa Kiếp"
+      ],
+      "Tuất": [
+        "Vũ Khúc",
+        "Đà La"
+      ],
+      "Tý": [
+        "Phá Quân"
+      ],
+      "Sửu": [
+        "Thiên Cơ",
+        "Địa Không"
+      ],
+      "Dần": [
+        "Tử Vi",
+        "Thiên Phủ"
+      ],
+      "Ngọ": [
+        "Liêm Trinh",
+        "Thiên Tướng"
+      ],
+      "Thân": [
+        "Thất Sát"
+      ]
+    },
+    "transformations": {
+      "Hợi": [
+        "Hóa Khoa"
+      ],
+      "Mùi": [
+        "Hóa Lộc"
+      ],
+      "Tuất": [
+        "Hóa Kỵ"
+      ]
+    },
+    "patterns": []
+  },
+  "addedStars": [],
+  "knownDiscrepancies": [],
+  "suspectedEngineBugs": [],
+  "spellingMap": {
+    "Thiên Hỉ": "Thiên Hỷ"
+  },
+  "notes": []
+}

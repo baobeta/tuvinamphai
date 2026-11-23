@@ -1,0 +1,122 @@
+{
+  "id": "09-nga-mi-tac-an-tan-mao",
+  "title": "Nga mi tác án Tân Mão (âm nữ)",
+  "kbFile": "Kien-thuc-Tu-Vi-Nam-Phai/13_La-so-mau/09_TVTH-Nga-mi-tac-an-Tan-Mao.md",
+  "bookSource": "Tu-Vi-Thuc-Hanh/06_So-Tu-Vi-mau/09_Nga-mi-tac-an-Tan-Mao.md",
+  "bookPage": "TVTH tr.175",
+  "confidence": "high",
+  "birth": {
+    "calendar": "lunar",
+    "yearCanChi": "Tân Mão",
+    "year": 2011,
+    "month": 11,
+    "day": 13,
+    "hourBranch": "Dần",
+    "gender": "nữ",
+    "isLeapMonth": false
+  },
+  "yearChoice": "Sách chỉ ghi can chi; chọn 2011 là năm trong 1800–2199 cùng can chi và có ngày âm này.",
+  "options": {},
+  "expected": {
+    "polarity": "Âm Nữ",
+    "lifeBranch": "Tuất",
+    "bodyBranch": "Dần",
+    "bureau": "Mộc tam cục",
+    "nayin": "Tùng Bách Mộc",
+    "palaces": {
+      "Mệnh": "Tuất",
+      "Phụ Mẫu": "Hợi",
+      "Phúc Đức": "Tý",
+      "Điền Trạch": "Sửu",
+      "Quan Lộc": "Dần",
+      "Nô Bộc": "Mão",
+      "Thiên Di": "Thìn",
+      "Tật Ách": "Tỵ",
+      "Tài Bạch": "Ngọ",
+      "Tử Tức": "Mùi",
+      "Phu Thê": "Thân",
+      "Huynh Đệ": "Dậu"
+    },
+    "stars": {
+      "Tuất": [
+        "Tham Lang",
+        "Lực Sĩ",
+        "Kình Dương",
+        "Long Đức",
+        "Địa Võng"
+      ],
+      "Thìn": [
+        "Vũ Khúc",
+        "Phong Cáo",
+        "Thiên Không",
+        "Thiếu Dương",
+        "Triệt",
+        "Hỷ Thần"
+      ],
+      "Dậu": [
+        "Thái Âm",
+        "Lộc Tồn"
+      ],
+      "Hợi": [
+        "Cự Môn"
+      ],
+      "Dần": [
+        "Thất Sát",
+        "Thiên Việt",
+        "Tả Phụ"
+      ],
+      "Thân": [
+        "Tử Vi",
+        "Thiên Phủ",
+        "Văn Xương",
+        "Đà La",
+        "Linh Tinh",
+        "Nguyệt Đức",
+        "Kiếp Sát"
+      ],
+      "Tý": [
+        "Liêm Trinh",
+        "Thiên Tướng",
+        "Hữu Bật",
+        "Hồng Loan",
+        "Đào Hoa"
+      ],
+      "Ngọ": [
+        "Phá Quân",
+        "Thiên Khôi",
+        "Văn Khúc",
+        "Tuần",
+        "Thiên Hỷ"
+      ]
+    },
+    "transformations": {
+      "Hợi": [
+        "Hóa Lộc"
+      ],
+      "Thân": [
+        "Hóa Kỵ"
+      ],
+      "Ngọ": [
+        "Hóa Khoa"
+      ]
+    },
+    "patterns": [
+      "tham-vu-dong-hanh"
+    ]
+  },
+  "addedStars": [
+    {
+      "star": "Hỷ Thần",
+      "branch": "Thìn",
+      "reason": "Ảnh TVTH tr.175 ô Thiên Di (Thìn) in 'Hi-Thần'; KB chép thành 'Thiên Hỉ'."
+    }
+  ],
+  "knownDiscrepancies": [],
+  "suspectedEngineBugs": [],
+  "spellingMap": {
+    "Lục Sĩ": "Lực Sĩ",
+    "Thiên Hỉ": "Thiên Hỷ",
+    "Tả Phù": "Tả Phụ"
+  },
+  "notes": []
+}

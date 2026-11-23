@@ -16,7 +16,7 @@ import type { Chart, Palace } from "../chart/types.js";
 import { DEFAULT_ANALYSIS_OPTIONS, type AnalysisOptions } from "./analysis-options.js";
 import { branchIn, branchIndex, formatSummary, hasAny, isStrong, mainNames, mainSummaries, oppositeOf, palaceTag, presentIn, presentInAny, type StarSummary } from "./analysis-helpers.js";
 import { bodyPalace, hasStarIn, isVoidOfMainStars, lifePalace, palaceAt, palacesOfStar, threeSidesOf } from "./chart-query.js";
-import { finding, renderFinding, type Certainty, type Finding, type Polarity } from "./finding.js";
+import { finding, renderFinding, renderFindingBrief, type Certainty, type Finding, type Polarity, type RenderDetail } from "./finding.js";
 import {
   BIRTH_MONTH_MLTC,
   BODY_LORD_BY_YEAR_BRANCH,
@@ -1094,7 +1094,7 @@ const voidLine = (label: string, coverage: VoidCoverage): string =>
     ? `- ${label} vô chính diệu, mượn ${coverage.borrowedFrom.role} (${branchName(coverage.borrowedFrom.branch)}): ${coverage.borrowedStars.map(formatSummary).join(", ") || "không có"}`
     : `- ${label} có chính tinh`;
 
-export function renderNatalProfile(profile: NatalProfile): string {
+export function renderNatalProfile(profile: NatalProfile, detail: RenderDetail = "full"): string {
   const stages = profile.lifeStages;
   const tt = profile.tuanTriet;
   return [
@@ -1114,6 +1114,6 @@ export function renderNatalProfile(profile: NatalProfile): string {
     voidLine("Thân", profile.bodyVoid),
     "",
     "### Nhận định",
-    ...profile.findings.map(renderFinding),
+    ...profile.findings.map(detail === "brief" ? renderFindingBrief : renderFinding),
   ].join("\n");
 }

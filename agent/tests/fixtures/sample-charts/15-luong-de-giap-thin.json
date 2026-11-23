@@ -1,0 +1,125 @@
+{
+  "id": "15-luong-de-giap-thin",
+  "title": "Nam nhân Lưỡng Đế Giáp Thìn",
+  "kbFile": "Kien-thuc-Tu-Vi-Nam-Phai/13_La-so-mau/15_TVTH-Nam-nhan-Luong-De-Giap-Thin.md",
+  "bookSource": "Tu-Vi-Thuc-Hanh/06_So-Tu-Vi-mau/15_Nam-nhan-Luong-De-Giap-Thin.md",
+  "bookPage": "TVTH tr.184–185",
+  "confidence": "high",
+  "birth": {
+    "calendar": "lunar",
+    "yearCanChi": "Giáp Thìn",
+    "year": 2024,
+    "month": 5,
+    "day": 9,
+    "hourBranch": "Dậu",
+    "gender": "nam",
+    "isLeapMonth": false
+  },
+  "yearChoice": "Sách chỉ ghi can chi; chọn 2024 là năm trong 1800–2199 cùng can chi và có ngày âm này.",
+  "options": {},
+  "expected": {
+    "polarity": "Dương Nam",
+    "lifeBranch": "Dậu",
+    "bodyBranch": "Mão",
+    "bureau": "Kim tứ cục",
+    "nayin": "Phú Đăng Hỏa",
+    "palaces": {
+      "Mệnh": "Dậu",
+      "Phụ Mẫu": "Tuất",
+      "Phúc Đức": "Hợi",
+      "Điền Trạch": "Tý",
+      "Quan Lộc": "Sửu",
+      "Nô Bộc": "Dần",
+      "Thiên Di": "Mão",
+      "Tật Ách": "Thìn",
+      "Tài Bạch": "Tỵ",
+      "Tử Tức": "Ngọ",
+      "Phu Thê": "Mùi",
+      "Huynh Đệ": "Thân"
+    },
+    "stars": {
+      "Dậu": [
+        "Vũ Khúc",
+        "Thất Sát",
+        "Thiên Phúc",
+        "Hỷ Thần",
+        "Đẩu Quân",
+        "Tử Phù",
+        "Nguyệt Đức",
+        "Đào Hoa",
+        "Lưu Hà",
+        "Triệt",
+        "Đế Vượng"
+      ],
+      "Mão": [
+        "Thiên Phủ",
+        "Lực Sĩ",
+        "Kình Dương",
+        "Thai Phụ",
+        "Trực Phù",
+        "Tuần"
+      ],
+      "Tỵ": [
+        "Liêm Trinh",
+        "Tham Lang",
+        "Thiên Không",
+        "Kiếp Sát"
+      ],
+      "Sửu": [
+        "Tử Vi",
+        "Phá Quân",
+        "Thiên Khôi",
+        "Văn Khúc",
+        "Văn Xương",
+        "Đà La",
+        "Linh Tinh"
+      ],
+      "Mùi": [
+        "Thiên Tướng"
+      ],
+      "Ngọ": [
+        "Cự Môn",
+        "Hữu Bật"
+      ],
+      "Tuất": [
+        "Thái Dương"
+      ],
+      "Thân": [
+        "Thiên Đồng",
+        "Thiên Lương",
+        "Tả Phụ",
+        "Địa Kiếp",
+        "Triệt"
+      ]
+    },
+    "transformations": {
+      "Dậu": [
+        "Hóa Khoa"
+      ],
+      "Tỵ": [
+        "Hóa Lộc"
+      ],
+      "Sửu": [
+        "Hóa Quyền"
+      ],
+      "Tuất": [
+        "Hóa Kỵ"
+      ]
+    },
+    "patterns": [
+      "sat-pha-liem-tham"
+    ]
+  },
+  "addedStars": [],
+  "knownDiscrepancies": [],
+  "suspectedEngineBugs": [],
+  "spellingMap": {
+    "Hỉ Thần": "Hỷ Thần",
+    "Lục Sĩ": "Lực Sĩ",
+    "Thái Phụ": "Thai Phụ",
+    "Đồng": "Thiên Đồng",
+    "Lương": "Thiên Lương",
+    "Tả Phù": "Tả Phụ"
+  },
+  "notes": []
+}

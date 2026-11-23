@@ -1,0 +1,119 @@
+{
+  "id": "01-la-thai-hau",
+  "title": "Lã Thái Hậu (Giáp Dần, nữ)",
+  "kbFile": "Kien-thuc-Tu-Vi-Nam-Phai/13_La-so-mau/01_TVTH-La-Thai-Hau.md",
+  "bookSource": "Tu-Vi-Thuc-Hanh/06_So-Tu-Vi-mau/01_La-Thai-Hau.md",
+  "bookPage": "TVTH tr.159–160",
+  "confidence": "high",
+  "birth": {
+    "calendar": "lunar",
+    "yearCanChi": "Giáp Dần",
+    "year": 1974,
+    "month": 3,
+    "day": 7,
+    "hourBranch": "Dần",
+    "gender": "nữ",
+    "isLeapMonth": false
+  },
+  "yearChoice": "Năm can chi của danh nhân lịch sử; chọn 1974 (cùng can chi) vì engine chỉ dùng can chi năm cùng tháng, ngày âm.",
+  "options": {},
+  "expected": {
+    "polarity": "Dương Nữ",
+    "lifeBranch": "Dần",
+    "bodyBranch": "Ngọ",
+    "bureau": "Hỏa lục cục",
+    "nayin": "Đại Khê Thủy",
+    "palaces": {
+      "Mệnh": "Dần",
+      "Phụ Mẫu": "Mão",
+      "Phúc Đức": "Thìn",
+      "Điền Trạch": "Tỵ",
+      "Quan Lộc": "Ngọ",
+      "Nô Bộc": "Mùi",
+      "Thiên Di": "Thân",
+      "Tật Ách": "Dậu",
+      "Tài Bạch": "Tuất",
+      "Tử Tức": "Hợi",
+      "Phu Thê": "Tý",
+      "Huynh Đệ": "Sửu"
+    },
+    "stars": {
+      "Dần": [
+        "Liêm Trinh",
+        "Lộc Tồn",
+        "Bác Sĩ",
+        "Bát Tọa",
+        "Thái Tuế",
+        "Đẩu Quân"
+      ],
+      "Thân": [
+        "Tham Lang",
+        "Hữu Bật",
+        "Văn Xương",
+        "Thiên Mã",
+        "Phượng Các",
+        "Triệt"
+      ],
+      "Ngọ": [
+        "Vũ Khúc",
+        "Thiên Phủ",
+        "Tả Phụ",
+        "Văn Khúc",
+        "Long Trì"
+      ],
+      "Tuất": [
+        "Tử Vi",
+        "Thiên Tướng",
+        "Quốc Ấn",
+        "Hoa Cái"
+      ],
+      "Thìn": [
+        "Phá Quân",
+        "Thiên Khốc"
+      ],
+      "Tý": [
+        "Thất Sát",
+        "Thanh Long",
+        "Điếu Khách",
+        "Tuần"
+      ],
+      "Hợi": [
+        "Thiên Lương",
+        "Hỏa Tinh",
+        "Thiên Hình",
+        "Kiếp Sát"
+      ]
+    },
+    "transformations": {
+      "Dần": [
+        "Hóa Lộc"
+      ],
+      "Ngọ": [
+        "Hóa Khoa"
+      ],
+      "Thìn": [
+        "Hóa Quyền"
+      ]
+    },
+    "patterns": [
+      "song-loc",
+      "tu-linh"
+    ]
+  },
+  "addedStars": [],
+  "knownDiscrepancies": [
+    {
+      "kind": "book-internal",
+      "star": "Thiên Khố",
+      "bookBranch": "Thân",
+      "engineBranch": "Tý",
+      "reason": "Ảnh lá số in chữ đậm 'Thiên-Khố' ở ô Thiên Di (Thân), nhưng quy tắc của chính TVTH tr.20 (Thiên Khố khởi Dần tháng Giêng, đếm nghịch) cho tháng 3 là Tý; lá số Kỷ Mùi tr.165 (tháng 8, Thiên Khố ở Mùi) khớp quy tắc. Engine theo quy tắc.",
+      "source": "KB 01_Du-lieu-lap-la-so/05_An-sao/04_An-phu-tinh-theo-thang-ngay-gio.md: 'quy tắc TVTH tr.20 ... cho Lã Thái Hậu (tháng 3) ở Tý, nhưng lá số mẫu tr.159 ghi chữ đậm \"Thiên Khố\" ở cung Thân'"
+    }
+  ],
+  "suspectedEngineBugs": [],
+  "spellingMap": {
+    "Tả Phù": "Tả Phụ"
+  },
+  "notes": []
+}

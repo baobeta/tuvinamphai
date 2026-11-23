@@ -1,0 +1,135 @@
+{
+  "id": "26-np1-mau-11-mau-tuat",
+  "title": "NP1 mẫu 11: Thiên Đồng tại Tuất (Mậu Tuất, dương nữ)",
+  "kbFile": "Kien-thuc-Tu-Vi-Nam-Phai/13_La-so-mau/26_NP1-Mau-11-Thien-Dong-tai-Tuat-Mau-Tuat.md",
+  "bookSource": "Tu-Vi-Nam-Phai_Phan-1/05_La-so-mau/11_La-so-mau-11.md",
+  "bookPage": "NP1 tr.277",
+  "confidence": "low",
+  "birth": {
+    "calendar": "lunar",
+    "yearCanChi": "Mậu Tuất",
+    "year": 2018,
+    "month": 1,
+    "day": 29,
+    "hourBranch": "Thìn",
+    "gender": "nữ",
+    "isLeapMonth": false
+  },
+  "yearChoice": "Ảnh ghi năm 2018 (Mậu Tuất), tháng 1 Giáp Dần, ngày 29 Đinh Mùi (âm lịch), giờ Thìn.",
+  "options": {},
+  "expected": {
+    "polarity": "Dương Nữ",
+    "lifeBranch": "Tuất",
+    "bodyBranch": "Ngọ",
+    "bureau": "Thủy nhị cục",
+    "nayin": "Bình Địa Mộc",
+    "palaces": {
+      "Mệnh": "Tuất",
+      "Phụ Mẫu": "Hợi",
+      "Phúc Đức": "Tý",
+      "Điền Trạch": "Sửu",
+      "Quan Lộc": "Dần",
+      "Nô Bộc": "Mão",
+      "Thiên Di": "Thìn",
+      "Tật Ách": "Tỵ",
+      "Tài Bạch": "Ngọ",
+      "Tử Tức": "Mùi",
+      "Phu Thê": "Thân",
+      "Huynh Đệ": "Dậu"
+    },
+    "stars": {
+      "Tuất": [
+        "Thiên Đồng",
+        "Hữu Bật",
+        "Thai Phụ",
+        "Hỷ Thần",
+        "Đường Phù",
+        "Hoa Cái",
+        "Thái Tuế",
+        "Địa Võng",
+        "Thai"
+      ],
+      "Ngọ": [
+        "Thiên Lương",
+        "Văn Xương",
+        "Kình Dương",
+        "Phong Cáo",
+        "Bát Tọa",
+        "Bạch Hổ",
+        "Quan Phủ"
+      ],
+      "Hợi": [
+        "Vũ Khúc",
+        "Phá Quân"
+      ],
+      "Tý": [
+        "Thái Dương",
+        "Tang Môn"
+      ],
+      "Sửu": [
+        "Thiên Phủ"
+      ],
+      "Dần": [
+        "Thiên Cơ",
+        "Thái Âm",
+        "Quan Phù"
+      ],
+      "Mão": [
+        "Tử Vi",
+        "Tham Lang",
+        "Địa Kiếp",
+        "Đào Hoa"
+      ],
+      "Thìn": [
+        "Cự Môn",
+        "Đà La",
+        "Tuế Phá",
+        "Thiên Hư",
+        "Tuần"
+      ],
+      "Tỵ": [
+        "Thiên Tướng",
+        "Lộc Tồn"
+      ],
+      "Mùi": [
+        "Liêm Trinh",
+        "Thất Sát",
+        "Địa Không",
+        "Linh Tinh"
+      ],
+      "Thân": [
+        "Văn Khúc",
+        "Đại Hao",
+        "Thiên Mã",
+        "Điếu Khách"
+      ]
+    },
+    "transformations": {
+      "Tuất": [
+        "Hóa Khoa"
+      ],
+      "Dần": [
+        "Hóa Quyền",
+        "Hóa Kỵ"
+      ],
+      "Mão": [
+        "Hóa Lộc"
+      ]
+    },
+    "patterns": []
+  },
+  "addedStars": [
+    {
+      "star": "Quan Phủ",
+      "branch": "Ngọ",
+      "reason": "Ảnh tr.277 ô Tài Bạch (M.Ngọ) in 'Quan Phủ' (vòng Bác Sĩ)."
+    }
+  ],
+  "knownDiscrepancies": [],
+  "suspectedEngineBugs": [],
+  "spellingMap": {
+    "Thái Phụ": "Thai Phụ",
+    "Hỉ Thần": "Hỷ Thần"
+  },
+  "notes": []
+}

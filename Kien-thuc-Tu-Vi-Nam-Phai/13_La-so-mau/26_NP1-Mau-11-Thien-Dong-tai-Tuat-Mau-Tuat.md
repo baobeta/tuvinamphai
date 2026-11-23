@@ -17,7 +17,7 @@ Mậu Tuất (2018), tháng 1 Giáp Dần, ngày 29 Đinh Mùi, giờ Giáp Thì
 
 ### Bố trí sao chính (đọc từ ảnh)
 - **Mệnh:** Thiên Đồng (Hãm), Hữu Bật, Hóa Khoa, Thái Phụ, Hỉ Thần, Đường Phù, Hoa Cái, Thái Tuế, Địa Võng; cung Thai.
-- **Thân/Tài Bạch:** Thiên Lương (Miếu), Văn Xương, Kình Dương, Phong Cáo, Quan Phù, Bát Tọa, Lộc Tồn, Bạch Hổ.
+- **Thân/Tài Bạch:** Thiên Lương (Miếu), Văn Xương, Kình Dương, Phong Cáo, Quan Phủ, Bát Tọa, L. Lộc Tồn (lưu niên 2019), Bạch Hổ.
 - Phụ Mẫu: Vũ Khúc, Phá Quân. Phúc: Thái Dương, Tang Môn. Điền: Thiên Phủ. Quan: Thiên Cơ, Thái Âm, Hóa Quyền, Hóa Kỵ. Nô: Tử Vi, Tham Lang, Hóa Lộc, Địa Kiếp, Đào Hoa. Thiên Di: Cự Môn, Đà La, Tuế Phá, Thiên Hư, Tuần. Tật: Thiên Tướng. Tử: Liêm Trinh, Thất Sát, Địa Không, Linh Tinh. Phu Thê: vô chính diệu (Văn Khúc, Đại Hao, Thiên Mã, Điếu Khách).
 
 ### Luận theo giảng viên
@@ -40,6 +40,7 @@ Dữ kiện: Tuần ở Thiên Di và Tật → giảng viên kết luận ít �
 
 ## Dị bản & lưu ý
 Văn bản nêu "Phu Cơ Âm: chồng hiền lành" nhưng ảnh cho thấy Cơ Âm ở Quan Lộc; lời "Thê có Hóa Kỵ Bạch Hổ" ở phần vận 44–54 không thấy trong cung Phu (ảnh). Ghi nguyên văn.
+- Đối chiếu ảnh trang 277: ô Tài Bạch (Ngọ) in "Quan Phủ" và "L.Lộc Tồn" (lưu năm Kỷ Hợi 2019); Quan Phù gốc (vòng Thái Tuế năm Tuất) ở Dần, Lộc Tồn gốc tuổi Mậu ở Tỵ.
 
 ## Liên quan
 - [Thái Tuế](../06_Cac-vong-sao/01_Vong-Thai-Tue/01_Thu-tu-va-y-nghia-12-sao.md)

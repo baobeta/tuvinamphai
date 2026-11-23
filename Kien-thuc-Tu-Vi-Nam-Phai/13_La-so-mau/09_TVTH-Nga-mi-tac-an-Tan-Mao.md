@@ -16,9 +16,9 @@ Nữ Âm Tân Mão, Mệnh Tham Lang miếu tại Tuất đồng cung Kình Dư�
 Tân Mão, tháng 11, ngày 13, giờ Dần; Âm Nữ. Bản mệnh Tùng Bách Mộc, Mộc tam cục. Thân cư Quan Lộc (Dần) (TVTH tr.175).
 
 ### Bố trí sao chính (đọc từ ảnh)
-- **Mệnh (Tuất):** Tham Lang, Lục Sĩ, Kình Dương, Long Đức, Địa Võng. **Thiên Di (Thìn):** Vũ Khúc, Thiên Hỉ, Phong Cáo, Thiên Không, Thiếu Dương, Triệt.
+- **Mệnh (Tuất):** Tham Lang, Lục Sĩ, Kình Dương, Long Đức, Địa Võng. **Thiên Di (Thìn):** Vũ Khúc, Hỷ Thần, Phong Cáo, Thiên Không, Thiếu Dương, Triệt.
 - Giáp Mệnh: Huynh Đệ (Dậu) Thái Âm, Lộc Tồn; Phụ Mẫu (Hợi) Cự Môn, Hóa Lộc. **Thân/Quan Lộc (Dần):** Thất Sát, Thiên Việt, Tả Phù.
-- Phu Thê (Thân): Tử Vi, Thiên Phủ, Văn Xương, Hóa Kỵ, Đà La, Linh Tinh, Nguyệt Đức, Kiếp Sát. Phúc (Tỵ): Liêm Trinh, Thiên Tướng, Hữu Bật, Hồng Loan, Đào Hoa. Tài (Ngọ): Phá Quân, Thiên Khôi, Văn Khúc, Hóa Khoa, Tuần.
+- Phu Thê (Thân): Tử Vi, Thiên Phủ, Văn Xương, Hóa Kỵ, Đà La, Linh Tinh, Nguyệt Đức, Kiếp Sát. Phúc (Tý): Liêm Trinh, Thiên Tướng, Hữu Bật, Hồng Loan, Đào Hoa. Tài (Ngọ): Phá Quân, Thiên Khôi, Văn Khúc, Hóa Khoa, Tuần.
 
 ### Cách cục nhận ra
 "Tham Vũ đồng hành hội Khôi Việt giáp song Lộc. Phúc cung có Hồng Đào là cách Nga mi tác án" (TVTH tr.175; sách ghi "áng", chép theo tên cách).
@@ -39,6 +39,7 @@ Dữ kiện: Tham tại Tuất + Kình, giáp Lộc Tồn (Dậu) và Hóa Lộc
 
 ## Dị bản & lưu ý
 Sách ghi Tham Vũ "đồng hành"; ảnh cho thấy Vũ Khúc ở Thiên Di chiếu Mệnh.
+- Đối chiếu ảnh trang 175: cung Phúc Đức ở Tý (Mệnh Tuất), bản chép cũ nhầm Tý thành Tỵ; ô Thiên Di (Thìn) in "Hi-Thần" tức Hỷ Thần, Thiên Hỷ năm Mão ở Tài Bạch (Ngọ).
 
 ## Liên quan
 - [Kình Dương](../05_Phu-tinh-sat-tinh-tu-hoa/02_Luc-sat-tinh/01_Kinh-Duong.md)

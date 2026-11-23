@@ -16,12 +16,15 @@ import {
   renderLifetimeTimeline,
   renderPeriodLayers,
 } from "../core/periods/index.js";
-import { renderFinding } from "../core/analysis/finding.js";
-import { chartReferenceFields, resolveChart, toChartOptions, type ResolvedChart } from "./chart-tools.js";
+import { briefFooter, renderFinding, renderFindingBrief, type Finding, type RenderDetail } from "../core/analysis/finding.js";
+import { chartReferenceFields, detailField, resolveChart, toChartOptions, type ResolvedChart } from "./chart-tools.js";
 import { defineTool } from "./registry.js";
 import { ToolInputError, unwrapOrThrow } from "./result-output.js";
 
 const header = (resolved: ResolvedChart): string => (resolved.id ? `chart_id: ${resolved.id}\n\n` : "");
+
+const withFooter = (text: string, detail: RenderDetail, findings: readonly Finding[]): string =>
+  detail === "brief" ? `${text}\n\n${briefFooter(findings)}` : text;
 
 const ROLE_ALIASES: Readonly<Record<string, PalaceRole>> = {
   "phụ": "Phụ Mẫu",
@@ -71,18 +74,23 @@ export const analyzeChartTool = defineTool({
   description:
     "Phân tích tổng hợp một lá số trong MỘT lần gọi: bản mệnh (chủ Mệnh/Thân, Thân cư, Cục với bản mệnh, sinh vượng bại tuyệt, " +
     "âm dương thuận/nghịch lý, vòng Thái Tuế, Tuần Triệt, vô chính diệu), các cách cục khớp, và phân tích cung Mệnh, cung Thân. " +
-    "Dùng tool này đầu tiên khi luận một lá số, rồi mới gọi tool chi tiết. Mỗi kết luận ghi 'khớp chắc chắn' hoặc 'khớp theo cách hiểu' kèm giả định.",
-  schema: z.strictObject({ ...chartReferenceFields }),
-  async run(reference, ctx) {
+    "Dùng tool này đầu tiên khi luận một lá số, rồi mới gọi tool chi tiết. Mỗi kết luận ghi 'khớp chắc chắn' hoặc 'khớp theo cách hiểu' kèm nguồn. " +
+    "Mặc định detail brief (gọn, đủ kết luận và dị bản); gọi lại với detail full để xem giả định, điều kiện và danh sách sao.",
+  schema: z.strictObject({ ...chartReferenceFields, detail: detailField("brief") }),
+  async run({ detail = "brief", ...reference }, ctx) {
     const resolved = resolveChart(reference, ctx);
     const chart = resolved.chart;
     const palaces = [...new Set([chart.parameters.lifePalace, chart.parameters.bodyPalace])];
-    return [
-      header(resolved) + renderNatalProfile(natalProfile(chart)),
+    const profile = natalProfile(chart);
+    const patterns = detectPatterns(chart);
+    const palaceAnalyses = palaces.map((branch) => unwrapOrThrow(analyzePalace(chart, branch)));
+    const text = [
+      header(resolved) + renderNatalProfile(profile, detail),
       "## Cách cục",
-      renderPatterns(detectPatterns(chart)),
-      ...palaces.map((branch) => renderPalaceAnalysis(unwrapOrThrow(analyzePalace(chart, branch)))),
+      renderPatterns(patterns, detail),
+      ...palaceAnalyses.map((analysis) => renderPalaceAnalysis(analysis, detail)),
     ].join("\n\n");
+    return withFooter(text, detail, [...profile.findings, ...patterns, ...palaceAnalyses.flatMap((analysis) => analysis.findings)]);
   },
 });
 
@@ -94,12 +102,17 @@ export const detectPatternsTool = defineTool({
   schema: z.strictObject({
     ...chartReferenceFields,
     pattern_id: z.string().optional().describe("Mã cách cục cần giải thích; bỏ trống để liệt kê mọi cách khớp"),
+    detail: detailField("full"),
   }),
-  async run({ pattern_id, ...reference }, ctx) {
+  async run({ pattern_id, detail = "full", ...reference }, ctx) {
     const resolved = resolveChart(reference, ctx);
-    if (!pattern_id) return header(resolved) + renderPatterns(detectPatterns(resolved.chart));
+    if (!pattern_id) {
+      const patterns = detectPatterns(resolved.chart);
+      return withFooter(header(resolved) + renderPatterns(patterns, detail), detail, patterns);
+    }
     const evaluation = unwrapOrThrow(evaluatePattern(resolved.chart, pattern_id));
-    return `${header(resolved)}${evaluation.matched ? "THÀNH CÁCH" : "KHÔNG THÀNH CÁCH"}\n${renderFinding(evaluation.finding)}`;
+    const rendered = detail === "brief" ? renderFindingBrief(evaluation.finding) : renderFinding(evaluation.finding);
+    return withFooter(`${header(resolved)}${evaluation.matched ? "THÀNH CÁCH" : "KHÔNG THÀNH CÁCH"}\n${rendered}`, detail, [evaluation.finding]);
   },
 });
 
@@ -117,10 +130,11 @@ export const natalProfileTool = defineTool({
   description:
     "Bản mệnh của lá số: sao chủ Mệnh, chủ Thân, Thân cư cung nào, Cục sinh khắc bản mệnh, cục kỵ hành, sinh vượng bại tuyệt địa, " +
     "mùa sinh và giờ sinh thuận/nghịch, âm dương thuận/nghịch lý theo từng cách tính, Mệnh trong vòng Thái Tuế, Tuần Triệt ở Mệnh/Thân, vô chính diệu.",
-  schema: z.strictObject({ ...chartReferenceFields }),
-  async run(reference, ctx) {
+  schema: z.strictObject({ ...chartReferenceFields, detail: detailField("full") }),
+  async run({ detail = "full", ...reference }, ctx) {
     const resolved = resolveChart(reference, ctx);
-    return header(resolved) + renderNatalProfile(natalProfile(resolved.chart));
+    const profile = natalProfile(resolved.chart);
+    return withFooter(header(resolved) + renderNatalProfile(profile, detail), detail, profile.findings);
   },
 });
 
@@ -132,11 +146,13 @@ export const analyzePalaceTool = defineTool({
   schema: z.strictObject({
     ...chartReferenceFields,
     palace: z.string().describe("Tên cung chức hoặc địa chi"),
+    detail: detailField("full"),
   }),
-  async run({ palace, ...reference }, ctx) {
+  async run({ palace, detail = "full", ...reference }, ctx) {
     const resolved = resolveChart(reference, ctx);
     const target = resolvePalaceName(resolved.chart, palace);
-    return `${header(resolved)}Hiểu "${palace}" là ${target.reading}.\n\n${renderPalaceAnalysis(unwrapOrThrow(analyzePalace(resolved.chart, target.branch)))}`;
+    const analysis = unwrapOrThrow(analyzePalace(resolved.chart, target.branch));
+    return withFooter(`${header(resolved)}Hiểu "${palace}" là ${target.reading}.\n\n${renderPalaceAnalysis(analysis, detail)}`, detail, analysis.findings);
   },
 });
 
@@ -151,8 +167,9 @@ export const periodLayersTool = defineTool({
     month: z.number().int().min(1).max(12).optional(),
     day: z.number().int().min(1).max(30).optional(),
     hour_branch: z.string().optional().describe("Địa chi giờ muốn xem"),
+    detail: detailField("full"),
   }),
-  async run({ year, month, day, hour_branch, ...reference }, ctx) {
+  async run({ year, month, day, hour_branch, detail = "full", ...reference }, ctx) {
     const resolved = resolveChart(reference, ctx);
     const view = {
       year,
@@ -160,7 +177,8 @@ export const periodLayersTool = defineTool({
       ...(day !== undefined ? { day } : {}),
       ...(hour_branch ? { hourBranch: unwrapOrThrow(parseBranch(hour_branch)) } : {}),
     };
-    return header(resolved) + renderPeriodLayers(resolved.chart, unwrapOrThrow(periodLayers(resolved.chart, view)));
+    const layers = unwrapOrThrow(periodLayers(resolved.chart, view));
+    return withFooter(header(resolved) + renderPeriodLayers(resolved.chart, layers, detail), detail, layers.findings);
   },
 });
 
@@ -171,11 +189,12 @@ export const lifetimeTimelineTool = defineTool({
   schema: z.strictObject({
     ...chartReferenceFields,
     max_age: z.number().int().min(13).max(120).optional().describe("Tuổi tối đa, mặc định 100"),
+    detail: detailField("full"),
   }),
-  async run({ max_age, ...reference }, ctx) {
+  async run({ max_age, detail = "full", ...reference }, ctx) {
     const resolved = resolveChart(reference, ctx);
     const timeline = lifetimeTimeline(resolved.chart, max_age ? { maxAge: max_age } : {});
-    return header(resolved) + renderLifetimeTimeline(resolved.chart, timeline);
+    return withFooter(header(resolved) + renderLifetimeTimeline(resolved.chart, timeline, detail), detail, timeline.findings);
   },
 });
 

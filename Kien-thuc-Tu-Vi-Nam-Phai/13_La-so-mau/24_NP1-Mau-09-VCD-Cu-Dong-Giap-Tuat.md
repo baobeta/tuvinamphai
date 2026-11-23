@@ -16,7 +16,7 @@ Nam Dương Giáp Tuất, Mệnh vô chính diệu có Cự Đồng chiếu từ
 Giáp Tuất (1994), tháng 3 Mậu Thìn, ngày 25 Tân Mão, giờ Đinh Dậu (17h30); Dương Nam; bản mệnh Sơn Đầu Hỏa; Thổ ngũ cục; Chủ Mệnh Lộc Tồn, Chủ Thân Văn Xương; "Âm Dương nghịch lý, Mệnh sinh Cục, Thân cư Thiên Di". Năm xem 2019, 26 tuổi.
 
 ### Bố trí sao chính (đọc từ ảnh)
-- **Mệnh:** vô chính diệu; Thiên Việt, Tấu Thư, Đường Phù, Thiên Quan, Thiên Đức, Bạch Hổ, Thiên Khốc; cung Dưỡng.
+- **Mệnh:** vô chính diệu; Thiên Việt, Tấu Thư, Đường Phù, Thiên Quan, Thiên Đức, L. Bạch Hổ, L. Thiên Khốc (lưu niên 2019); cung Dưỡng.
 - **Thân/Thiên Di:** Thiên Đồng (Hãm), Cự Môn (Hãm), Văn Khúc, Đà La, Thiên Khôi, Quan Phủ, Phá Toái, Thiếu Âm.
 - Phụ Mẫu: Phá Quân, Địa Kiếp, Hữu Bật, Hóa Quyền, Bát Tọa, Điếu Khách, Thiên Mã. Điền: Liêm Trinh, Thiên Phủ, Hóa Lộc, Hỏa Tinh, Thái Tuế, Hoa Cái. Quan Lộc: Thái Âm (Miếu), Thiên Hình, Thiên Không, Thiên Hỉ, Đại Hao, Kiếp Sát. Nô: Tham Lang. Tật Ách: Vũ Khúc, Thiên Tướng, Địa Không, Hóa Khoa, Lộc Tồn. Tài Bạch: Thái Dương, Thiên Lương, Đào Hoa, Kình Dương, Hóa Kỵ, Thiên Diêu. Phu Thê: Thiên Cơ, Hồng Loan. Huynh Đệ: Tử Vi, Tả Phù, Linh Tinh. Tử Tức: Thất Sát.
 
@@ -39,6 +39,7 @@ Dữ kiện: Mệnh VCD, Quan có Thiên Hình + Thiên Không → giảng viên
 
 ## Dị bản & lưu ý
 OCR lỗi ("thì trường" nghĩa có thể là "thị trường" = thọ). Một số vị trí cung (Phu Thê) đọc theo ảnh.
+- Đối chiếu ảnh trang 272: ô Mệnh ghi "L.Bạch Hổ", "L.Thiên Khốc" (lưu niên 2019); Bạch Hổ gốc năm Tuất ở Ngọ, Thiên Khốc gốc ở Thân.
 
 ## Liên quan
 - [Nguyên tắc xem VCD](../04_Chinh-tinh/15_Menh-vo-chinh-dieu/01_Nguyen-tac-xem-VCD.md)

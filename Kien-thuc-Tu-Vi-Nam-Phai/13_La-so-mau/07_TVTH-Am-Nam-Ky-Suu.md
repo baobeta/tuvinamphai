@@ -16,7 +16,7 @@
 Kỷ Sửu, tháng Giêng, ngày 26, giờ Ngọ; Âm Nam. Bản mệnh Tích Lịch Hỏa, Kim tứ cục. Thân cư Mệnh (Thân) (TVTH tr.171).
 
 ### Bố trí sao chính (đọc từ ảnh)
-- **Mệnh/Thân (Thân):** Tham Lang, Thiên Việt, Hóa Quyền, Phục Binh, Phong Cáo, Thiên Hỉ, Long Đức, Giải Thần, Thiên Trù, Triệt; cung Tuyệt.
+- **Mệnh/Thân (Thân):** Tham Lang, Thiên Việt, Hóa Quyền, Phục Binh, Phong Cáo, Thiên Hỉ, Long Đức, Thiên Giải, Thiên Trù, Triệt; cung Tuyệt.
 - Thiên Di (Dần): Liêm Trinh, Thiên Phúc, Quốc Ấn, Tướng Quân, Hồng Loan, Thiên Không, Kiếp Sát. Quan Lộc (Tý): Thất Sát, Thiên Khôi, Thái Phụ.
 - Huynh Đệ (Mùi): Thái Dương, Thái Âm, Kình Dương, Tuần. Phu Thê (Ngọ): Vũ Khúc, Thiên Phủ, Hóa Lộc, Lộc Tồn. Phúc (Tuất): Tử Vi, Thiên Tướng, Hóa Kỵ, Văn Khúc, Hữu Bật.
 
@@ -39,6 +39,7 @@ Dữ kiện: Huynh Đệ có Nhật + Nguyệt + Thiên Hỉ → quy tắc phú 
 
 ## Dị bản & lưu ý
 Không có.
+- Đối chiếu ảnh trang 171: ô Mệnh (Thân) in "Thiên-Giải"; Giải Thần đi cùng Phượng Các ở Phụ Mẫu (Dậu).
 
 ## Liên quan
 - [Sát Phá Liêm Tham](../09_Cach-cuc/01_Cach-tot/12_Sat-Pha-Liem-Tham.md)

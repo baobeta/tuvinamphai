@@ -1,0 +1,104 @@
+{
+  "id": "13-nu-cu-dong-mau-tuat",
+  "title": "Nữ nhân Cự Đồng Mậu Tuất",
+  "kbFile": "Kien-thuc-Tu-Vi-Nam-Phai/13_La-so-mau/13_TVTH-Nu-nhan-Cu-Dong-Mau-Tuat.md",
+  "bookSource": "Tu-Vi-Thuc-Hanh/06_So-Tu-Vi-mau/13_Nu-nhan-Cu-Dong-Mau-Tuat.md",
+  "bookPage": "TVTH tr.181–182",
+  "confidence": "high",
+  "birth": {
+    "calendar": "lunar",
+    "yearCanChi": "Mậu Tuất",
+    "year": 2018,
+    "month": 2,
+    "day": 23,
+    "hourBranch": "Dần",
+    "gender": "nữ",
+    "isLeapMonth": false
+  },
+  "yearChoice": "Sách chỉ ghi can chi; chọn 2018 là năm trong 1800–2199 cùng can chi và có ngày âm này.",
+  "options": {},
+  "expected": {
+    "polarity": "Dương Nữ",
+    "lifeBranch": "Sửu",
+    "bodyBranch": "Tỵ",
+    "bureau": "Kim tứ cục",
+    "nayin": "Bình Địa Mộc",
+    "palaces": {
+      "Mệnh": "Sửu",
+      "Phụ Mẫu": "Dần",
+      "Phúc Đức": "Mão",
+      "Điền Trạch": "Thìn",
+      "Quan Lộc": "Tỵ",
+      "Nô Bộc": "Ngọ",
+      "Thiên Di": "Mùi",
+      "Tật Ách": "Thân",
+      "Tài Bạch": "Dậu",
+      "Tử Tức": "Tuất",
+      "Phu Thê": "Hợi",
+      "Huynh Đệ": "Tý"
+    },
+    "stars": {
+      "Sửu": [
+        "Thiên Đồng",
+        "Cự Môn",
+        "Thiên Khôi",
+        "Quốc Ấn",
+        "Tướng Quân",
+        "Địa Kiếp",
+        "Thiếu Âm",
+        "Phá Toái",
+        "Triệt",
+        "Đế Vượng"
+      ],
+      "Tỵ": [
+        "Thiên Cơ",
+        "Tả Phụ",
+        "Lộc Tồn",
+        "Bác Sĩ",
+        "Linh Tinh",
+        "Ân Quang",
+        "Hồng Loan",
+        "Long Đức",
+        "Lưu Hà",
+        "Tuần"
+      ],
+      "Hợi": [
+        "Thái Âm",
+        "Hỏa Tinh"
+      ],
+      "Tý": [
+        "Tham Lang"
+      ],
+      "Mão": [
+        "Thái Dương",
+        "Thiên Lương"
+      ],
+      "Dậu": [
+        "Hữu Bật",
+        "Địa Không"
+      ]
+    },
+    "transformations": {
+      "Tỵ": [
+        "Hóa Kỵ"
+      ],
+      "Hợi": [
+        "Hóa Quyền"
+      ],
+      "Tý": [
+        "Hóa Lộc"
+      ],
+      "Dậu": [
+        "Hóa Khoa"
+      ]
+    },
+    "patterns": []
+  },
+  "addedStars": [],
+  "knownDiscrepancies": [],
+  "suspectedEngineBugs": [],
+  "spellingMap": {
+    "Tả Phù": "Tả Phụ"
+  },
+  "notes": []
+}

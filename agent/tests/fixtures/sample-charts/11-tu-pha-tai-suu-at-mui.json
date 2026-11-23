@@ -1,0 +1,102 @@
+{
+  "id": "11-tu-pha-tai-suu-at-mui",
+  "title": "Tử Phá tại Sửu, Ất Mùi (âm nam)",
+  "kbFile": "Kien-thuc-Tu-Vi-Nam-Phai/13_La-so-mau/11_TVTH-Tu-Pha-tai-Suu-At-Mui.md",
+  "bookSource": "Tu-Vi-Thuc-Hanh/06_So-Tu-Vi-mau/11_Tu-Pha-tai-Suu-At-Mui.md",
+  "bookPage": "TVTH tr.177–179",
+  "confidence": "high",
+  "birth": {
+    "calendar": "lunar",
+    "yearCanChi": "Ất Mùi",
+    "year": 2015,
+    "month": 2,
+    "day": 5,
+    "hourBranch": "Dần",
+    "gender": "nam",
+    "isLeapMonth": false
+  },
+  "yearChoice": "Sách chỉ ghi can chi; chọn 2015 là năm trong 1800–2199 cùng can chi và có ngày âm này.",
+  "options": {},
+  "expected": {
+    "polarity": "Âm Nam",
+    "lifeBranch": "Sửu",
+    "bodyBranch": "Tỵ",
+    "bureau": "Hỏa lục cục",
+    "nayin": "Sa Trung Kim",
+    "palaces": {
+      "Mệnh": "Sửu",
+      "Phụ Mẫu": "Dần",
+      "Phúc Đức": "Mão",
+      "Điền Trạch": "Thìn",
+      "Quan Lộc": "Tỵ",
+      "Nô Bộc": "Ngọ",
+      "Thiên Di": "Mùi",
+      "Tật Ách": "Thân",
+      "Tài Bạch": "Dậu",
+      "Tử Tức": "Tuất",
+      "Phu Thê": "Hợi",
+      "Huynh Đệ": "Tý"
+    },
+    "stars": {
+      "Sửu": [
+        "Tử Vi",
+        "Phá Quân",
+        "Thanh Long",
+        "Địa Kiếp",
+        "Thiên Hư",
+        "Tuế Phá",
+        "Phá Toái",
+        "Mộc Dục"
+      ],
+      "Tỵ": [
+        "Liêm Trinh",
+        "Tham Lang",
+        "Tả Phụ",
+        "Phục Binh",
+        "Bát Tọa",
+        "Điếu Khách",
+        "Thiên Mã",
+        "Tuần"
+      ],
+      "Mùi": [
+        "Thiên Tướng",
+        "Hỏa Tinh",
+        "Hoa Cái",
+        "Triệt"
+      ],
+      "Dậu": [
+        "Vũ Khúc",
+        "Thất Sát",
+        "Hữu Bật",
+        "Địa Không"
+      ],
+      "Tý": [
+        "Thiên Cơ",
+        "Thiên Khôi",
+        "Linh Tinh"
+      ],
+      "Mão": [
+        "Thiên Phủ",
+        "Lộc Tồn"
+      ]
+    },
+    "transformations": {
+      "Sửu": [
+        "Hóa Khoa"
+      ],
+      "Tý": [
+        "Hóa Lộc"
+      ]
+    },
+    "patterns": [
+      "sat-pha-liem-tham"
+    ]
+  },
+  "addedStars": [],
+  "knownDiscrepancies": [],
+  "suspectedEngineBugs": [],
+  "spellingMap": {
+    "Tả Phù": "Tả Phụ"
+  },
+  "notes": []
+}

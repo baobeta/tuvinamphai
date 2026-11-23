@@ -1,0 +1,133 @@
+{
+  "id": "21-np1-mau-06-quy-hoi",
+  "title": "NP1 mẫu 6: Thiên Tướng Không Kiếp (Quý Hợi, âm nam)",
+  "kbFile": "Kien-thuc-Tu-Vi-Nam-Phai/13_La-so-mau/21_NP1-Mau-06-Thien-Tuong-Khong-Kiep-Quy-Hoi.md",
+  "bookSource": "Tu-Vi-Nam-Phai_Phan-1/05_La-so-mau/06_La-so-mau-6.md",
+  "bookPage": "NP1 tr.260",
+  "confidence": "low",
+  "birth": {
+    "calendar": "lunar",
+    "yearCanChi": "Quý Hợi",
+    "year": 1983,
+    "month": 10,
+    "day": 15,
+    "hourBranch": "Thìn",
+    "gender": "nam",
+    "isLeapMonth": false
+  },
+  "yearChoice": "Ảnh ghi năm 1983 (Quý Hợi), tháng 10, ngày 15 (âm lịch), giờ Thìn.",
+  "options": {},
+  "expected": {
+    "polarity": "Âm Nam",
+    "lifeBranch": "Mùi",
+    "bodyBranch": "Mão",
+    "bureau": "Hỏa lục cục",
+    "nayin": "Đại Hải Thủy",
+    "palaces": {
+      "Mệnh": "Mùi",
+      "Phụ Mẫu": "Thân",
+      "Phúc Đức": "Dậu",
+      "Điền Trạch": "Tuất",
+      "Quan Lộc": "Hợi",
+      "Nô Bộc": "Tý",
+      "Thiên Di": "Sửu",
+      "Tật Ách": "Dần",
+      "Tài Bạch": "Mão",
+      "Tử Tức": "Thìn",
+      "Phu Thê": "Tỵ",
+      "Huynh Đệ": "Ngọ"
+    },
+    "stars": {
+      "Mùi": [
+        "Thiên Tướng",
+        "Ân Quang",
+        "Địa Không",
+        "Bạch Hổ",
+        "Thiên Khốc",
+        "Tấu Thư",
+        "Hoa Cái"
+      ],
+      "Mão": [
+        "Thiên Phủ",
+        "Địa Kiếp",
+        "Thiên Khôi",
+        "Tam Thai",
+        "Đại Hao",
+        "Long Trì",
+        "Quan Phù"
+      ],
+      "Tỵ": [
+        "Liêm Trinh",
+        "Tham Lang",
+        "Hỏa Tinh",
+        "Thiên Mã"
+      ],
+      "Ngọ": [
+        "Cự Môn",
+        "Thiên Hình",
+        "Văn Xương"
+      ],
+      "Thân": [
+        "Thiên Đồng",
+        "Thiên Lương",
+        "Văn Khúc"
+      ],
+      "Thìn": [
+        "Thái Âm",
+        "Hồng Loan"
+      ],
+      "Dậu": [
+        "Vũ Khúc",
+        "Thất Sát"
+      ],
+      "Tuất": [
+        "Thái Dương"
+      ],
+      "Tý": [
+        "Thiên Cơ",
+        "Lộc Tồn",
+        "Đào Hoa"
+      ],
+      "Sửu": [
+        "Tử Vi",
+        "Phá Quân",
+        "Hữu Bật"
+      ]
+    },
+    "transformations": {
+      "Tỵ": [
+        "Hóa Kỵ"
+      ],
+      "Ngọ": [
+        "Hóa Quyền"
+      ],
+      "Thìn": [
+        "Hóa Khoa"
+      ],
+      "Sửu": [
+        "Hóa Lộc"
+      ]
+    },
+    "patterns": []
+  },
+  "addedStars": [
+    {
+      "star": "Quan Phù",
+      "branch": "Mão",
+      "reason": "Quan Phù (vòng Thái Tuế, năm Hợi) ở Mão; ảnh tr.260 ô Tài Bạch Mão in mờ 'Quan Phù/Phủ', còn 'Quan Phủ' rõ ở Thiên Di (Sửu)."
+    }
+  ],
+  "knownDiscrepancies": [
+    {
+      "kind": "ocr",
+      "star": "Quan Phủ",
+      "bookBranch": "Mão",
+      "engineBranch": "Sửu",
+      "reason": "KB ghi 'Quan Phủ' ở Tài Bạch (Mão); ảnh mờ dấu, và 'Quan Phủ' (vòng Bác Sĩ, Âm Nam Quý khởi Tý nghịch) đã in ở Thiên Di Sửu, nên chữ ở Mão là Quan Phù.",
+      "source": "Ảnh Tu-Vi-Nam-Phai_Phan-1/_anh-trang/trang-260.jpg, ô THIÊN DI (Ất Sửu): 'Quan Phủ'"
+    }
+  ],
+  "suspectedEngineBugs": [],
+  "spellingMap": {},
+  "notes": []
+}

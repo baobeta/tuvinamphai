@@ -17,7 +17,7 @@ Tân Dậu (1981), tháng 2 Tân Mão, ngày 11 Quý Tỵ, giờ Nhâm Tý (0 gi
 
 ### Bố trí sao chính (đọc từ ảnh)
 - **Mệnh/Thân (Mão):** Thiên Cơ (Miếu), Cự Môn (Miếu), Hóa Lộc, Hỏa Tinh, Tam Thai, Phi Liêm, Lưu Hà, Tuế Phá, Thiên Hư.
-- Tật Ách: Phá Quân (Đắc), Văn Xương, Linh Tinh, Kình Dương, Thiên Không, Hóa Kỵ, Thiên Hình, Quan Phủ, Địa Võng, Thiên Sứ. Tài Bạch: Thiên Đồng, Địa Không, Địa Kiếp, Tang Môn, Thái Tuế. Phụ Mẫu: Thiên Tướng, Văn Khúc, Hóa Khoa. Phúc: Thiên Lương. Điền: Thất Sát. Nô: Liêm Trinh. Thiên Di: Hữu Bật, Lộc Tồn. Phu Thê: Thái Dương, Thái Âm. Tử Tức: Vũ Khúc. Huynh Đệ: Tham Lang, Thiên Khôi.
+- Tật Ách: Phá Quân (Đắc), Văn Xương, Linh Tinh, Kình Dương, Thiên Không, Hóa Kỵ, Thiên Hình, Quan Phủ, Địa Võng, Thiên Sứ. Tài Bạch: Thiên Đồng, Địa Không, Địa Kiếp, Tang Môn, L. Thái Tuế (lưu niên 2019). Phụ Mẫu: Thiên Tướng, Văn Khúc, Hóa Khoa. Phúc: Thiên Lương. Điền: Thất Sát. Nô: Liêm Trinh. Thiên Di: Hữu Bật, Lộc Tồn. Phu Thê: Thái Dương, Thái Âm. Tử Tức: Vũ Khúc. Huynh Đệ: Tham Lang, Thiên Khôi.
 
 ### Luận theo giảng viên
 - Tật có Xương Khúc, Kình, Thiên Không, Thiên Hình, Hóa Kỵ, Quan Phủ: "toàn những sao xấu nhập về Tật sẽ làm giảm thọ"; Tật có Văn Xương nặng hơn Văn Khúc.
@@ -36,6 +36,7 @@ Dữ kiện: Mệnh Thiên Cơ (Mộc) đồng cung Hỏa Tinh → quy tắc Cơ
 
 ## Dị bản & lưu ý
 Ví dụ giết người chỉ là bài giảng minh họa, không phải kết luận tất yếu. Bản OCR có lỗi chính tả.
+- Đối chiếu ảnh trang 256: ô Tài Bạch (Hợi) ghi "L.Thái Tuế", tức Thái Tuế lưu năm xem 2019 (Kỷ Hợi); Thái Tuế gốc năm Dậu ở cung Dậu.
 
 ## Liên quan
 - [Hỏa Tinh – Linh Tinh](../05_Phu-tinh-sat-tinh-tu-hoa/02_Luc-sat-tinh/03_Hoa-Tinh-Linh-Tinh.md)

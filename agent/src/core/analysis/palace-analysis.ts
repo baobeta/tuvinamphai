@@ -21,7 +21,7 @@ import {
   type StarSummary,
 } from "./analysis-helpers.js";
 import { hasStarIn, isVoidOfMainStars, palaceAt, threeSidesOf } from "./chart-query.js";
-import { finding, renderFinding, type Certainty, type Finding, type Polarity } from "./finding.js";
+import { finding, renderFinding, renderFindingBrief, type Certainty, type Finding, type Polarity, type RenderDetail } from "./finding.js";
 import {
   AUSPICIOUS_STARS,
   BAD_FLANK_PATTERNS,
@@ -695,7 +695,15 @@ export const analyzePalace = (chart: Chart, branch: number | string, options: An
 const sideLine = (label: string, side: SidePalace): string =>
   `- ${label}: ${side.role} (${branchName(side.branch)}) — ${side.mainStars.map(formatSummary).join(", ") || "vô chính diệu"}${side.stars.length ? `; ${side.stars.join(", ")}` : ""}`;
 
-export function renderPalaceAnalysis(analysis: PalaceAnalysis): string {
+function renderPalaceAnalysisBrief(analysis: PalaceAnalysis): string {
+  return [
+    `## Cung ${analysis.role}${analysis.isBodyPalace ? " (Thân)" : ""} · ${analysis.stemBranch} · ${analysis.mainStars.map(formatSummary).join(", ") || "vô chính diệu"}`,
+    ...analysis.findings.map(renderFindingBrief),
+  ].join("\n");
+}
+
+export function renderPalaceAnalysis(analysis: PalaceAnalysis, detail: RenderDetail = "full"): string {
+  if (detail === "brief") return renderPalaceAnalysisBrief(analysis);
   const mains = analysis.mainStars.length
     ? analysis.mainStars.map((star) => {
         const element = star.elementFit.element ? `${star.elementFit.element.element}` : "không rõ hành";

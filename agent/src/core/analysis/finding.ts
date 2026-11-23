@@ -42,3 +42,21 @@ export function renderFinding(item: Finding): string {
   ];
   return parts.filter(Boolean).join("\n");
 }
+
+export type RenderDetail = "brief" | "full";
+
+export const briefFooter = (findings: readonly Finding[]): string => {
+  const assumptionCount = findings.reduce((total, item) => total + item.assumptions.length, 0);
+  return `_Rút gọn · giả định: ${assumptionCount} mục, điều kiện, danh sách sao: gọi lại với detail full để xem_`;
+};
+
+const countMarker = (label: string, items: readonly string[]): string => (items.length ? ` · ${label}: ${items.length} mục` : "");
+
+export function renderFindingBrief(item: Finding): string {
+  const head =
+    `- **${item.name}** (${item.polarity}, ${CERTAINTY_LABEL[item.certainty]}) — ${item.summary} [${item.source}]` +
+    countMarker("phá cách/giảm", item.breakers) +
+    countMarker("chưa thỏa", item.missing) +
+    countMarker("giả định", item.assumptions);
+  return item.variants.length ? `${head}\n  - Dị bản: ${item.variants.join("; ")}` : head;
+}

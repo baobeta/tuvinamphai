@@ -8,6 +8,7 @@ import { yearView } from "../core/chart/periods.js";
 import { renderChart, renderYearView } from "../core/chart/render.js";
 import { DEFAULT_CHART_OPTIONS, type Chart, type ChartOptions } from "../core/chart/types.js";
 import { defineTool, type ToolContext } from "./registry.js";
+import { CHART_ID_PATTERN } from "./chart-store.js";
 import { ToolInputError, unwrapOrThrow } from "./result-output.js";
 
 const birthSchema = z
@@ -29,7 +30,8 @@ const optionsSchema = z
   .strictObject({
     leap_month_rule: z.enum(["next-month", "split-at-15"]).optional().describe("Sinh tháng nhuận: tính sang tháng sau (mặc định) hay chia nửa tháng"),
     late_rat_hour_next_day: z.boolean().optional().describe("Dương lịch: sinh 23:00–24:00 thì tính sang ngày hôm sau (mặc định false, theo MLTC)"),
-    khoi_viet_for_canh: z.enum(["TVTH", "MLTC"]).optional(),
+    khoi_viet_for_canh: z.enum(["TVTH", "MLTC", "NP1"]).optional(),
+    khoi_viet_for_tan: z.enum(["TVTH", "NP1"]).optional(),
     transformations_for_canh: z.enum(["TVTH", "MLTC"]).optional(),
     khoa_star_for_nham: z.enum(["Tả Phụ", "Thiên Phủ"]).optional(),
     hoa_linh_for_ty_dau_suu: z.enum(["TVTH", "Tống"]).optional(),
@@ -70,6 +72,7 @@ export const toChartOptions = (raw: RawOptions): ChartOptions => ({
   leapMonthRule: raw?.leap_month_rule ?? DEFAULT_CHART_OPTIONS.leapMonthRule,
   lateRatHourNextDay: raw?.late_rat_hour_next_day ?? DEFAULT_CHART_OPTIONS.lateRatHourNextDay,
   khoiVietForCanh: raw?.khoi_viet_for_canh ?? DEFAULT_CHART_OPTIONS.khoiVietForCanh,
+  khoiVietForTan: raw?.khoi_viet_for_tan ?? DEFAULT_CHART_OPTIONS.khoiVietForTan,
   transformationsForCanh: raw?.transformations_for_canh ?? DEFAULT_CHART_OPTIONS.transformationsForCanh,
   khoaStarForNham: raw?.khoa_star_for_nham ?? DEFAULT_CHART_OPTIONS.khoaStarForNham,
   hoaLinhForTyDauSuu: raw?.hoa_linh_for_ty_dau_suu ?? DEFAULT_CHART_OPTIONS.hoaLinhForTyDauSuu,
@@ -82,10 +85,19 @@ export const chartReferenceFields = {
   options: optionsSchema,
 };
 
+export const detailField = (fallback: "brief" | "full") =>
+  z
+    .enum(["brief", "full"])
+    .optional()
+    .describe(
+      `Mức chi tiết, mặc định ${fallback}. brief: giữ mọi kết luận, mức chắc chắn, nguồn, dị bản; lược giả định, điều kiện thỏa, danh sách sao lặp lại. full: đầy đủ`,
+    );
+
 export interface ResolvedChart {
   readonly id: string | null;
   readonly chart: Chart;
   readonly cached: boolean;
+  readonly persisted: boolean | null;
 }
 
 export function resolveChart(
@@ -96,20 +108,29 @@ export function resolveChart(
     if (reference.birth || reference.options) {
       throw new ToolInputError("Chỉ truyền chart_id hoặc birth/options, không truyền cả hai; muốn đổi dị bản thì gọi lại với birth và options.");
     }
+    if (!CHART_ID_PATTERN.test(reference.chart_id)) {
+      throw new ToolInputError(`chart_id "${reference.chart_id}" sai định dạng (dạng đúng: ls_ và 10 ký tự hex, do build_chart trả về).`);
+    }
     const stored = ctx.charts?.get(reference.chart_id);
-    if (!stored) throw new ToolInputError(`Không còn lá số ${reference.chart_id} trong bộ nhớ; gọi lại với birth để lập lại.`);
-    return { id: reference.chart_id, chart: stored, cached: true };
+    if (!stored) {
+      throw new ToolInputError(`Không tìm thấy lá số ${reference.chart_id} (chưa lập trong phiên này hoặc file lưu đã bị xóa); gọi lại với birth để lập lại.`);
+    }
+    return { id: reference.chart_id, chart: stored, cached: true, persisted: null };
   }
   if (!reference.birth) throw new ToolInputError("Cần chart_id hoặc birth");
   const input = unwrapOrThrow(toBirthInput(reference.birth));
   const options = toChartOptions(reference.options);
   const build = () => unwrapOrThrow(buildChart(input, options));
-  if (!ctx.charts) return { id: null, chart: build(), cached: false };
+  if (!ctx.charts) return { id: null, chart: build(), cached: false, persisted: null };
   return ctx.charts.remember(input, options, build);
 }
 
-const chartHeader = (resolved: ResolvedChart): string =>
-  resolved.id ? `chart_id: ${resolved.id}${resolved.cached ? " (lấy từ bộ nhớ)" : ""}\n\n` : "";
+const chartHeader = (resolved: ResolvedChart): string => {
+  if (!resolved.id) return "";
+  const cachedNote = resolved.cached ? " (lấy từ bộ nhớ)" : "";
+  const persistNote = resolved.persisted === false ? " (không ghi được ra file, chỉ dùng được trong phiên này)" : "";
+  return `chart_id: ${resolved.id}${cachedNote}${persistNote}\n\n`;
+};
 
 export const buildChartTool = defineTool({
   name: "build_chart",
@@ -118,10 +139,14 @@ export const buildChartTool = defineTool({
     "14 chính tinh kèm miếu/hãm, khoảng 60 phụ tinh, vòng Bác Sĩ, Tràng Sinh, Thái Tuế, Tứ Hóa, Tuần, Triệt, đại hạn và tiểu hạn. " +
     "Nhận ngày dương lịch (tự đổi sang âm lịch) hoặc âm lịch. Trả về chart_id: các tool phân tích sau chỉ cần chart_id. " +
     "Kết quả có mục ghi chú dị bản; khi luận phải nêu các dị bản đó.",
-  schema: z.strictObject({ birth: birthSchema, options: optionsSchema }),
-  async run({ birth, options }, ctx) {
+  schema: z.strictObject({
+    birth: birthSchema,
+    options: optionsSchema,
+    detail: detailField("full").describe("full (mặc định): bảng đủ phụ tinh và vòng sao; brief: chỉ chính tinh, Tứ Hóa, Tuần Triệt, lục sát tinh và ghi chú"),
+  }),
+  async run({ birth, options, detail = "full" }, ctx) {
     const resolved = resolveChart({ birth, options }, ctx);
-    return chartHeader(resolved) + renderChart(resolved.chart);
+    return chartHeader(resolved) + renderChart(resolved.chart, detail);
   },
 });
 
@@ -134,10 +159,11 @@ export const yearForecastTool = defineTool({
   schema: z.strictObject({
     ...chartReferenceFields,
     view_year: z.number().int().describe("Năm âm lịch muốn xem, ví dụ 2026"),
+    detail: detailField("full").describe("full (mặc định): bảng sao lưu niên theo cung; brief: sao lưu niên gộp một dòng"),
   }),
-  async run({ view_year, ...reference }, ctx) {
+  async run({ view_year, detail = "full", ...reference }, ctx) {
     const resolved = resolveChart(reference, ctx);
-    return chartHeader(resolved) + renderYearView(resolved.chart, unwrapOrThrow(yearView(resolved.chart, view_year)));
+    return chartHeader(resolved) + renderYearView(resolved.chart, unwrapOrThrow(yearView(resolved.chart, view_year)), detail);
   },
 });
 

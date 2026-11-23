@@ -43,6 +43,7 @@ Dữ kiện: Thân cư Tài, Thiên Phủ + Địa Kiếp → quy tắc Phủ s�
 
 ## Dị bản & lưu ý
 Giảng viên nói Địa Không ở Mệnh và Địa Kiếp ở Thân Tài (cùng gọi "Không Kiếp"). Một số mốc tuổi 66–75 là hạn tổng quát. OCR lỗi ("hiêu học", "Thiên Tuóng").
+- Đối chiếu ảnh trang 260 (dấu mờ): "Quan Phủ" (vòng Bác Sĩ, Âm Nam tuổi Quý) đã in ở Thiên Di (Sửu), nên chữ ở Tài Bạch (Mão) nhiều khả năng là Quan Phù.
 
 ## Liên quan
 - [Địa Không – Địa Kiếp](../05_Phu-tinh-sat-tinh-tu-hoa/02_Luc-sat-tinh/04_Dia-Khong-Dia-Kiep.md)

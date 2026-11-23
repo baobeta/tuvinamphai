@@ -41,6 +41,7 @@ Dữ kiện: nữ, Mệnh Phá Quân Hoa Cái, Phu Thiên Mã + Triệt → sác
 
 ## Dị bản & lưu ý
 Ghi chú giảng viên, không đầy đủ; một số nhận định (ví dụ bệnh buồng trứng) là lời giảng về tổ hợp sao, cần coi như tham khảo.
+- Ngày in 20/10/1998 dương lịch là 1/9 Mậu Dần, nhưng mọi sao an theo ngày trong lời giảng (Phá Quân ở Mệnh, Liêm Mã ở Phu, Sát Kình ở Tài, Đồng Không Kiếp ở Phụ Mẫu, Ân Quang và Cơ Hóa Kỵ ở Nô) chỉ khớp ngày âm 7/9 Mậu Dần (26/10/1998). Lời giảng gọi Tuần ở Phu (Thân) là "Triệt" (tuổi Mậu Triệt ở Tý Sửu), và xếp Song Hao, Phượng Các vào cung Phúc trong khi chúng nằm ở Phu Thê (Thân).
 
 ## Liên quan
 - [Phá Quân](../04_Chinh-tinh/14_Pha-Quan/04_Nam-menh-nu-menh.md)

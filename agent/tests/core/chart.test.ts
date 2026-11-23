@@ -206,6 +206,16 @@ describe("dị bản", () => {
     expect(tvth.notes.some((note) => note.includes("Tuổi Canh"))).toBe(true);
   });
 
+  it("tuổi Canh và Tân theo NP1: Khôi ở Dần, Việt ở Ngọ", () => {
+    const canh = lunarChart(1980, 1, 1, "Tý", "nam", { khoiVietForCanh: "NP1" });
+    const tan = lunarChart(1981, 1, 1, "Tý", "nam", { khoiVietForTan: "NP1" });
+    const tanDefault = lunarChart(1981, 1, 1, "Tý", "nam");
+    for (const chart of [canh, tan]) {
+      expect([palaceOfStar(chart, "Thiên Khôi"), palaceOfStar(chart, "Thiên Việt")]).toEqual([["Dần"], ["Ngọ"]]);
+    }
+    expect([palaceOfStar(tanDefault, "Thiên Khôi"), palaceOfStar(tanDefault, "Thiên Việt")]).toEqual([["Ngọ"], ["Dần"]]);
+  });
+
   it("tuổi Tỵ Dậu Sửu: Hỏa Linh theo TVTH hoặc bản đời Tống", () => {
     const tvth = lunarChart(1981, 1, 1, "Tý", "nữ");
     const song = lunarChart(1981, 1, 1, "Tý", "nữ", { hoaLinhForTyDauSuu: "Tống" });

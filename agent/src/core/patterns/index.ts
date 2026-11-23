@@ -1,4 +1,4 @@
-import { renderFinding, type Finding } from "../analysis/finding.js";
+import { renderFinding, renderFindingBrief, type Finding, type RenderDetail } from "../analysis/finding.js";
 import type { Chart } from "../chart/types.js";
 import { err, ok, type Result } from "../result.js";
 import { BAD_PATTERNS, UNSUPPORTED_PATTERNS } from "./bad-patterns.js";
@@ -29,10 +29,12 @@ export function evaluatePattern(chart: Chart, id: string, options: PatternOption
   return ok(evaluation);
 }
 
-export function renderPatterns(findings: readonly Finding[]): string {
+export function renderPatterns(findings: readonly Finding[], detail: RenderDetail = "full"): string {
   if (!findings.length) return "Không phát hiện cách cục nào trong danh mục.";
+  const renderItem = detail === "brief" ? renderFindingBrief : renderFinding;
+  const itemSeparator = detail === "brief" ? "\n" : "\n\n";
   const section = (title: string, items: readonly Finding[]): string =>
-    items.length ? [`### ${title}`, ...items.map(renderFinding)].join("\n\n") : "";
+    items.length ? [`### ${title}`, items.map(renderItem).join(itemSeparator)].join(itemSeparator) : "";
   return [
     section("Cách tốt", findings.filter((item) => item.polarity === "tốt")),
     section("Cách xấu", findings.filter((item) => item.polarity === "xấu")),

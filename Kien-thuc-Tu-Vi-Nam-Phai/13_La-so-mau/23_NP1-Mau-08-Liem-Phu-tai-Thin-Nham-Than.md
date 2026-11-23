@@ -17,7 +17,7 @@ Nhâm Thân (1992), tháng 7 Mậu Thân, ngày 19 Ất Sửu, giờ Canh Thìn 
 
 ### Bố trí sao chính (đọc từ ảnh)
 - **Mệnh:** Liêm Trinh (Miếu), Thiên Phủ (Vượng), Hữu Bật, Tam Thai, Hỉ Thần, Đường Phù, Bạch Hổ, Thiên La; cung Thai.
-- Tài Bạch (Thân): chữ mờ, có Hóa Quyền, Quan Phù, Long Trì. Quan Lộc: Vũ Khúc, Thiên Tướng, Văn Khúc, Hóa Kỵ, Thái Tuế. Nô: Thái Dương, Thiên Lương, Hóa Lộc, Đào Hoa. Điền: Thiên Đồng, Cự Môn, Địa Không, Thiên Diêu. Phu Thê: Phá Quân, Linh Tinh, Đại Hao, Thiên Mã, Tuế Phá, Triệt. Phúc: Tham Lang. Phụ Mẫu: Thái Âm, Kiếp Sát. Tật: Thiên Cơ. Thiên Di: Thất Sát, Hóa Khoa, Hỏa Tinh, Đà La. Tử Tức: vô chính diệu (Thiên Hỉ, Phục Binh).
+- Tài Bạch (Tý): chữ mờ, có Hóa Quyền, Quan Phù, Long Trì. Quan Lộc: Vũ Khúc, Thiên Tướng, Văn Khúc, Hóa Kỵ, Thái Tuế. Nô: Thái Dương, Thiên Lương, Hóa Lộc, Đào Hoa. Điền: Thiên Đồng, Cự Môn, Địa Không, Thiên Diêu. Phu Thê: Phá Quân, Linh Tinh, Đại Hao, Thiên Mã, Tuế Phá, Triệt. Phúc: Tham Lang. Phụ Mẫu: Thái Âm, Kiếp Sát. Tật: Thiên Cơ. Thiên Di: Thất Sát, Hóa Khoa, Hỏa Tinh, Đà La. Tử Tức: vô chính diệu (Thiên Hỉ, Phục Binh).
 
 ### Luận theo giảng viên
 - Mệnh Liêm Phủ hai cung Thìn Tuất: giàu có khá giả; kinh doanh làm đẹp, nhà hàng, khách sạn. Liêm Trinh "đệ nhất hưởng thụ": ăn ngon mặc đẹp, nóng tính, khí khái, lúc hiền rất hiền lúc dữ vô cùng. Thiên Phủ da trắng.
@@ -37,6 +37,7 @@ Dữ kiện: nữ, Mệnh Hoa Cái + Bạch Hổ + Thai, Nô có Đào Hoa Hóa 
 
 ## Dị bản & lưu ý
 Một số cung trong ảnh bị mờ; chỉ ghi sao đọc được. OCR lỗi ("Lưu Hồ").
+- Mệnh ở Thìn thì Tài Bạch ở Tý; bản chép cũ ghi "Tài Bạch (Thân)" trong khi các sao ở Thân (Vũ Khúc, Thiên Tướng) đã được xếp vào Quan Lộc.
 
 ## Liên quan
 - [Liêm Trinh](../04_Chinh-tinh/06_Liem-Trinh/04_Nam-menh-nu-menh.md)

@@ -983,9 +983,20 @@ const tuyetXuPhungSinh = definePattern({
         cite: "TVTH tr.94",
         required: [
           condition(`Mệnh ở Bại (${stage.bai}) hoặc Tuyệt (${stage.tuyet}) của hành ${element}`, [stage.bai, stage.tuyet].includes(branchName(ctx.life.branch))),
-          withAssumption(allInLifeGroup(ctx, TAM_HOA), "'Tam hóa hội' hiểu là đủ Hóa Lộc, Quyền, Khoa trong tam phương tứ chính Mệnh"),
+          anyOf("được cứu giải", [
+            allInLifeGroup(ctx, TAM_HOA),
+            allOf("quý tinh Tử Vi/Thiên Phủ thủ Mệnh có Khôi Việt hội (lá số mẫu TVTH tr.182–183)", [
+              anyOf("Tử Vi hoặc Thiên Phủ thủ Mệnh", [lifeHas(ctx, "Tử Vi"), lifeHas(ctx, "Thiên Phủ")]),
+              inLifeGroup(ctx, ["Thiên Khôi", "Thiên Việt"]),
+            ]),
+            countInScope(ctx, BAN_CACH_CAT, ctx.life, "tam phương tứ chính", ctx.options.minLuckyCount + 1),
+          ]),
         ],
-        assumptions: ["chỉ xét đường cứu 'Tam hóa hội'; đường 'chính diệu sinh bản mệnh theo ngũ hành' chưa xét (cần bảng hành sao)"],
+        assumptions: [
+          "đường cứu gồm: Tam hóa hội (đủ Lộc, Quyền, Khoa trong tam phương tứ chính Mệnh, TVTH tr.94); quý cách Tử Phủ thủ Mệnh có Khôi/Việt hội như lá số mẫu TVTH tr.182–183; hoặc 'nhiều cát tinh hỗ trợ' (MLTC tr.862–864)",
+          `'nhiều cát tinh' hiểu là từ ${ctx.options.minLuckyCount + 1} sao cát (Lộc Tồn, tam Hóa, lục cát) trong tam phương tứ chính Mệnh`,
+          "đường 'chính diệu sinh bản mệnh theo ngũ hành' chưa xét (cần bảng hành sao)",
+        ],
         breakers: defaultGoodBreakers(ctx, ctx.life),
       },
     ];

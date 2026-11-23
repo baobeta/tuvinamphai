@@ -19,7 +19,7 @@ Lá số nữ mệnh quyền thế: Mệnh có Liêm Trinh hội Song Lộc, Mã
 ### Bố trí sao chính (đọc từ ảnh)
 - **Mệnh (Dần):** Liêm Trinh (Hỏa, vượng/đắc) cùng Hóa Lộc, Lộc Tồn, Bác Sĩ, Bát Tọa, Thái Tuế, Đẩu Quân. Cung đối Thiên Di (Thân) là Tham Lang, kèm Hữu Bật, Văn Xương, Thiên Mã, Phượng Các, Thiên Khố, Triệt. Sách gọi chung là "Liêm Tham đồng độ" (cặp Liêm–Tham ở trục Dần–Thân).
 - **Thân (Ngọ, Quan Lộc):** Vũ Khúc, Thiên Phủ, Tả Phù, Văn Khúc, Hóa Khoa, Long Trì.
-- Tam hợp còn lại: Tài Bạch (Tuất) Tử Vi, Thiên Tướng, Quốc Ấn, Hoa Cái; Phúc Đức (Thìn) Phá Quân, Hóa Quyền, Thiên Khố.
+- Tam hợp còn lại: Tài Bạch (Tuất) Tử Vi, Thiên Tướng, Quốc Ấn, Hoa Cái; Phúc Đức (Thìn) Phá Quân, Hóa Quyền, Thiên Khốc.
 - Phu Thê (Tý): Thất Sát, Thanh Long, Điếu Khách, Tuần. Tử Tức (Hợi): Thiên Lương, Hỏa Tinh, Thiên Hình, Kiếp Sát.
 
 ### Cách cục nhận ra (theo sách)
@@ -45,6 +45,7 @@ Dữ kiện: nữ, Giáp Dần, Liêm Trinh tại Mệnh có Hóa Lộc + Lộc 
 
 ## Dị bản & lưu ý
 Ảnh lá số cho thấy Liêm Trinh ở Mệnh (Dần) và Tham Lang ở Thiên Di (Thân), trong khi lời luận ghi "Liêm Tham đồng độ"; đây là cách gọi cặp sao xung chiếu của sách.
+- Đối chiếu ảnh trang 159: ô Phúc Đức (Thìn) in "Thiên Khốc" (bản chép cũ ghi nhầm "Thiên Khố"). Riêng chữ đậm "Thiên Khố" ở ô Thiên Di (Thân) trái với quy tắc của chính TVTH tr.20 (tháng 3 thì Thiên Khố ở Tý); lá số Kỷ Mùi tr.165 thì khớp quy tắc.
 
 ## Liên quan
 - [Song Lộc ngộ Mã](../05_Phu-tinh-sat-tinh-tu-hoa/04_Loc-Ton-Thien-Ma/03_Loc-Ma-giao-tri-Loc-dao-Ma-dao.md)

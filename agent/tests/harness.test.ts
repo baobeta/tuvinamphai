@@ -13,6 +13,7 @@ const config: Config = {
   model: "claude-opus-5-5",
   effort: "high",
   maxIterations: 5,
+  chartDir: null,
   maxTokens: 64_000,
 };
 

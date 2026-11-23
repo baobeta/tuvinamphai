@@ -12,7 +12,10 @@ export interface Config {
   effort: Effort;
   maxIterations: number;
   maxTokens: number;
+  chartDir: string | null;
 }
+
+export const CHART_DIR_DISABLED = "off";
 
 export function loadConfig(env: NodeJS.ProcessEnv = process.env, cwd = process.cwd()): Config {
   const corpusRoot = env.TUVI_WORKSPACE ? path.resolve(cwd, env.TUVI_WORKSPACE) : REPO_ROOT;
@@ -31,5 +34,9 @@ export function loadConfig(env: NodeJS.ProcessEnv = process.env, cwd = process.c
     effort,
     maxIterations,
     maxTokens: 64_000,
+    chartDir:
+      env.TUVI_CHART_DIR === CHART_DIR_DISABLED
+        ? null
+        : path.resolve(cwd, env.TUVI_CHART_DIR ?? path.join(corpusRoot, ".omc", "charts")),
   };
 }

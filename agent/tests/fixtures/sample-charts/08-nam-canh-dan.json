@@ -1,0 +1,108 @@
+{
+  "id": "08-nam-canh-dan",
+  "title": "Nam Canh Dần",
+  "kbFile": "Kien-thuc-Tu-Vi-Nam-Phai/13_La-so-mau/08_TVTH-Nam-Canh-Dan.md",
+  "bookSource": "Tu-Vi-Thuc-Hanh/06_So-Tu-Vi-mau/08_Nam-Canh-Dan.md",
+  "bookPage": "TVTH tr.173–174",
+  "confidence": "high",
+  "birth": {
+    "calendar": "lunar",
+    "yearCanChi": "Canh Dần",
+    "year": 2010,
+    "month": 8,
+    "day": 1,
+    "hourBranch": "Mão",
+    "gender": "nam",
+    "isLeapMonth": false
+  },
+  "yearChoice": "Sách chỉ ghi can chi; chọn 2010 là năm trong 1800–2199 cùng can chi và có ngày âm này.",
+  "options": {},
+  "expected": {
+    "polarity": "Dương Nam",
+    "lifeBranch": "Ngọ",
+    "bodyBranch": "Tý",
+    "bureau": "Mộc tam cục",
+    "nayin": "Tùng Bách Mộc",
+    "palaces": {
+      "Mệnh": "Ngọ",
+      "Phụ Mẫu": "Mùi",
+      "Phúc Đức": "Thân",
+      "Điền Trạch": "Dậu",
+      "Quan Lộc": "Tuất",
+      "Nô Bộc": "Hợi",
+      "Thiên Di": "Tý",
+      "Tật Ách": "Sửu",
+      "Tài Bạch": "Dần",
+      "Tử Tức": "Mão",
+      "Phu Thê": "Thìn",
+      "Huynh Đệ": "Tỵ"
+    },
+    "stars": {
+      "Ngọ": [
+        "Thất Sát",
+        "Thiên Khôi",
+        "Thiên Phúc",
+        "Phục Binh",
+        "Ân Quang",
+        "Long Trì",
+        "Quan Phù",
+        "Triệt",
+        "Tuần",
+        "Tử"
+      ],
+      "Tý": [
+        "Vũ Khúc",
+        "Thiên Phủ",
+        "Tướng Quân",
+        "Điếu Khách",
+        "Linh Tinh"
+      ],
+      "Thìn": [
+        "Tử Vi",
+        "Thiên Tướng",
+        "Quốc Ấn",
+        "Hỏa Tinh"
+      ],
+      "Sửu": [
+        "Thái Dương",
+        "Thái Âm",
+        "Hồng Loan"
+      ],
+      "Dần": [
+        "Tham Lang",
+        "Thiên Việt",
+        "Địa Kiếp"
+      ],
+      "Tuất": [
+        "Phá Quân",
+        "Thanh Long"
+      ],
+      "Hợi": [
+        "Thiên Đồng",
+        "Tả Phụ"
+      ]
+    },
+    "transformations": {
+      "Tý": [
+        "Hóa Quyền"
+      ],
+      "Sửu": [
+        "Hóa Lộc",
+        "Hóa Kỵ"
+      ],
+      "Hợi": [
+        "Hóa Khoa"
+      ]
+    },
+    "patterns": [
+      "sat-pha-liem-tham"
+    ]
+  },
+  "addedStars": [],
+  "knownDiscrepancies": [],
+  "suspectedEngineBugs": [],
+  "spellingMap": {
+    "Tả Phù": "Tả Phụ"
+  },
+  "notes": []
+}

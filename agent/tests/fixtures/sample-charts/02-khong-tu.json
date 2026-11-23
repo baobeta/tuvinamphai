@@ -1,0 +1,127 @@
+{
+  "id": "02-khong-tu",
+  "title": "Khổng Tử (Canh Tuất, nam)",
+  "kbFile": "Kien-thuc-Tu-Vi-Nam-Phai/13_La-so-mau/02_TVTH-Khong-Tu.md",
+  "bookSource": "Tu-Vi-Thuc-Hanh/06_So-Tu-Vi-mau/02_Khong-Tu.md",
+  "bookPage": "TVTH tr.161–162",
+  "confidence": "high",
+  "birth": {
+    "calendar": "lunar",
+    "yearCanChi": "Canh Tuất",
+    "year": 1970,
+    "month": 11,
+    "day": 1,
+    "hourBranch": "Tý",
+    "gender": "nam",
+    "isLeapMonth": false
+  },
+  "yearChoice": "Năm can chi của danh nhân lịch sử; chọn 1970 (cùng can chi) vì engine chỉ dùng can chi năm cùng tháng, ngày âm.",
+  "options": {},
+  "expected": {
+    "polarity": "Dương Nam",
+    "lifeBranch": "Tý",
+    "bodyBranch": "Tý",
+    "bureau": "Hỏa lục cục",
+    "nayin": "Thoa Xuyến Kim",
+    "palaces": {
+      "Mệnh": "Tý",
+      "Phụ Mẫu": "Sửu",
+      "Phúc Đức": "Dần",
+      "Điền Trạch": "Mão",
+      "Quan Lộc": "Thìn",
+      "Nô Bộc": "Tỵ",
+      "Thiên Di": "Ngọ",
+      "Tật Ách": "Mùi",
+      "Tài Bạch": "Thân",
+      "Tử Tức": "Dậu",
+      "Phu Thê": "Tuất",
+      "Huynh Đệ": "Hợi"
+    },
+    "stars": {
+      "Tý": [
+        "Thiên Lương",
+        "Hữu Bật",
+        "Tướng Quân",
+        "Bát Tọa",
+        "Phượng Các",
+        "Giải Thần",
+        "Đẩu Quân",
+        "Tang Môn",
+        "Thai"
+      ],
+      "Ngọ": [
+        "Thái Dương",
+        "Thiên Khôi",
+        "Thiên Phúc",
+        "Phục Binh",
+        "Thai Phụ",
+        "Bạch Hổ",
+        "Triệt"
+      ],
+      "Thân": [
+        "Thiên Cơ",
+        "Thái Âm",
+        "Lộc Tồn",
+        "Bác Sĩ",
+        "Thiên Khốc",
+        "Điếu Khách",
+        "Thiên Mã"
+      ],
+      "Thìn": [
+        "Thiên Đồng",
+        "Văn Khúc",
+        "Quốc Ấn"
+      ],
+      "Tỵ": [
+        "Vũ Khúc",
+        "Phá Quân"
+      ],
+      "Tuất": [
+        "Cự Môn",
+        "Văn Xương"
+      ],
+      "Dậu": [
+        "Tử Vi",
+        "Tham Lang",
+        "Kình Dương"
+      ],
+      "Mùi": [
+        "Thiên Phủ",
+        "Đà La",
+        "Triệt"
+      ]
+    },
+    "transformations": {
+      "Ngọ": [
+        "Hóa Lộc"
+      ],
+      "Thân": [
+        "Hóa Kỵ"
+      ],
+      "Thìn": [
+        "Hóa Khoa"
+      ],
+      "Tỵ": [
+        "Hóa Quyền"
+      ]
+    },
+    "patterns": [
+      "co-nguyet-dong-luong",
+      "song-loc"
+    ]
+  },
+  "addedStars": [],
+  "knownDiscrepancies": [
+    {
+      "kind": "pattern-scope",
+      "pattern": "tam-hoa-lien-chau",
+      "reason": "Sách gán Tam Hóa liên châu cho cung Thiên Di (Lộc Ngọ, Quyền Tỵ, Khoa Thìn), không cho Mệnh Tý; detectPatterns chỉ xét cách của Mệnh/Thân nên đúng là không báo.",
+      "source": "TVTH tr.161: 'Xét thấy cung Thiên di có Tam Hoá liên châu.'"
+    }
+  ],
+  "suspectedEngineBugs": [],
+  "spellingMap": {
+    "Thái Phụ": "Thai Phụ"
+  },
+  "notes": []
+}

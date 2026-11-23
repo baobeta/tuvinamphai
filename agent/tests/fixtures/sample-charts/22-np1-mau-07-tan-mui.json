@@ -1,0 +1,135 @@
+{
+  "id": "22-np1-mau-07-tan-mui",
+  "title": "NP1 mẫu 7: Thiên Lương Đào Hoa (Tân Mùi, âm nữ)",
+  "kbFile": "Kien-thuc-Tu-Vi-Nam-Phai/13_La-so-mau/22_NP1-Mau-07-Thien-Luong-Dao-Hoa-Tan-Mui.md",
+  "bookSource": "Tu-Vi-Nam-Phai_Phan-1/05_La-so-mau/07_La-so-mau-7.md",
+  "bookPage": "NP1 tr.265",
+  "confidence": "low",
+  "birth": {
+    "calendar": "lunar",
+    "yearCanChi": "Tân Mùi",
+    "year": 1991,
+    "month": 7,
+    "day": 16,
+    "hourBranch": "Thân",
+    "gender": "nữ",
+    "isLeapMonth": false
+  },
+  "yearChoice": "Ảnh ghi năm 1991 (Tân Mùi), tháng 7 Bính Thân, ngày 16 Đinh Mão (âm lịch), giờ Thân.",
+  "options": {
+    "khoiVietForTan": "NP1"
+  },
+  "expected": {
+    "polarity": "Âm Nữ",
+    "lifeBranch": "Tý",
+    "bodyBranch": "Thìn",
+    "bureau": "Thổ ngũ cục",
+    "nayin": "Lộ Bàng Thổ",
+    "palaces": {
+      "Mệnh": "Tý",
+      "Phụ Mẫu": "Sửu",
+      "Phúc Đức": "Dần",
+      "Điền Trạch": "Mão",
+      "Quan Lộc": "Thìn",
+      "Nô Bộc": "Tỵ",
+      "Thiên Di": "Ngọ",
+      "Tật Ách": "Mùi",
+      "Tài Bạch": "Thân",
+      "Tử Tức": "Dậu",
+      "Phu Thê": "Tuất",
+      "Huynh Đệ": "Hợi"
+    },
+    "stars": {
+      "Tý": [
+        "Thiên Lương",
+        "Văn Khúc",
+        "Đào Hoa",
+        "Tiểu Hao",
+        "Tử Phù",
+        "Nguyệt Đức",
+        "Đế Vượng"
+      ],
+      "Thìn": [
+        "Thiên Đồng",
+        "Hữu Bật",
+        "Ân Quang",
+        "Hỷ Thần",
+        "Thiên Đức",
+        "Triệt"
+      ],
+      "Hợi": [
+        "Thiên Tướng",
+        "Thanh Long",
+        "Long Trì"
+      ],
+      "Sửu": [
+        "Liêm Trinh",
+        "Thất Sát",
+        "Tướng Quân"
+      ],
+      "Dần": [
+        "Linh Tinh",
+        "Thiên Khôi",
+        "Thiên Hỷ"
+      ],
+      "Mão": [
+        "Địa Không",
+        "Thiên Hình"
+      ],
+      "Tuất": [
+        "Cự Môn",
+        "Lực Sĩ"
+      ],
+      "Dậu": [
+        "Tham Lang",
+        "Tang Môn"
+      ],
+      "Thân": [
+        "Thiên Cơ",
+        "Thái Âm",
+        "Hồng Loan",
+        "Thiên Không"
+      ],
+      "Ngọ": [
+        "Thái Dương"
+      ],
+      "Tỵ": [
+        "Vũ Khúc",
+        "Phá Quân"
+      ],
+      "Mùi": [
+        "Thiên Diêu"
+      ]
+    },
+    "transformations": {
+      "Tý": [
+        "Hóa Khoa"
+      ],
+      "Dần": [
+        "Hóa Kỵ"
+      ],
+      "Tuất": [
+        "Hóa Lộc"
+      ],
+      "Ngọ": [
+        "Hóa Quyền"
+      ]
+    },
+    "patterns": []
+  },
+  "addedStars": [
+    {
+      "star": "Thiên Diêu",
+      "branch": "Mùi",
+      "reason": "Ảnh tr.265 ô Tật Ách (Mùi) in 'Thiên Diêu(H)'."
+    }
+  ],
+  "knownDiscrepancies": [],
+  "suspectedEngineBugs": [],
+  "spellingMap": {
+    "Hỉ Thần": "Hỷ Thần",
+    "Thiên Hỉ": "Thiên Hỷ",
+    "Lục Sĩ": "Lực Sĩ"
+  },
+  "notes": []
+}
