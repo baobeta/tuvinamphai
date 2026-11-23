@@ -29,6 +29,12 @@ Hoặc chạy một lần: `pnpm ask /xem 15/8/1990 9:10 nam`.
 
 `/xem` dựng sẵn yêu cầu xem chi tiết (chính tinh, phụ tinh, vòng sao, tam phương tứ chính, cách cục, 12 cung, từng đại vận, lời khuyên sự nghiệp, gia đình, tình cảm, sức khỏe). System prompt (mục "Xem trọn một lá số" trong `src/agent/system-prompt.ts`) quy định agent gọi tool nào để lấy dữ kiện, viết theo 10 phần nào, và lập luận theo ba bước: dữ kiện trên lá số → quy tắc của sách có nguồn → kết luận. Muốn đổi cấu trúc bài luận thì sửa mục đó.
 
+## Dùng như MCP server / plugin Claude Code
+- `pnpm mcp`: chạy MCP server (stdio) từ mã nguồn, dùng để thử hoặc đăng ký thủ công.
+- `pnpm build:plugin`: đóng gói `src/mcp-stdio.ts` thành `../tu-vi-plugin/server/tuvi-mcp.mjs` (một file, không cần node_modules), chép file `.md` của kho và bốn cuốn sách vào `../tu-vi-plugin/data/`, sinh `../tu-vi-plugin/commands/xem.md` từ `READING_GUIDE`, rồi chạy smoke test qua stdio thật.
+- Server dùng chung `ALL_TOOLS` và `runTool` với agent, nên kiểm tra input, thông báo lỗi và kết quả giống hệt. Instructions của server là `SYSTEM_PROMPT`; prompt MCP `xem-la-so` và lệnh `/tu-vi:xem` cùng dùng `READING_GUIDE`.
+- Cách cài: xem README ở gốc repo.
+
 ## Thử tool không cần API key
 Gọi thẳng các tool, không qua Claude:
 ```bash
@@ -99,6 +105,8 @@ src/
     reading-request.ts     lệnh /xem: đọc ngày giờ sinh, dựng yêu cầu xem trọn lá số
     harness.ts             TuViAgent: vòng lặp stream → tool_use → tool_result → … → end_turn
     system-prompt.ts       prompt cố định (để prompt cache khớp tiền tố)
+  mcp/                   server.ts (MCP: tools, prompt xem-la-so, instructions) · prompts.ts · command.ts (sinh lệnh /tu-vi:xem)
+  mcp-stdio.ts           điểm vào MCP server qua stdio
   cli.ts · config.ts
   tool-cli.ts            pnpm tool: gọi tool trực tiếp, không cần API key
 tests/

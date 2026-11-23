@@ -17,8 +17,15 @@ export interface Config {
 
 export const CHART_DIR_DISABLED = "off";
 
+const UNEXPANDED_VARIABLE = /\$\{[^}]*\}/;
+
+const expandedOrUndefined = (value: string | undefined): string | undefined =>
+  value && !UNEXPANDED_VARIABLE.test(value) ? value : undefined;
+
 export function loadConfig(env: NodeJS.ProcessEnv = process.env, cwd = process.cwd()): Config {
-  const corpusRoot = env.TUVI_WORKSPACE ? path.resolve(cwd, env.TUVI_WORKSPACE) : REPO_ROOT;
+  const workspace = expandedOrUndefined(env.TUVI_WORKSPACE);
+  const corpusRoot = workspace ? path.resolve(cwd, workspace) : REPO_ROOT;
+  const chartDir = expandedOrUndefined(env.TUVI_CHART_DIR);
   const effort = (env.TUVI_EFFORT ?? "high") as Effort;
   if (!EFFORTS.includes(effort)) {
     throw new Error(`TUVI_EFFORT không hợp lệ: ${effort} (chọn một trong ${EFFORTS.join(", ")})`);
@@ -35,8 +42,6 @@ export function loadConfig(env: NodeJS.ProcessEnv = process.env, cwd = process.c
     maxIterations,
     maxTokens: 64_000,
     chartDir:
-      env.TUVI_CHART_DIR === CHART_DIR_DISABLED
-        ? null
-        : path.resolve(cwd, env.TUVI_CHART_DIR ?? path.join(corpusRoot, ".omc", "charts")),
+      chartDir === CHART_DIR_DISABLED ? null : path.resolve(cwd, chartDir ?? path.join(corpusRoot, ".omc", "charts")),
   };
 }

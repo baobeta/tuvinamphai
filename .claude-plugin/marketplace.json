@@ -1,0 +1,14 @@
+{
+  "name": "tuvinamphai",
+  "description": "Marketplace cục bộ của kho tài liệu Tử Vi Nam Phái",
+  "owner": {
+    "name": "baobeta"
+  },
+  "plugins": [
+    {
+      "name": "tu-vi",
+      "source": "./tu-vi-plugin",
+      "description": "Tool lập lá số, phân tích, vận hạn và tra kho tri thức Tử Vi Nam Phái (MCP server chạy cục bộ)"
+    }
+  ]
+}

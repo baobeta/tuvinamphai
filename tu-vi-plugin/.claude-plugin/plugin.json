@@ -1,0 +1,6 @@
+{
+  "name": "tu-vi",
+  "version": "0.1.0",
+  "description": "Tử Vi Nam Phái: lập lá số, phân tích bản mệnh, cách cục, vận hạn, so hai lá số và tra kho tri thức MLTC, TVTH, NP1, NP2. Mọi phép tính chạy cục bộ bằng MCP server, không cần API key.",
+  "author": { "name": "baobeta" }
+}

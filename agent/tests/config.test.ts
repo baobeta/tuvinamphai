@@ -14,6 +14,11 @@ describe("loadConfig", () => {
     expect(loadConfig({ TUVI_CHART_DIR: "off" }).chartDir).toBeNull();
     expect(loadConfig({ TUVI_CHART_DIR: "c" }, "/tmp").chartDir).toBe("/tmp/c");
   });
+  it("biến môi trường chưa được thay giá trị (còn ${…}) thì bỏ qua, dùng mặc định", () => {
+    const cfg = loadConfig({ TUVI_CHART_DIR: "${CLAUDE_PLUGIN_DATA}/charts", TUVI_WORKSPACE: "${X}" }, "/x");
+    expect(cfg.corpusRoot).toBe(REPO_ROOT);
+    expect(cfg.chartDir).toBe(path.join(REPO_ROOT, ".omc", "charts"));
+  });
   it("TUVI_WORKSPACE ghi đè, tính theo thư mục đang chạy", () => {
     expect(loadConfig({ TUVI_WORKSPACE: "x" }, "/tmp").corpusRoot).toBe("/tmp/x");
   });

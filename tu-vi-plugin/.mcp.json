@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "tuvi": {
+      "command": "node",
+      "args": ["${CLAUDE_PLUGIN_ROOT}/server/tuvi-mcp.mjs"],
+      "env": {
+        "TUVI_WORKSPACE": "${CLAUDE_PLUGIN_ROOT}/data",
+        "TUVI_CHART_DIR": "${CLAUDE_PLUGIN_DATA}/charts"
+      }
+    }
+  }
+}

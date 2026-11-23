@@ -8,7 +8,9 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "typecheck": "tsc --noEmit",
-    "tool": "tsx src/tool-cli.ts"
+    "tool": "tsx src/tool-cli.ts",
+    "build:plugin": "tsx scripts/build-plugin.ts && tsx scripts/smoke-plugin.ts",
+    "mcp": "tsx src/mcp-stdio.ts"
   },
   "license": "UNLICENSED",
   "dependencies": {

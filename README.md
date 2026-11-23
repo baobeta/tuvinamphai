@@ -14,3 +14,17 @@ bảng, sơ đồ, chữ viết tay nên đối chiếu với PDF theo số tran
 Script tái tạo: `split_book.py` (sách TV34), `build_ocr_book.py` (sách scan), `build_tvth.py` (Tử Vi Thực Hành).
 
 **Agent hỏi đáp:** [agent/](agent/README.md) là harness TypeScript (pnpm) dùng Claude API, tra kho tri thức và sách gốc ở trên. Chạy: `cd agent && pnpm install && pnpm dev`.
+
+## Dùng trực tiếp trong Claude Code (plugin, không cần API key)
+Plugin `tu-vi` (thư mục `tu-vi-plugin/`) đóng gói toàn bộ tool của `agent/` thành một MCP server chạy cục bộ, kèm kho tri thức, bốn cuốn sách, skill `tu-vi-nam-phai` và lệnh `/tu-vi:xem`.
+
+```bash
+cd agent && pnpm install && pnpm build:plugin      # build server + chép dữ liệu + smoke test
+claude plugin marketplace add /Users/baolequoc/workspaces/tuvinamphai
+claude plugin install tu-vi@tuvinamphai
+```
+Mở phiên Claude Code mới rồi dùng:
+- `/tu-vi:xem 15/8/1990 9:10 nam` hoặc `/tu-vi:xem âm 25/6/1990 Tỵ nữ Lan`: xem trọn lá số theo 10 phần.
+- Hỏi tự nhiên ("lá số tôi năm 2027 thế nào?"): Claude tự gọi tool của server `tuvi`.
+
+Mỗi lần sửa code hoặc kho tri thức, chạy lại `pnpm build:plugin` rồi cập nhật plugin trong `/plugin` (bản đã cài là bản chép vào cache). Lá số đã lập được lưu ở thư mục dữ liệu của plugin, không nằm trong repo.
