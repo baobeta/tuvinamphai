@@ -1,6 +1,6 @@
 # Đặc tả viết kho tri thức Tử Vi Nam Phái
 
-Kho này **tổng hợp lại** kiến thức của 4 cuốn sách trong `/Users/baolequoc/workspaces/tuvinamphai`, sắp xếp theo khía cạnh của môn Tử Vi. Mục tiêu: một câu hỏi tử vi bất kỳ tìm được đúng **một file nhỏ** trả lời nó, có quy tắc, ví dụ cụ thể và nguồn.
+Kho này **tổng hợp lại** kiến thức của 4 cuốn sách ở thư mục gốc của repo, sắp xếp theo khía cạnh của môn Tử Vi. Mục tiêu: một câu hỏi tử vi bất kỳ tìm được đúng **một file nhỏ** trả lời nó, có quy tắc, ví dụ cụ thể và nguồn.
 
 ## Nguồn (chỉ dùng 4 cuốn này)
 
@@ -13,7 +13,7 @@ Kho này **tổng hợp lại** kiến thức của 4 cuốn sách trong `/Users
 
 - **Mục lục toàn kho (tên mục + trang + file):** `~/.claude/skills/tu-vi/references/corpus-index.md`.
 - **Tóm tắt đã kiểm** (dùng làm điểm xuất phát, không chép nguyên): `~/.claude/skills/tu-vi/references/{an-sao,chinh-tinh,phu-tinh,cach-cuc,cung,han-van}.md`.
-- Tìm theo chủ đề trong cả kho: `grep -rn "Cự Môn" /Users/baolequoc/workspaces/tuvinamphai --include='*.md' | grep -v Kien-thuc`.
+- Tìm theo chủ đề trong cả kho: `grep -rn "Cự Môn" . --include='*.md' | grep -v Kien-thuc`.
 - Mỗi file nguồn có dòng `> Trang sách a–b` ở đầu.
 
 ## Quy tắc nội dung

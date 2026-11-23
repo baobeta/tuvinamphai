@@ -24,9 +24,15 @@ describe("plugin Claude Code", () => {
     expect(MCP_SERVER_NAME).toBe("tu-vi-nam-phai");
   });
 
-  it("dữ liệu và server build ra không bị commit", () => {
+  it("server và dữ liệu đã build có trong plugin để cài thẳng từ GitHub", () => {
+    expect(fs.existsSync(path.join(PLUGIN_ROOT, "server", "tuvi-mcp.mjs"))).toBe(true);
+    expect(fs.existsSync(path.join(PLUGIN_ROOT, "data", "Kien-thuc-Tu-Vi-Nam-Phai", "README.md"))).toBe(true);
     const ignore = fs.readFileSync(path.join(REPO_ROOT, ".gitignore"), "utf8");
-    expect(ignore).toContain("tu-vi-plugin/server/");
-    expect(ignore).toContain("tu-vi-plugin/data/");
+    expect(ignore).not.toContain("tu-vi-plugin/server/");
+  });
+
+  it("server đã build không chứa đường dẫn cá nhân của máy build", () => {
+    const bundle = fs.readFileSync(path.join(PLUGIN_ROOT, "server", "tuvi-mcp.mjs"), "utf8");
+    expect(bundle).not.toContain(REPO_ROOT);
   });
 });

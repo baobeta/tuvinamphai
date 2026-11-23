@@ -1,30 +1,105 @@
-# Tài liệu Tử Vi (Tử Vi Nam Phái – Lê Quang Lăng; Tử Vi Thực Hành – Dịch Lý Huyền Cơ)
+# Tử Vi Nam Phái
 
-| Sách | Nguồn | Cách trích xuất |
-|---|---|---|
-| [Mệnh Lý Thiên Cơ – Tuyển tập Tử Vi Nam Phái](Menh-Ly-Thien-Co_Tu-Vi-Nam-Phai/README.md) | TV34 (1000 trang, PDF có chữ) | tách theo mục lục: 5 chương, 139 mục |
-| [Tử Vi Nam Phái – Phần 1](Tu-Vi-Nam-Phai_Phan-1/README.md) | TuViNamPhai1.pdf (282 trang scan) | OCR, 5 phần, 58 mục |
-| [Tử Vi Nam Phái – Phần 2](Tu-Vi-Nam-Phai_Phan-2/README.md) | TuViNamPhai2.pdf (286 trang scan) | OCR, 6 khối, 102 mục |
-| [Tử Vi Thực Hành – Dịch Lý Huyền Cơ](Tu-Vi-Thuc-Hanh/README.md) | 58_TU_VI_THUC_HANH.pdf (201 trang, PDF có chữ) | tách theo tiêu đề: 8 phần, 132 mục, 16 ảnh lá số |
+Bộ công cụ xem Tử Vi Nam Phái dựa trên sách, gồm:
 
-**Kho tri thức tổng hợp:** [Kien-thuc-Tu-Vi-Nam-Phai/](Kien-thuc-Tu-Vi-Nam-Phai/README.md). Gồm 426 file theo 13 khía cạnh (lập lá số, bản mệnh, 12 cung, chính tinh, phụ tinh, vòng sao, Tuần Triệt, quan hệ cung, cách cục, vận hạn, chủ đề luận, nguyên tắc, lá số mẫu). Mỗi file trả lời một câu hỏi, có ví dụ và trích nguồn về 4 cuốn trên.
+- **Plugin cho Claude Code**: lập lá số, luận giải, xem vận hạn ngay trong Claude, không cần API key.
+- **Kho tri thức** 426 bài ngắn, mỗi bài trả lời một câu hỏi, tổng hợp từ bốn cuốn sách Tử Vi Nam Phái.
+- **Bản chữ của bốn cuốn sách** gốc, chia theo chương mục.
+- **Agent dòng lệnh** (TypeScript) cho ai muốn chạy bằng Claude API.
 
-Hai cuốn Phần 1/Phần 2 là bản scan: chữ được nhận dạng bằng OCR nên có thể sai chính tả rải rác;
-bảng, sơ đồ, chữ viết tay nên đối chiếu với PDF theo số trang ghi ở đầu mỗi file.
-Script tái tạo: `split_book.py` (sách TV34), `build_ocr_book.py` (sách scan), `build_tvth.py` (Tử Vi Thực Hành).
+Mọi phép tính (đổi âm dương lịch, an sao, Cục, đại hạn, tiểu hạn, cách cục…) chạy bằng code theo quy tắc trong sách, không để AI tự nhẩm.
 
-**Agent hỏi đáp:** [agent/](agent/README.md) là harness TypeScript (pnpm) dùng Claude API, tra kho tri thức và sách gốc ở trên. Chạy: `cd agent && pnpm install && pnpm dev`.
+## Bắt đầu nhanh: dùng trong Claude Code
 
-## Dùng trực tiếp trong Claude Code (plugin, không cần API key)
-Plugin `tu-vi` (thư mục `tu-vi-plugin/`) đóng gói toàn bộ tool của `agent/` thành một MCP server chạy cục bộ, kèm kho tri thức, bốn cuốn sách, skill `tu-vi-nam-phai` và lệnh `/tu-vi:xem`.
+Cần có [Claude Code](https://claude.com/claude-code) và [Node.js](https://nodejs.org) 22 trở lên.
+
+**1. Cài plugin** (chạy trong terminal):
 
 ```bash
-cd agent && pnpm install && pnpm build:plugin      # build server + chép dữ liệu + smoke test
-claude plugin marketplace add /Users/baolequoc/workspaces/tuvinamphai
+claude plugin marketplace add baobeta/tuvinamphai
 claude plugin install tu-vi@tuvinamphai
 ```
-Mở phiên Claude Code mới rồi dùng:
-- `/tu-vi:xem 15/8/1990 9:10 nam` hoặc `/tu-vi:xem âm 25/6/1990 Tỵ nữ Lan`: xem trọn lá số theo 10 phần.
-- Hỏi tự nhiên ("lá số tôi năm 2027 thế nào?"): Claude tự gọi tool của server `tuvi`.
 
-Mỗi lần sửa code hoặc kho tri thức, chạy lại `pnpm build:plugin` rồi cập nhật plugin trong `/plugin` (bản đã cài là bản chép vào cache). Lá số đã lập được lưu ở thư mục dữ liệu của plugin, không nằm trong repo.
+Hoặc gõ ngay trong Claude Code:
+
+```
+/plugin marketplace add baobeta/tuvinamphai
+/plugin install tu-vi@tuvinamphai
+```
+
+**2. Mở một phiên Claude Code mới** và dùng:
+
+| Bạn muốn | Gõ |
+|---|---|
+| Xem trọn lá số (dương lịch) | `/tu-vi:xem 15/8/1990 9:10 nam` |
+| Xem trọn lá số (âm lịch, giờ theo canh giờ) | `/tu-vi:xem âm 25/6/1990 Tỵ nữ Lan` |
+| Sinh tháng nhuận | `/tu-vi:xem âm nhuận 10/2/2023 Thìn nam` |
+| Hỏi một ý | "Lá số của tôi (15/8/1990, 9h10, nam) năm 2027 thế nào?" |
+| Tìm năm thuận lợi | "Từ 2025 đến 2035 năm nào thuận cho việc cưới hỏi?" |
+| Xem hợp tuổi | "So lá số của tôi với người sinh 3/2/1992, 20h, nữ" |
+| Không nhớ chắc giờ sinh | "Tôi sinh khoảng 7 đến 10 giờ sáng, giúp tôi soát giờ" |
+
+Lần đầu Claude gọi công cụ của plugin, Claude Code sẽ hỏi quyền; chọn cho phép. Lệnh `/tu-vi:xem` đã được cho phép sẵn.
+
+Bài xem trọn lá số đi qua 10 phần: dữ kiện lá số và địa bàn, bản mệnh, cung Mệnh và Thân, các vòng sao, cách cục, mười hai cung, từng đại vận mười năm, năm hiện tại và năm tới, lời khuyên (sự nghiệp, tài chính, gia đình, tình cảm, sức khỏe), và những điểm cần lưu ý. Mỗi ý đi theo ba bước: dữ kiện trên lá số → quy tắc cổ thư → kết luận.
+
+## Trong repo có gì
+
+| Thư mục | Nội dung |
+|---|---|
+| [`tu-vi-plugin/`](tu-vi-plugin) | Plugin Claude Code: MCP server đã build (chạy bằng `node`), dữ liệu, lệnh `/tu-vi:xem`, skill |
+| [`Kien-thuc-Tu-Vi-Nam-Phai/`](Kien-thuc-Tu-Vi-Nam-Phai/README.md) | Kho tri thức 426 bài theo 13 nhánh: lập lá số, bản mệnh, 12 cung, chính tinh, phụ tinh, vòng sao, Tuần Triệt, quan hệ cung, cách cục, vận hạn, chủ đề luận, nguyên tắc, lá số mẫu |
+| [`agent/`](agent/README.md) | Mã nguồn TypeScript: lõi tính toán, 29 công cụ, MCP server, agent dòng lệnh, 2.200+ test |
+| `Menh-Ly-Thien-Co_Tu-Vi-Nam-Phai/`, `Tu-Vi-Thuc-Hanh/`, `Tu-Vi-Nam-Phai_Phan-1/`, `Tu-Vi-Nam-Phai_Phan-2/` | Bản chữ của bốn cuốn sách, chia theo chương mục |
+
+Bốn cuốn sách:
+
+| Sách | Bản gốc | Ghi chú |
+|---|---|---|
+| [Mệnh Lý Thiên Cơ – Tuyển tập Tử Vi Nam Phái](Menh-Ly-Thien-Co_Tu-Vi-Nam-Phai/README.md) (Lê Quang Lăng) | PDF có chữ, 1000 trang | 5 chương, 139 mục |
+| [Tử Vi Thực Hành](Tu-Vi-Thuc-Hanh/README.md) (Dịch Lý Huyền Cơ) | PDF có chữ, 201 trang | 8 phần, 132 mục, ảnh lá số mẫu |
+| [Tử Vi Nam Phái – Phần 1](Tu-Vi-Nam-Phai_Phan-1/README.md) | PDF scan, 282 trang | chữ nhận dạng bằng OCR, có thể sai chính tả |
+| [Tử Vi Nam Phái – Phần 2](Tu-Vi-Nam-Phai_Phan-2/README.md) | PDF scan, 286 trang | chữ nhận dạng bằng OCR, có thể sai chính tả |
+
+## Độ chính xác
+
+- Quy tắc an sao lấy từ Tử Vi Thực Hành, đối chiếu Mệnh Lý Thiên Cơ.
+- Đã so với **29 lá số mẫu** trong sách: khớp cả 888 vị trí sao, Tứ Hóa, Mệnh, Thân, Cục và các cách cục sách gọi tên.
+- Lịch âm theo thuật toán thiên văn Hồ Ngọc Đức. Ngày trước 1968 tính theo lịch UTC+8 mà người Việt dùng thời đó, từ 1968 theo UTC+7.
+- Chỗ các sách nói khác nhau (ví dụ Tứ Hóa tuổi Canh, Khôi Việt tuổi Canh Tân) được đưa thành tùy chọn; kết quả luôn nói rõ điểm nào chưa chắc.
+
+## Các cách dùng khác
+
+**Agent dòng lệnh (cần Claude API key):**
+
+```bash
+cd agent
+pnpm install
+cp .env.example .env        # điền ANTHROPIC_API_KEY
+pnpm dev                    # rồi gõ: /xem 15/8/1990 9:10 nam
+```
+
+**Gọi thẳng một công cụ, không cần API key** (để thử hoặc kiểm tra):
+
+```bash
+cd agent && pnpm install
+pnpm tool --list
+pnpm tool build_chart '{"birth":{"calendar":"solar","year":1990,"month":8,"day":15,"hour":9,"minute":10,"gender":"nam"}}' \
+          render_chart_grid '{"chart_id":"@last"}'
+```
+
+**Sửa code hoặc kho rồi cài plugin từ máy mình:**
+
+```bash
+cd agent && pnpm install && pnpm test && pnpm build:plugin
+claude plugin marketplace add "$(pwd)"   # chạy ở thư mục gốc repo
+claude plugin install tu-vi@tuvinamphai
+```
+
+Chi tiết kiến trúc và từng công cụ: [agent/README.md](agent/README.md).
+
+## Lưu ý
+
+- Tử vi chỉ để tham khảo. Bài luận không thay cho lời khuyên y tế, pháp lý hay tài chính.
+- Bản quyền nội dung bốn cuốn sách thuộc về tác giả và nhà xuất bản; bản chữ trong repo phục vụ nghiên cứu.
+- Lá số bạn lập được lưu trên máy bạn (thư mục dữ liệu của plugin), không gửi đi đâu ngoài phiên Claude của bạn.
